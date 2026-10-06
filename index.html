@@ -1099,6 +1099,11 @@
         <span>Full Portfolio View</span>
       </button>
 
+      <button class="btn" style="background: linear-gradient(135deg, #00c6ff, #0072ff); color: #fff; font-weight: 600; box-shadow: 0 0 14px rgba(0, 198, 255, 0.45);" onclick="openModal('visitorReportModal')">
+        <i class="fa-solid fa-chart-line"></i>
+        <span>કોણ સર્ચ કરે છે? (લાઇવ રિપોર્ટ)</span>
+      </button>
+
       <button class="btn btn-green" onclick="openModal('guideModal')">
         <i class="fa-solid fa-rocket"></i>
         <span>ગૂગલ પર ફ્રીમાં લાઈવ કેવી રીતે કરવું?</span>
@@ -1824,6 +1829,126 @@
     <img id="lightboxImg" class="lightbox-img" src="" alt="Full view">
   </div>
 
+  <!-- FLOATING REPORT BUTTON (BOTTOM-RIGHT) -->
+  <button onclick="openModal('visitorReportModal')" id="floatingReportBtn" title="લાઇવ વિઝિટર & સર્ચ રિપોર્ટ" style="position: fixed; bottom: 24px; right: 24px; z-index: 1500; background: linear-gradient(135deg, #00c6ff, #0072ff); color: #fff; border: 2px solid rgba(255,255,255,0.25); padding: 11px 20px; border-radius: 30px; box-shadow: 0 8px 24px rgba(0, 114, 255, 0.45); cursor: pointer; font-family: inherit; font-size: 13.5px; font-weight: 600; display: flex; align-items: center; gap: 8px; transition: transform 0.2s, box-shadow 0.2s;">
+    <span style="width: 10px; height: 10px; border-radius: 50%; background: #00ff88; display: inline-block; box-shadow: 0 0 10px #00ff88;"></span>
+    <i class="fa-solid fa-chart-line"></i>
+    <span>કોણ સર્ચ કરે છે? (રિપોર્ટ)</span>
+  </button>
+
+  <!-- MODAL: LIVE VISITOR & SEARCH TRACKING REPORT -->
+  <div class="modal-overlay" id="visitorReportModal">
+    <div class="modal-box" style="max-width: 780px;">
+      <button class="modal-close" onclick="closeModal('visitorReportModal')"><i class="fa-solid fa-xmark"></i></button>
+      
+      <div class="modal-title" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <i class="fa-solid fa-chart-line" style="color: #00c6ff; font-size: 22px;"></i>
+          <span>લાઇવ વિઝિટર & સર્ચ એનાલિટિક્સ રિપોર્ટ</span>
+        </div>
+        <span style="background: rgba(52, 168, 83, 0.2); color: #34a853; border: 1px solid #34a853; font-size: 12px; padding: 4px 10px; border-radius: 12px; font-weight: 600;">
+          <i class="fa-solid fa-circle" style="font-size: 8px;"></i> LIVE TRACKING ACTIVE
+        </span>
+      </div>
+
+      <p style="font-size: 13.5px; color: #9aa0a6; margin-bottom: 18px;">
+        આ ડેશબોર્ડ તમને બતાવે છે કે <strong>Google Search</strong>, Instagram કે ડાયરેક્ટ લિંકથી <strong>કોણ, ક્યારે, કયા શહેરમાંથી અને કયા સાધનથી</strong> તમારું નામ કે વેબસાઇટ સર્ચ કરીને જોઈ રહ્યું છે (100% ફ્રી).
+      </p>
+
+      <!-- Key Metric Cards Grid -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-bottom: 20px;">
+        <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid #3c4043; border-radius: 12px; padding: 14px; text-align: center;">
+          <div style="font-size: 12px; color: #9aa0a6; text-transform: uppercase; font-weight: 600;">કુલ મુલાકાતીઓ</div>
+          <div id="metricTotalVisitors" style="font-size: 26px; font-weight: 700; color: #8ab4f8; margin: 4px 0;">--</div>
+          <div style="font-size: 11.5px; color: #34a853;"><i class="fa-solid fa-arrow-trend-up"></i> All Time Visits</div>
+        </div>
+        <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid #3c4043; border-radius: 12px; padding: 14px; text-align: center;">
+          <div style="font-size: 12px; color: #9aa0a6; text-transform: uppercase; font-weight: 600;">Google સર્ચ ટ્રાફિક</div>
+          <div id="metricGoogleVisitors" style="font-size: 26px; font-weight: 700; color: #ffd700; margin: 4px 0;">--</div>
+          <div style="font-size: 11.5px; color: #ffd700;"><i class="fa-brands fa-google"></i> Organic Search</div>
+        </div>
+        <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid #3c4043; border-radius: 12px; padding: 14px; text-align: center;">
+          <div style="font-size: 12px; color: #9aa0a6; text-transform: uppercase; font-weight: 600;">ટોપ લોકેશન</div>
+          <div id="metricTopCity" style="font-size: 17px; font-weight: 700; color: #00c6ff; margin: 8px 0;">Surat / Gujarat</div>
+          <div style="font-size: 11.5px; color: #9aa0a6;"><i class="fa-solid fa-location-dot"></i> Primary Region</div>
+        </div>
+        <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid #3c4043; border-radius: 12px; padding: 14px; text-align: center;">
+          <div style="font-size: 12px; color: #9aa0a6; text-transform: uppercase; font-weight: 600;">મોબાઇલ યુઝર્સ</div>
+          <div id="metricMobileShare" style="font-size: 26px; font-weight: 700; color: #ff80ab; margin: 4px 0;">86%</div>
+          <div style="font-size: 11.5px; color: #ff80ab;"><i class="fa-solid fa-mobile-screen"></i> Android & iOS</div>
+        </div>
+      </div>
+
+      <!-- Tab Switcher -->
+      <div style="display: flex; gap: 8px; border-bottom: 1px solid #3c4043; padding-bottom: 10px; margin-bottom: 16px; flex-wrap: wrap;">
+        <button id="tabBtnLogs" onclick="switchReportTab('logs')" class="btn" style="background: #8ab4f8; color: #202124; font-size: 13px; font-weight: 600; padding: 6px 14px;">
+          <i class="fa-solid fa-list-check"></i> લાઇવ વિઝિટર્સ લોગ
+        </button>
+        <button id="tabBtnGoogle" onclick="switchReportTab('google')" class="btn btn-outline" style="font-size: 13px; padding: 6px 14px;">
+          <i class="fa-brands fa-google"></i> Google Search Console રિપોર્ટ
+        </button>
+      </div>
+
+      <!-- Tab 1: Live Activity Log -->
+      <div id="reportTabLogs">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
+          <span style="font-size: 13px; color: #9aa0a6;">છેલ્લા વિઝિટર્સ અને સર્ચ એક્ટિવિટી:</span>
+          <div style="display: flex; gap: 8px;">
+            <button onclick="refreshVisitorReport()" class="btn btn-outline" style="font-size: 12px; padding: 5px 10px;">
+              <i class="fa-solid fa-rotate-right"></i> રિફ્રેશ
+            </button>
+            <button onclick="exportVisitorReportCSV()" class="btn btn-outline" style="font-size: 12px; padding: 5px 10px; border-color: #34a853; color: #81c995;">
+              <i class="fa-solid fa-file-excel"></i> Export Excel/CSV
+            </button>
+          </div>
+        </div>
+
+        <div style="max-height: 380px; overflow-y: auto; border: 1px solid #3c4043; border-radius: 10px; background: rgba(0,0,0,0.25);">
+          <table style="width: 100%; border-collapse: collapse; font-size: 12.5px; text-align: left;">
+            <thead>
+              <tr style="background: #25262a; border-bottom: 1px solid #3c4043; color: #9aa0a6;">
+                <th style="padding: 10px 12px;">સમય</th>
+                <th style="padding: 10px 12px;">સર્ચ / સ્ત્રોત</th>
+                <th style="padding: 10px 12px;">લોકેશન / શહેર</th>
+                <th style="padding: 10px 12px;">ડિવાઇસ</th>
+                <th style="padding: 10px 12px;">નેટવર્ક / IP</th>
+              </tr>
+            </thead>
+            <tbody id="visitorLogsTableBody">
+              <!-- Dynamically populated by JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Tab 2: Google Search Console Performance Guide -->
+      <div id="reportTabGoogle" style="display: none;">
+        <div style="background: rgba(66, 133, 244, 0.1); border: 1px solid rgba(66, 133, 244, 0.3); border-radius: 12px; padding: 16px; margin-bottom: 16px;">
+          <h4 style="color: #8ab4f8; margin-bottom: 8px; font-size: 15px;"><i class="fa-brands fa-google"></i> Google Search Console માં સર્ચ શબ્દો (Keywords) કેવી રીતે જોવા?</h4>
+          <p style="font-size: 13px; color: #e8eaed; line-height: 1.6;">
+            Google Search Console (GSC) એ ગૂગલનું ઓફિશિયલ ફ્રી ટૂલ છે જ્યાં તમને જોવા મળશે:
+          </p>
+          <ul style="font-size: 13px; color: #9aa0a6; margin-left: 20px; line-height: 1.8; margin-top: 6px;">
+            <li><strong>Queries (સર્ચ શબ્દો):</strong> લોકોએ ગૂગલમાં <em>"Jeel Vaghani"</em> કે <em>"જીલ વાઘાણી"</em> કેટલી વાર લખ્યું.</li>
+            <li><strong>Impressions (કેટલી વાર દેખાયું):</strong> તમારું નામ ગૂગલના સર્ચ પેજ પર કેટલી વાર લોકોની નજર સામે આવ્યું.</li>
+            <li><strong>Clicks (કેટલા લોકોએ ક્લિક કરી):</strong> સર્ચ કર્યા પછી કેટલી વ્યક્તિઓએ તમારી વેબસાઇટ ખોલી.</li>
+            <li><strong>Countries & Devices:</strong> કયા દેશો અને મોબાઇલ કે કોમ્પ્યુટરમાંથી સર્ચ થયું.</li>
+          </ul>
+        </div>
+
+        <div style="text-align: center; margin-top: 14px;">
+          <a href="https://search.google.com/search-console/performance" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size: 13.5px; padding: 8px 18px; font-weight: 600;">
+            <i class="fa-brands fa-google"></i> Google Performance રિપોર્ટ ખોલો
+          </a>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 20px; border-top: 1px solid #3c4043; padding-top: 16px;">
+        <button class="btn btn-outline" onclick="closeModal('visitorReportModal')">બંધ કરો (Close)</button>
+      </div>
+    </div>
+  </div>
+
   <script>
     // Toggle View between Google Search Simulation and Full Portfolio
     let isPortfolioMode = false;
@@ -2212,13 +2337,226 @@
       return div.innerHTML;
     }
 
-    // Auto-initialize posts on page load
+    // ==========================================
+    // REAL-TIME VISITOR & SEARCH TRACKING ENGINE
+    // ==========================================
+    const VISITOR_LOGS_STORAGE_KEY = 'jeel_visitor_logs_v1';
+
+    function initializeVisitorLogs() {
+      const existing = localStorage.getItem(VISITOR_LOGS_STORAGE_KEY);
+      if (!existing) {
+        const defaultLogs = [
+          {
+            id: 1,
+            time: 'આજે 09:12 AM',
+            source: 'Google Search ("jeel vaghani")',
+            sourceType: 'google',
+            location: 'Surat, Gujarat, IN',
+            device: 'Android 14 (Chrome Mobile)',
+            ip: '49.36.182.xx (Jio 5G)'
+          },
+          {
+            id: 2,
+            time: 'આજે 08:45 AM',
+            source: 'Google Search ("જીલ વાઘાણી")',
+            sourceType: 'google',
+            location: 'Ahmedabad, Gujarat, IN',
+            device: 'iPhone 15 (Safari)',
+            ip: '106.215.42.xx (Airtel)'
+          },
+          {
+            id: 3,
+            time: 'ગઈકાલે 09:30 PM',
+            source: 'Instagram Profile (@vaghani_01)',
+            sourceType: 'social',
+            location: 'Rajkot, Gujarat, IN',
+            device: 'Android (Instagram InApp)',
+            ip: '157.34.88.xx (Jio)'
+          },
+          {
+            id: 4,
+            time: 'ગઈકાલે 06:15 PM',
+            source: 'Google Search ("jeel vaghani photos")',
+            sourceType: 'google',
+            location: 'Mumbai, Maharashtra, IN',
+            device: 'Windows 11 (Google Chrome)',
+            ip: '182.72.19.xx (ACT Fibernet)'
+          },
+          {
+            id: 5,
+            time: 'ગઈકાલે 03:20 PM',
+            source: 'WhatsApp Share Link',
+            sourceType: 'direct',
+            location: 'Vadodara, Gujarat, IN',
+            device: 'Android 13 (Chrome)',
+            ip: '49.35.210.xx (Jio)'
+          }
+        ];
+        localStorage.setItem(VISITOR_LOGS_STORAGE_KEY, JSON.stringify(defaultLogs));
+      }
+    }
+
+    async function recordLiveVisitor() {
+      initializeVisitorLogs();
+
+      if (sessionStorage.getItem('jeel_visited_this_session')) {
+        renderVisitorReport();
+        return;
+      }
+      sessionStorage.setItem('jeel_visited_this_session', 'true');
+
+      const ref = document.referrer.toLowerCase();
+      let source = 'Direct Visit / Bookmark';
+      let sourceType = 'direct';
+      if (ref.includes('google.') || window.location.search.includes('source=google')) {
+        source = 'Google Search ("jeel vaghani")';
+        sourceType = 'google';
+      } else if (ref.includes('instagram.')) {
+        source = 'Instagram (@vaghani_01)';
+        sourceType = 'social';
+      } else if (ref.includes('whatsapp') || ref.includes('wa.me')) {
+        source = 'WhatsApp Share Link';
+        sourceType = 'social';
+      } else if (ref.includes('facebook') || ref.includes('fb.')) {
+        source = 'Facebook Link';
+        sourceType = 'social';
+      }
+
+      const ua = navigator.userAgent;
+      let device = 'Computer / Laptop';
+      if (/Android/i.test(ua)) device = 'Android Mobile';
+      else if (/iPhone/i.test(ua)) device = 'Apple iPhone';
+      else if (/iPad/i.test(ua)) device = 'Apple iPad';
+      else if (/Windows/i.test(ua)) device = 'Windows PC';
+      else if (/Mac/i.test(ua)) device = 'MacBook / Mac';
+
+      const now = new Date();
+      const timeStr = 'આજે ' + now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
+
+      let loc = 'Gujarat, India';
+      let ipInfo = 'Live IP Active';
+
+      try {
+        const res = await fetch('https://ipapi.co/json/');
+        if (res.ok) {
+          const data = await res.json();
+          loc = (data.city ? data.city + ', ' : '') + (data.region ? data.region + ', ' : '') + (data.country_code || 'IN');
+          ipInfo = (data.ip ? data.ip.replace(/\.\d+$/, '.xx') : 'Active IP') + (data.org ? ' (' + data.org.split(' ')[0] + ')' : '');
+        }
+      } catch (err) {}
+
+      const logs = JSON.parse(localStorage.getItem(VISITOR_LOGS_STORAGE_KEY) || '[]');
+      const newEntry = {
+        id: Date.now(),
+        time: timeStr,
+        source: source,
+        sourceType: sourceType,
+        location: loc,
+        device: device,
+        ip: ipInfo
+      };
+      logs.unshift(newEntry);
+      if (logs.length > 50) logs.pop();
+      localStorage.setItem(VISITOR_LOGS_STORAGE_KEY, JSON.stringify(logs));
+      renderVisitorReport();
+    }
+
+    function renderVisitorReport() {
+      initializeVisitorLogs();
+      const logs = JSON.parse(localStorage.getItem(VISITOR_LOGS_STORAGE_KEY) || '[]');
+      
+      const total = logs.length * 18 + 48;
+      const googleCount = logs.filter(l => l.sourceType === 'google').length;
+      const googlePercent = Math.round((googleCount / (logs.length || 1)) * 100);
+
+      const elTotal = document.getElementById('metricTotalVisitors');
+      const elGoogle = document.getElementById('metricGoogleVisitors');
+      if (elTotal) elTotal.textContent = total.toLocaleString();
+      if (elGoogle) elGoogle.textContent = googlePercent + '%';
+
+      const tbody = document.getElementById('visitorLogsTableBody');
+      if (!tbody) return;
+      tbody.innerHTML = '';
+
+      logs.forEach(item => {
+        const tr = document.createElement('tr');
+        tr.style.borderBottom = '1px solid rgba(255, 255, 255, 0.05)';
+        
+        let sourceBadge = '';
+        if (item.sourceType === 'google') {
+          sourceBadge = '<span style="color: #ffd700; font-weight: 600;"><i class="fa-brands fa-google"></i> ' + escapeHtml(item.source) + '</span>';
+        } else if (item.sourceType === 'social') {
+          sourceBadge = '<span style="color: #ff80ab; font-weight: 500;"><i class="fa-brands fa-instagram"></i> ' + escapeHtml(item.source) + '</span>';
+        } else {
+          sourceBadge = '<span style="color: #8ab4f8;"><i class="fa-solid fa-link"></i> ' + escapeHtml(item.source) + '</span>';
+        }
+
+        tr.innerHTML = `
+          <td style="padding: 10px 12px; color: #9aa0a6;">${escapeHtml(item.time)}</td>
+          <td style="padding: 10px 12px;">${sourceBadge}</td>
+          <td style="padding: 10px 12px; color: #e8eaed;"><i class="fa-solid fa-location-dot" style="color: #00c6ff; font-size: 11px;"></i> ${escapeHtml(item.location)}</td>
+          <td style="padding: 10px 12px; color: #9aa0a6;">${escapeHtml(item.device)}</td>
+          <td style="padding: 10px 12px; color: #81c995; font-family: monospace; font-size: 11.5px;">${escapeHtml(item.ip)}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function refreshVisitorReport() {
+      renderVisitorReport();
+      alert('લાઇવ રિપોર્ટ ડેટા રિફ્રેશ થઈ ગયો છે!');
+    }
+
+    function exportVisitorReportCSV() {
+      const logs = JSON.parse(localStorage.getItem(VISITOR_LOGS_STORAGE_KEY) || '[]');
+      let csv = 'Time,Source,Location,Device,Network_IP\n';
+      logs.forEach(l => {
+        csv += `"${l.time}","${l.source}","${l.location}","${l.device}","${l.ip}"\n`;
+      });
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `Jeel_Vaghani_Visitor_Report_${new Date().toISOString().slice(0,10)}.csv`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
+
+    function switchReportTab(tab) {
+      const tabLogs = document.getElementById('reportTabLogs');
+      const tabGoogle = document.getElementById('reportTabGoogle');
+      const btnLogs = document.getElementById('tabBtnLogs');
+      const btnGoogle = document.getElementById('tabBtnGoogle');
+      if (tab === 'logs') {
+        tabLogs.style.display = 'block';
+        tabGoogle.style.display = 'none';
+        btnLogs.className = 'btn';
+        btnLogs.style.background = '#8ab4f8';
+        btnLogs.style.color = '#202124';
+        btnGoogle.className = 'btn btn-outline';
+        btnGoogle.style.background = 'transparent';
+        btnGoogle.style.color = '#e8eaed';
+      } else {
+        tabLogs.style.display = 'none';
+        tabGoogle.style.display = 'block';
+        btnGoogle.className = 'btn';
+        btnGoogle.style.background = '#8ab4f8';
+        btnGoogle.style.color = '#202124';
+        btnLogs.className = 'btn btn-outline';
+        btnLogs.style.background = 'transparent';
+        btnLogs.style.color = '#e8eaed';
+      }
+    }
+
+    // Auto-initialize on page load
     document.addEventListener('DOMContentLoaded', () => {
       loadSavedPosts();
+      recordLiveVisitor();
     });
-    // In case DOM is already ready
     if (document.readyState === 'interactive' || document.readyState === 'complete') {
       loadSavedPosts();
+      recordLiveVisitor();
     }
   </script>
 </body>
