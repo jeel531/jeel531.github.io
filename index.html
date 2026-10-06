@@ -73,7 +73,13 @@
           "https://jeel531.github.io/assets/jeel-cyberpunk.jpeg",
           "https://jeel531.github.io/assets/jeel-biker.jpeg",
           "https://jeel531.github.io/assets/jeel-movie-sultan.jpg",
-          "https://jeel531.github.io/assets/jeel-life-poster.jpg"
+          "https://jeel531.github.io/assets/jeel-movie-rudra.jpg",
+          "https://jeel531.github.io/assets/jeel-life-poster.jpg",
+          "https://jeel531.github.io/assets/jeel-life-1-romance.jpg",
+          "https://jeel531.github.io/assets/jeel-life-2-threat.jpg",
+          "https://jeel531.github.io/assets/jeel-life-3-combat.jpg",
+          "https://jeel531.github.io/assets/movie-scene-3-chase.jpg",
+          "https://jeel531.github.io/assets/jeel-life-5-climax.jpg"
         ],
         "url": "https://jeel531.github.io",
         "mainEntityOfPage": "https://jeel531.github.io",
@@ -84,9 +90,11 @@
           "https://twitter.com/jeelvaghani"
         ],
         "knowsAbout": [
-          "Business Development",
-          "Digital Strategy",
-          "Entrepreneurship",
+          "Enterprise Resource Planning (ERP)",
+          "Industrial Barcode & Label Automation",
+          "Quick-Commerce Supply Chain (Blinkit / Flipkart)",
+          "Software Engineering & System Architecture",
+          "Business Development & Digital Strategy",
           "Film & Media Production"
         ]
       },
@@ -94,8 +102,48 @@
         "@type": "WebSite",
         "@id": "https://jeel531.github.io/#website",
         "url": "https://jeel531.github.io",
-        "name": "Jeel Vaghani - Official Website & Google Knowledge Panel",
+        "name": "Jeel Vaghani - Official Website & Software Innovations",
         "publisher": {
+          "@id": "https://jeel531.github.io/#person"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "OSLC ERP Master Ecosystem",
+        "operatingSystem": "Windows 11, Windows 10, Android",
+        "applicationCategory": "BusinessApplication",
+        "description": "Comprehensive apparel manufacturing ERP solution by Jeel Vaghani managing complete production lifecycle, lot tracking, karigar gate pass, and pending WIP shortage.",
+        "author": {
+          "@id": "https://jeel531.github.io/#person"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "LUMORA Barcode & Label Automation Engine",
+        "operatingSystem": "Windows, Android, TSC Thermal Printers",
+        "applicationCategory": "UtilitiesApplication",
+        "description": "High-speed automated barcode label printing engine for warehouse logistics and bin management.",
+        "author": {
+          "@id": "https://jeel531.github.io/#person"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Blinkit PO x Digi ERP Automated Scanner",
+        "operatingSystem": "Android, Web Portal",
+        "applicationCategory": "BusinessApplication",
+        "description": "Quick-commerce purchase order integration portal syncing real-time inventory for Blinkit and Amazon fulfillment.",
+        "author": {
+          "@id": "https://jeel531.github.io/#person"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "DIGI One-Click Batch Print Engine",
+        "operatingSystem": "Windows Power Pivot, Android",
+        "applicationCategory": "UtilitiesApplication",
+        "description": "Logistics batch print automation accelerating warehouse order dispatch by 400%.",
+        "author": {
           "@id": "https://jeel531.github.io/#person"
         }
       },
@@ -1074,6 +1122,254 @@
       font-size: 12px;
       color: #9aa0a6;
     }
+
+    /* ========================================================
+       PROJECTS & INNOVATIONS SHOWCASE (GOOGLE DARK SYSTEM)
+       ======================================================== */
+    .projects-section-container {
+      background-color: #303134;
+      border: 1px solid #3c4043;
+      border-radius: 16px;
+      padding: 22px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+      margin-bottom: 24px;
+    }
+
+    .section-header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .section-heading-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-heading-sub {
+      font-size: 13px;
+      color: #9aa0a6;
+      margin-top: 2px;
+    }
+
+    /* Filter Chips (Google Style) */
+    .filter-chips-bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 10px;
+      margin-bottom: 18px;
+      scrollbar-width: thin;
+    }
+
+    .filter-chip {
+      background: #202124;
+      border: 1px solid #5f6368;
+      color: #bdc1c6;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12.5px;
+      font-weight: 500;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .filter-chip:hover {
+      background: #3c4043;
+      color: #fff;
+      border-color: #8ab4f8;
+    }
+
+    .filter-chip.active {
+      background: rgba(138, 180, 248, 0.15);
+      border-color: #8ab4f8;
+      color: #8ab4f8;
+      font-weight: 600;
+    }
+
+    /* Projects Grid */
+    .projects-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 16px;
+    }
+
+    .project-card-item {
+      background: #202124;
+      border: 1px solid #3c4043;
+      border-radius: 12px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.25s ease;
+      position: relative;
+    }
+
+    .project-card-item:hover {
+      border-color: #8ab4f8;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    .project-card-top {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+
+    .project-card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: rgba(138, 180, 248, 0.12);
+      border: 1px solid rgba(138, 180, 248, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      color: #8ab4f8;
+      flex-shrink: 0;
+    }
+
+    .project-card-title {
+      font-size: 15.5px;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.3;
+      margin-bottom: 4px;
+    }
+
+    .project-card-role {
+      font-size: 11.5px;
+      color: #81c995;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .project-card-desc {
+      font-size: 13px;
+      color: #bdc1c6;
+      line-height: 1.55;
+      margin-bottom: 14px;
+      flex-grow: 1;
+    }
+
+    .project-tags-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+
+    .project-tag {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #9aa0a6;
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 6px;
+    }
+
+    .project-card-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding-top: 12px;
+    }
+
+    .project-status-pill {
+      font-size: 11.5px;
+      font-weight: 600;
+      color: #81c995;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .status-dot-pulse {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #34a853;
+      box-shadow: 0 0 8px #34a853;
+      display: inline-block;
+    }
+
+    /* ========================================================
+       VISUAL GALLERY HORIZONTAL CAROUSEL (GOOGLE STYLE)
+       ======================================================== */
+    .photo-strip-container {
+      background-color: #303134;
+      border: 1px solid #3c4043;
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    }
+
+    .photo-strip-scroll {
+      display: flex;
+      gap: 14px;
+      overflow-x: auto;
+      padding-bottom: 10px;
+      scrollbar-width: thin;
+      scroll-snap-type: x mandatory;
+    }
+
+    .photo-strip-item {
+      flex: 0 0 170px;
+      height: 220px;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.25s ease;
+      scroll-snap-align: start;
+      background: #18191e;
+    }
+
+    .photo-strip-item:hover {
+      transform: scale(1.04);
+      border-color: #8ab4f8;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+      z-index: 5;
+    }
+
+    .photo-strip-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .photo-strip-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 8px 10px;
+      background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.9));
+      font-size: 11px;
+      font-weight: 600;
+      color: #fff;
+    }
   </style>
 </head>
 <body>
@@ -1177,14 +1473,14 @@
         </div>
       </div>
 
-      <!-- Google Tabs (All, Images, Posts, Videos, News, Maps) -->
+      <!-- Google Tabs (All, Projects & Systems, Images & Gallery, Posts & Updates, Official Movie, Analytics) -->
       <div class="google-tabs">
-        <div class="tab-item active"><i class="fa-solid fa-magnifying-glass"></i> All</div>
-        <div class="tab-item" onclick="toggleView()"><i class="fa-regular fa-image"></i> Images</div>
-        <div class="tab-item" onclick="filterCategory('posts')"><i class="fa-regular fa-newspaper"></i> Posts & Updates</div>
-        <div class="tab-item"><i class="fa-solid fa-video"></i> Videos</div>
-        <div class="tab-item"><i class="fa-solid fa-location-dot"></i> Maps</div>
-        <div class="tab-item"><i class="fa-solid fa-ellipsis-vertical"></i> More</div>
+        <div class="tab-item active" id="tabMainAll" onclick="filterMainTab('all', this)"><i class="fa-solid fa-magnifying-glass"></i> All</div>
+        <div class="tab-item" id="tabMainProjects" onclick="filterMainTab('projects', this)"><i class="fa-solid fa-cubes-stacked"></i> Projects & Systems (8)</div>
+        <div class="tab-item" id="tabMainPhotos" onclick="filterMainTab('photos', this)"><i class="fa-regular fa-image"></i> Photos & Gallery (12)</div>
+        <div class="tab-item" id="tabMainPosts" onclick="filterMainTab('posts', this)"><i class="fa-regular fa-newspaper"></i> Posts & Updates</div>
+        <div class="tab-item" onclick="window.location.href='movie.html'"><i class="fa-solid fa-film"></i> Official Movie (1080p)</div>
+        <div class="tab-item" onclick="openModal('visitorReportModal')"><i class="fa-solid fa-chart-line"></i> Analytics</div>
       </div>
     </div>
 
@@ -1241,6 +1537,341 @@
             Official Instagram profile of <strong>Jeel Vaghani</strong> (@vaghani_01). 1,780+ Followers. Business Developer from Gujarat, India. View exclusive reels, lifestyle photoshoots, and updates.
           </p>
         </article>
+
+        <!-- Google Organic Search Result 3: Master Software Systems -->
+        <article class="search-snippet">
+          <div class="snippet-source">
+            <div class="snippet-icon"><i class="fa-solid fa-cubes-stacked" style="color: #00d2ff;"></i></div>
+            <span>jeel531.github.io &rsaquo; software-systems</span>
+          </div>
+          <a href="#projectsSection" onclick="filterMainTab('projects'); return false;" class="snippet-title">
+            Jeel Vaghani - Enterprise Software, ERP Systems & Automation Solutions
+          </a>
+          <p class="snippet-desc">
+            Industrial software ecosystems architected and developed by <strong>Jeel Vaghani</strong>: OSLC Manufacturing ERP suite, LUMORA High-Speed Barcode Automation Engine, Blinkit Quick-Commerce Dispatch Scanner, and DIGI One-Click Logistics Spooler.
+          </p>
+        </article>
+
+        <!-- VISUAL GALLERY CAROUSEL: ALL 12 PHOTOS OF JEEL VAGHANI -->
+        <div class="photo-strip-container" id="visualPhotosSection">
+          <div class="section-header-row">
+            <div>
+              <div class="section-heading-title">
+                <i class="fa-solid fa-camera-retro" style="color: #ea4335;"></i>
+                <span>Photos of Jeel Vaghani (Visual Highlights)</span>
+              </div>
+              <div class="section-heading-sub">12 High-Definition Photos & Movie Production Stills · Click to enlarge</div>
+            </div>
+            <button class="btn btn-outline" onclick="toggleView()" style="font-size: 12.5px; padding: 5px 12px;">
+              <i class="fa-solid fa-expand"></i> Full Screen Gallery
+            </button>
+          </div>
+
+          <div class="photo-strip-scroll">
+            <div class="photo-strip-item" onclick="viewPhoto('./assets/jeel-suit.jpeg')">
+              <img src="./assets/jeel-suit.jpeg" alt="Corporate Suit - Balcony">
+              <div class="photo-strip-overlay">Corporate Executive</div>
+            </div>
+            <div class="photo-strip-item" onclick="viewPhoto('./assets/jeel-royal.jpeg')">
+              <img src="./assets/jeel-royal.jpeg" alt="Royal Heritage Sherwani">
+              <div class="photo-strip-overlay">Royal Heritage</div>
+            </div>
+            <div class="photo-strip-item" onclick="viewPhoto('./assets/jeel-cyberpunk.jpeg')">
+              <img src="./assets/jeel-cyberpunk.jpeg" alt="Cyberpunk Times Square">
+              <div class="photo-strip-overlay">Cyberpunk Neon</div>
+            </div>
+            <div class="photo-strip-item" onclick="viewPhoto('./assets/jeel-biker.jpeg')">
+              <img src="./assets/jeel-biker.jpeg" alt="Mountain Cruiser Biker">
+              <div class="photo-strip-overlay">Mountain Biker</div>
+            </div>
+            <div class="photo-strip-item" onclick="viewPhoto('./assets/jeel-movie-sultan.jpg')">
+              <img src="./assets/jeel-movie-sultan.jpg" alt="The Sultan Mafia Emperor">
+              <div class="photo-strip-overlay">The Sultan Emperor</div>
+            </div>
+            <div class="photo-strip-item" onclick="viewPhoto('./assets/jeel-movie-rudra.jpg')">
+              <img src="./assets/jeel-movie-rudra.jpg" alt="Rudra Action Hero">
+              <div class="photo-strip-overlay">Rudra Action Hero</div>
+            </div>
+            <div class="photo-strip-item" onclick="viewPhoto('./assets/jeel-life-poster.jpg')">
+              <img src="./assets/jeel-life-poster.jpg" alt="Jeel Vaghani: Life Movie Poster">
+              <div class="photo-strip-overlay">Movie Poster (Life)</div>
+            </div>
+            <div class="photo-strip-item" onclick="viewPhoto('./assets/jeel-life-1-romance.jpg')">
+              <img src="./assets/jeel-life-1-romance.jpg" alt="Sunset Romance Scene">
+              <div class="photo-strip-overlay">Sunset Romance</div>
+            </div>
+            <div class="photo-strip-item" onclick="viewPhoto('./assets/jeel-life-2-threat.jpg')">
+              <img src="./assets/jeel-life-2-threat.jpg" alt="Palace Threat Standoff">
+              <div class="photo-strip-overlay">Palace Standoff</div>
+            </div>
+            <div class="photo-strip-item" onclick="viewPhoto('./assets/jeel-life-3-combat.jpg')">
+              <img src="./assets/jeel-life-3-combat.jpg" alt="Rain Martial Arts Combat">
+              <div class="photo-strip-overlay">Rain Martial Combat</div>
+            </div>
+            <div class="photo-strip-item" onclick="viewPhoto('./assets/movie-scene-3-chase.jpg')">
+              <img src="./assets/movie-scene-3-chase.jpg" alt="Highway Car Shootout">
+              <div class="photo-strip-overlay">Highway Car Chase</div>
+            </div>
+            <div class="photo-strip-item" onclick="viewPhoto('./assets/jeel-life-5-climax.jpg')">
+              <img src="./assets/jeel-life-5-climax.jpg" alt="Climax Fire Walk Victory">
+              <div class="photo-strip-overlay">Fire Walk Victory</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MASTER PROJECTS SHOWCASE: 8 ENTERPRISE SYSTEMS ARCHITECTED BY JEEL VAGHANI -->
+        <div class="projects-section-container" id="projectsSection">
+          <div class="section-header-row">
+            <div>
+              <div class="section-heading-title">
+                <i class="fa-solid fa-cubes-stacked" style="color: #4285f4;"></i>
+                <span>Enterprise Software & Engineering Systems</span>
+              </div>
+              <div class="section-heading-sub">8 production platforms, logistics engines, and desktop/mobile systems built by Jeel Vaghani</div>
+            </div>
+            <span style="background: rgba(52, 168, 83, 0.18); color: #81c995; border: 1px solid #34a853; font-size: 11.5px; padding: 4px 10px; border-radius: 12px; font-weight: 600;">
+              <span class="status-dot-pulse"></span> ALL SYSTEMS DEPLOYED
+            </span>
+          </div>
+
+          <!-- Quick Filter Chips -->
+          <div class="filter-chips-bar">
+            <button class="filter-chip active" onclick="filterProjects('all', this)"><i class="fa-solid fa-layer-group"></i> All Systems (8)</button>
+            <button class="filter-chip" onclick="filterProjects('erp', this)"><i class="fa-solid fa-industry"></i> Enterprise ERP</button>
+            <button class="filter-chip" onclick="filterProjects('automation', this)"><i class="fa-solid fa-barcode"></i> Automation & Printing</button>
+            <button class="filter-chip" onclick="filterProjects('logistics', this)"><i class="fa-solid fa-bolt"></i> Quick-Commerce & Logistics</button>
+            <button class="filter-chip" onclick="filterProjects('media', this)"><i class="fa-solid fa-wand-magic-sparkles"></i> AI Media & Film</button>
+          </div>
+
+          <!-- Projects Grid -->
+          <div class="projects-cards-grid" id="projectsCardsGrid">
+
+            <!-- Project 1: OSLC ERP -->
+            <div class="project-card-item" data-category="erp">
+              <div>
+                <div class="project-card-top">
+                  <div class="project-card-icon" style="background: rgba(66, 133, 244, 0.15); color: #8ab4f8; border-color: rgba(66, 133, 244, 0.3);">
+                    <i class="fa-solid fa-industry"></i>
+                  </div>
+                  <div>
+                    <div class="project-card-title">OSLC ERP Master Ecosystem</div>
+                    <div class="project-card-role">Lead Architect & Developer · Jeel Vaghani</div>
+                  </div>
+                </div>
+                <div class="project-card-desc">
+                  Industrial manufacturing ERP for textile and garment production. Covers full lifecycle tracking: lot allocation, job-work karigar gate pass, cutting-to-stitching stages, inventory reconciliation, and real-time pending shortage WIP dashboards.
+                </div>
+                <div class="project-tags-row">
+                  <span class="project-tag"><i class="fa-brands fa-windows"></i> Windows Desktop (.exe)</span>
+                  <span class="project-tag"><i class="fa-brands fa-android"></i> Android APK</span>
+                  <span class="project-tag"><i class="fa-solid fa-network-wired"></i> Multi-PC LAN Sync</span>
+                  <span class="project-tag"><i class="fa-solid fa-database"></i> SQL Relational DB</span>
+                </div>
+              </div>
+              <div class="project-card-bottom">
+                <span class="project-status-pill"><span class="status-dot-pulse"></span> Active Factory Production</span>
+                <span style="font-size: 11.5px; color: #9aa0a6;">V17 Enterprise</span>
+              </div>
+            </div>
+
+            <!-- Project 2: LUMORA Barcode Automation -->
+            <div class="project-card-item" data-category="automation">
+              <div>
+                <div class="project-card-top">
+                  <div class="project-card-icon" style="background: rgba(249, 171, 0, 0.15); color: #ffd700; border-color: rgba(249, 171, 0, 0.3);">
+                    <i class="fa-solid fa-barcode"></i>
+                  </div>
+                  <div>
+                    <div class="project-card-title">LUMORA Barcode & Label Engine</div>
+                    <div class="project-card-role">Logistics Automation Engineer · Jeel Vaghani</div>
+                  </div>
+                </div>
+                <div class="project-card-desc">
+                  High-speed automated drop-and-make barcode generator for warehouse SKU binning and shipping labels. Communicates directly with TSC industrial thermal printers for instant error-free sticker printing.
+                </div>
+                <div class="project-tags-row">
+                  <span class="project-tag"><i class="fa-brands fa-windows"></i> Desktop (.exe)</span>
+                  <span class="project-tag"><i class="fa-brands fa-android"></i> Mobile App (.apk)</span>
+                  <span class="project-tag"><i class="fa-solid fa-print"></i> TSC Thermal Protocol</span>
+                  <span class="project-tag"><i class="fa-solid fa-file-csv"></i> Bulk CSV Auto-Parse</span>
+                </div>
+              </div>
+              <div class="project-card-bottom">
+                <span class="project-status-pill"><span class="status-dot-pulse"></span> 100K+ Labels Processed</span>
+                <span style="font-size: 11.5px; color: #ffd700;">Drop & Print</span>
+              </div>
+            </div>
+
+            <!-- Project 3: Blinkit PO x Digi ERP -->
+            <div class="project-card-item" data-category="logistics">
+              <div>
+                <div class="project-card-top">
+                  <div class="project-card-icon" style="background: rgba(234, 67, 53, 0.15); color: #ff8a80; border-color: rgba(234, 67, 53, 0.3);">
+                    <i class="fa-solid fa-bolt"></i>
+                  </div>
+                  <div>
+                    <div class="project-card-title">Blinkit PO x Digi ERP Scanner</div>
+                    <div class="project-card-role">Quick-Commerce Solutions · Jeel Vaghani</div>
+                  </div>
+                </div>
+                <div class="project-card-desc">
+                  High-velocity purchase order synchronization engine for Blinkit, Flipkart, and Amazon quick-commerce channels. Scans items with camera/hardware scanner, verifies inventory matches, and speeds up bulk order fulfillment.
+                </div>
+                <div class="project-tags-row">
+                  <span class="project-tag"><i class="fa-brands fa-android"></i> Scanner APK</span>
+                  <span class="project-tag"><i class="fa-solid fa-globe"></i> Cloud Portal</span>
+                  <span class="project-tag"><i class="fa-solid fa-qrcode"></i> Instant SKU Match</span>
+                  <span class="project-tag"><i class="fa-solid fa-truck-fast"></i> Rapid Dispatch</span>
+                </div>
+              </div>
+              <div class="project-card-bottom">
+                <span class="project-status-pill"><span class="status-dot-pulse"></span> Live Marketplace Sync</span>
+                <span style="font-size: 11.5px; color: #ff8a80;">Quick-Commerce</span>
+              </div>
+            </div>
+
+            <!-- Project 4: DIGI One-Click Batch Print -->
+            <div class="project-card-item" data-category="automation">
+              <div>
+                <div class="project-card-top">
+                  <div class="project-card-icon" style="background: rgba(52, 168, 83, 0.15); color: #81c995; border-color: rgba(52, 168, 83, 0.3);">
+                    <i class="fa-solid fa-print"></i>
+                  </div>
+                  <div>
+                    <div class="project-card-title">DIGI One-Click Batch Print Engine</div>
+                    <div class="project-card-role">Process Optimization · Jeel Vaghani</div>
+                  </div>
+                </div>
+                <div class="project-card-desc">
+                  Instant 1-click batch printing solution accelerating warehouse dispatch speeds by 400%. Generates formatted shipping labels, packing slips, and short-stock WIP reports directly from marketplace sheets with automatic spooling.
+                </div>
+                <div class="project-tags-row">
+                  <span class="project-tag"><i class="fa-brands fa-windows"></i> Power Pivot (.exe)</span>
+                  <span class="project-tag"><i class="fa-brands fa-android"></i> Mobile App</span>
+                  <span class="project-tag"><i class="fa-solid fa-file-pdf"></i> Batch PDF Engine</span>
+                  <span class="project-tag"><i class="fa-solid fa-gauge-high"></i> 400% Acceleration</span>
+                </div>
+              </div>
+              <div class="project-card-bottom">
+                <span class="project-status-pill"><span class="status-dot-pulse"></span> 400% Speed Improvement</span>
+                <span style="font-size: 11.5px; color: #81c995;">Zero Jam Spool</span>
+              </div>
+            </div>
+
+            <!-- Project 5: OSLC In-Out Workforce Tracker -->
+            <div class="project-card-item" data-category="erp">
+              <div>
+                <div class="project-card-top">
+                  <div class="project-card-icon" style="background: rgba(197, 138, 249, 0.15); color: #c58af9; border-color: rgba(197, 138, 249, 0.3);">
+                    <i class="fa-solid fa-user-clock"></i>
+                  </div>
+                  <div>
+                    <div class="project-card-title">OSLC In-Out & Attendance System</div>
+                    <div class="project-card-role">Workforce Solutions · Jeel Vaghani</div>
+                  </div>
+                </div>
+                <div class="project-card-desc">
+                  Gate security and factory attendance tracking system. Logs employee entry/exit, material in-and-out passes, contractor records, and automatically compiles daily pending workforce reports across departments.
+                </div>
+                <div class="project-tags-row">
+                  <span class="project-tag"><i class="fa-brands fa-windows"></i> Desktop App</span>
+                  <span class="project-tag"><i class="fa-brands fa-android"></i> Mobile Companion</span>
+                  <span class="project-tag"><i class="fa-solid fa-shield-halved"></i> Gate Pass Security</span>
+                  <span class="project-tag"><i class="fa-solid fa-chart-column"></i> Daily Shift Logs</span>
+                </div>
+              </div>
+              <div class="project-card-bottom">
+                <span class="project-status-pill"><span class="status-dot-pulse"></span> Factory Deployed</span>
+                <span style="font-size: 11.5px; color: #c58af9;">Daily In/Out</span>
+              </div>
+            </div>
+
+            <!-- Project 6: OSLC Local 4K Ad & Reel Maker -->
+            <div class="project-card-item" data-category="media">
+              <div>
+                <div class="project-card-top">
+                  <div class="project-card-icon" style="background: rgba(225, 48, 108, 0.15); color: #ff80ab; border-color: rgba(225, 48, 108, 0.3);">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                  </div>
+                  <div>
+                    <div class="project-card-title">OSLC Local 4K Ad & Reel Studio</div>
+                    <div class="project-card-role">AI Media Engineer · Jeel Vaghani</div>
+                  </div>
+                </div>
+                <div class="project-card-desc">
+                  Automated high-definition video production engine generating 4K product advertisement videos and viral social reels for fashion ecommerce catalogs without requiring complex manual video editing.
+                </div>
+                <div class="project-tags-row">
+                  <span class="project-tag"><i class="fa-solid fa-desktop"></i> Desktop Studio</span>
+                  <span class="project-tag"><i class="fa-solid fa-video"></i> 4K Ultra-HD Rendering</span>
+                  <span class="project-tag"><i class="fa-solid fa-wand-magic"></i> AI Motion Choreography</span>
+                  <span class="project-tag"><i class="fa-brands fa-instagram"></i> Viral Reel Templates</span>
+                </div>
+              </div>
+              <div class="project-card-bottom">
+                <span class="project-status-pill"><span class="status-dot-pulse"></span> 4K Ultra-HD Output</span>
+                <span style="font-size: 11.5px; color: #ff80ab;">AI Automation</span>
+              </div>
+            </div>
+
+            <!-- Project 7: OSLC Packing Control Station -->
+            <div class="project-card-item" data-category="logistics">
+              <div>
+                <div class="project-card-top">
+                  <div class="project-card-icon" style="background: rgba(0, 210, 255, 0.15); color: #00d2ff; border-color: rgba(0, 210, 255, 0.3);">
+                    <i class="fa-solid fa-box-open"></i>
+                  </div>
+                  <div>
+                    <div class="project-card-title">OSLC Packing Station Validator</div>
+                    <div class="project-card-role">Quality Control · Jeel Vaghani</div>
+                  </div>
+                </div>
+                <div class="project-card-desc">
+                  Station-based packing verification software ensuring zero-error parcel dispatch. Scans final packed orders against invoice barcodes with instant visual green/red pass confirmation to prevent wrong-item shipping.
+                </div>
+                <div class="project-tags-row">
+                  <span class="project-tag"><i class="fa-solid fa-laptop"></i> Station PC</span>
+                  <span class="project-tag"><i class="fa-brands fa-android"></i> Mobile App</span>
+                  <span class="project-tag"><i class="fa-solid fa-circle-check"></i> Barcode Cross-Match</span>
+                  <span class="project-tag"><i class="fa-solid fa-weight-scale"></i> Weight Verification</span>
+                </div>
+              </div>
+              <div class="project-card-bottom">
+                <span class="project-status-pill"><span class="status-dot-pulse"></span> 0% Dispatch Error Rate</span>
+                <span style="font-size: 11.5px; color: #00d2ff;">Quality Pass</span>
+              </div>
+            </div>
+
+            <!-- Project 8: JEEL VAGHANI: THE SULTAN & LIFE -->
+            <div class="project-card-item" data-category="media">
+              <div>
+                <div class="project-card-top">
+                  <div class="project-card-icon" style="background: linear-gradient(135deg, rgba(229, 9, 20, 0.2), rgba(249, 171, 0, 0.2)); color: #ffd700; border-color: rgba(249, 171, 0, 0.4);">
+                    <i class="fa-solid fa-film"></i>
+                  </div>
+                  <div>
+                    <div class="project-card-title">JEEL VAGHANI: THE SULTAN & LIFE</div>
+                    <div class="project-card-role">Lead Actor & Producer · Jeel Vaghani</div>
+                  </div>
+                </div>
+                <div class="project-card-desc">
+                  Official cinematic action movie experience. Features high-definition 1080p IMAX theater player, authentic Kling AI motion choreography, synthesized soundtrack, real-time particle rain VFX, and AI voice cloning studio.
+                </div>
+                <div class="project-tags-row">
+                  <span class="project-tag"><i class="fa-solid fa-clapperboard"></i> 1080p IMAX Theater</span>
+                  <span class="project-tag"><i class="fa-solid fa-robot"></i> Kling AI Action</span>
+                  <span class="project-tag"><i class="fa-solid fa-microphone"></i> AI Voice Studio</span>
+                  <span class="project-tag"><i class="fa-solid fa-volume-high"></i> Dolby Atmos Audio</span>
+                </div>
+              </div>
+              <div class="project-card-bottom">
+                <span class="project-status-pill"><span class="status-dot-pulse"></span> Live Cinema Player</span>
+                <a href="movie.html" style="font-size: 12px; color: #ffd700; font-weight: 700; text-decoration: none;">Watch Movie &rarr;</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
 
         <!-- INSTAGRAM AUTO-SYNC LIVE HUB (FREE & INSTANT) -->
         <div class="instagram-sync-hub" style="background: linear-gradient(135deg, rgba(225, 48, 108, 0.12), rgba(131, 58, 180, 0.08)); border: 1px solid rgba(225, 48, 108, 0.35); border-radius: 12px; padding: 18px; margin: 20px 0 24px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.25);">
@@ -1615,14 +2246,25 @@
       </div>
     </section>
 
-    <!-- Photo Gallery Grid -->
+    <!-- Photo Gallery Grid (All 12 Authentic Photos & Cinematic Stills) -->
     <section>
-      <h2 style="font-size: 26px; color: #fff; margin-bottom: 20px;">
-        <i class="fa-solid fa-camera-retro" style="color: #8ab4f8;"></i> Exclusive Photo Collection
-      </h2>
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 20px; flex-wrap: wrap; gap: 12px;">
+        <div>
+          <div style="font-size: 13px; font-weight: 600; color: #8ab4f8; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 4px;">
+            <i class="fa-solid fa-image"></i> High-Resolution Visual Gallery
+          </div>
+          <h2 style="font-size: 26px; color: #fff; margin: 0;">
+            <i class="fa-solid fa-camera-retro" style="color: #8ab4f8;"></i> Exclusive Photo Collection (12 Photos)
+          </h2>
+        </div>
+        <span style="background: rgba(138, 180, 248, 0.18); color: #8ab4f8; border: 1px solid #4285f4; font-size: 12px; padding: 4px 12px; border-radius: 12px; font-weight: 600;">
+          <i class="fa-solid fa-eye"></i> Click any photo to view full size
+        </span>
+      </div>
+
       <div class="gallery-grid">
         <div class="gallery-card" onclick="viewPhoto('./assets/jeel-suit.jpeg')">
-          <img src="./assets/jeel-suit.jpeg" alt="Corporate Suit">
+          <img src="./assets/jeel-suit.jpeg" alt="Corporate Suit - Balcony" loading="lazy">
           <div class="gallery-card-info">
             <div class="gallery-card-title">Corporate Executive</div>
             <div class="gallery-card-desc">Luxury Balcony View · Sunset Golden Hour</div>
@@ -1630,7 +2272,7 @@
         </div>
 
         <div class="gallery-card" onclick="viewPhoto('./assets/jeel-royal.jpeg')">
-          <img src="./assets/jeel-royal.jpeg" alt="Royal Heritage">
+          <img src="./assets/jeel-royal.jpeg" alt="Royal Heritage Sherwani" loading="lazy">
           <div class="gallery-card-info">
             <div class="gallery-card-title">Royal Heritage Sherwani</div>
             <div class="gallery-card-desc">Velvet Embroidery · Palace Architecture</div>
@@ -1638,7 +2280,7 @@
         </div>
 
         <div class="gallery-card" onclick="viewPhoto('./assets/jeel-cyberpunk.jpeg')">
-          <img src="./assets/jeel-cyberpunk.jpeg" alt="Cyberpunk Times Square">
+          <img src="./assets/jeel-cyberpunk.jpeg" alt="Cyberpunk Times Square" loading="lazy">
           <div class="gallery-card-info">
             <div class="gallery-card-title">Cyberpunk Neon Edition</div>
             <div class="gallery-card-desc">Times Square · LED Jacket Aesthetic</div>
@@ -1646,26 +2288,339 @@
         </div>
 
         <div class="gallery-card" onclick="viewPhoto('./assets/jeel-biker.jpeg')">
-          <img src="./assets/jeel-biker.jpeg" alt="Mountain Biker">
+          <img src="./assets/jeel-biker.jpeg" alt="Mountain Highway Biker" loading="lazy">
           <div class="gallery-card-info">
             <div class="gallery-card-title">Mountain Highway Rider</div>
             <div class="gallery-card-desc">Royal Enfield Cruiser · Misty Hills</div>
           </div>
         </div>
 
-        <div class="gallery-card" onclick="viewPhoto('./assets/jeel-beach.jpeg')">
-          <img src="./assets/jeel-beach.jpeg" alt="Beach Resort">
+        <div class="gallery-card" onclick="viewPhoto('./assets/jeel-movie-sultan.jpg')">
+          <img src="./assets/jeel-movie-sultan.jpg" alt="The Sultan Mafia Emperor" loading="lazy">
           <div class="gallery-card-info">
-            <div class="gallery-card-title">Tropical Island Sunset</div>
-            <div class="gallery-card-desc">Ocean Boardwalk · Linen Leisure</div>
+            <div class="gallery-card-title">The Sultan Mafia Emperor</div>
+            <div class="gallery-card-desc">Gold Throne · Feature Film Lead</div>
           </div>
         </div>
 
-        <div class="gallery-card" onclick="viewPhoto('./assets/jeel-festival.jpeg')">
-          <img src="./assets/jeel-festival.jpeg" alt="Festive Look">
+        <div class="gallery-card" onclick="viewPhoto('./assets/jeel-movie-rudra.jpg')">
+          <img src="./assets/jeel-movie-rudra.jpg" alt="Rudra Action Hero" loading="lazy">
           <div class="gallery-card-info">
-            <div class="gallery-card-title">Celebration Night</div>
-            <div class="gallery-card-desc">Black & Gold Kurta · Heritage Courtyard</div>
+            <div class="gallery-card-title">Rudra Action Hero</div>
+            <div class="gallery-card-desc">Cinematic Combat Still · Feature Lead</div>
+          </div>
+        </div>
+
+        <div class="gallery-card" onclick="viewPhoto('./assets/jeel-life-poster.jpg')">
+          <img src="./assets/jeel-life-poster.jpg" alt="Jeel Vaghani: Life Movie Poster" loading="lazy">
+          <div class="gallery-card-info">
+            <div class="gallery-card-title">JEEL VAGHANI: LIFE Poster</div>
+            <div class="gallery-card-desc">Official Theatrical Blockbuster Key Art</div>
+          </div>
+        </div>
+
+        <div class="gallery-card" onclick="viewPhoto('./assets/jeel-life-1-romance.jpg')">
+          <img src="./assets/jeel-life-1-romance.jpg" alt="Sunset Romance Scene" loading="lazy">
+          <div class="gallery-card-info">
+            <div class="gallery-card-title">Sunset Romance Scene</div>
+            <div class="gallery-card-desc">Cinema Scene 1 · Emotional Narrative</div>
+          </div>
+        </div>
+
+        <div class="gallery-card" onclick="viewPhoto('./assets/jeel-life-2-threat.jpg')">
+          <img src="./assets/jeel-life-2-threat.jpg" alt="Palace Threat Standoff" loading="lazy">
+          <div class="gallery-card-info">
+            <div class="gallery-card-title">Palace Standoff Scene</div>
+            <div class="gallery-card-desc">Cinema Scene 2 · High Tension Standoff</div>
+          </div>
+        </div>
+
+        <div class="gallery-card" onclick="viewPhoto('./assets/jeel-life-3-combat.jpg')">
+          <img src="./assets/jeel-life-3-combat.jpg" alt="Rain Martial Combat" loading="lazy">
+          <div class="gallery-card-info">
+            <div class="gallery-card-title">Rain Martial Arts Combat</div>
+            <div class="gallery-card-desc">Cinema Scene 3 · Martial Combat Stunt</div>
+          </div>
+        </div>
+
+        <div class="gallery-card" onclick="viewPhoto('./assets/movie-scene-3-chase.jpg')">
+          <img src="./assets/movie-scene-3-chase.jpg" alt="Highway Car Chase" loading="lazy">
+          <div class="gallery-card-info">
+            <div class="gallery-card-title">Highway Car Shootout</div>
+            <div class="gallery-card-desc">Cinema Scene 4 · High-Speed Pursuit</div>
+          </div>
+        </div>
+
+        <div class="gallery-card" onclick="viewPhoto('./assets/jeel-life-5-climax.jpg')">
+          <img src="./assets/jeel-life-5-climax.jpg" alt="Fire Walk Climax Victory" loading="lazy">
+          <div class="gallery-card-info">
+            <div class="gallery-card-title">Climax Fire Walk Victory</div>
+            <div class="gallery-card-desc">Cinema Scene 5 · Dramatic Victory</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Master Software & Engineering Systems Section in Portfolio View -->
+    <section style="margin-top: 50px;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 24px; flex-wrap: wrap; gap: 12px;">
+        <div>
+          <div style="font-size: 13px; font-weight: 600; color: #8ab4f8; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 4px;">
+            <i class="fa-solid fa-code-branch"></i> Engineering & Innovations
+          </div>
+          <h2 style="font-size: 26px; color: #fff; margin: 0;">
+            <i class="fa-solid fa-cubes-stacked" style="color: #4285f4;"></i> Master Software Systems (8)
+          </h2>
+          <p style="font-size: 14px; color: #9aa0a6; margin: 6px 0 0 0;">
+            Mission-critical production systems architected and programmed by Jeel Vaghani
+          </p>
+        </div>
+        <span style="background: rgba(52, 168, 83, 0.18); color: #81c995; border: 1px solid #34a853; font-size: 12px; padding: 5px 12px; border-radius: 14px; font-weight: 600;">
+          <span class="status-dot-pulse"></span> 8 Production Systems Live
+        </span>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 18px;">
+        <!-- Card 1: OSLC ERP -->
+        <div style="background: #25272a; border: 1px solid rgba(66, 133, 244, 0.35); border-radius: 14px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(66, 133, 244, 0.15); display: flex; align-items: center; justify-content: center; color: #8ab4f8; font-size: 20px;">
+                  <i class="fa-solid fa-industry"></i>
+                </div>
+                <div>
+                  <h3 style="font-size: 16.5px; font-weight: 700; color: #fff; margin: 0;">OSLC ERP Master Ecosystem</h3>
+                  <div style="font-size: 12px; color: #9aa0a6;">Garment Manufacturing & WIP Lifecycle</div>
+                </div>
+              </div>
+              <span style="background: rgba(66, 133, 244, 0.18); color: #8ab4f8; font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600;">ERP Enterprise</span>
+            </div>
+            <p style="font-size: 13px; color: #bdc1c6; line-height: 1.5; margin-bottom: 14px;">
+              Comprehensive enterprise resource planning engine tracking cutting lots, sewing, washing, packaging, karigar gate pass, and pending WIP shortages.
+            </p>
+            <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="project-tag">Windows .EXE</span>
+              <span class="project-tag">Android .APK</span>
+              <span class="project-tag">Multi-Device Cloud</span>
+              <span class="project-tag">Lot Lifecycle</span>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #3c4043; padding-top: 12px;">
+            <span style="font-size: 12px; color: #81c995; font-weight: 600;"><span class="status-dot-pulse"></span> Active in Production</span>
+            <span style="font-size: 12px; color: #8ab4f8; font-weight: 600;">Desktop + Mobile</span>
+          </div>
+        </div>
+
+        <!-- Card 2: LUMORA Barcode -->
+        <div style="background: #25272a; border: 1px solid rgba(251, 188, 5, 0.35); border-radius: 14px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(251, 188, 5, 0.15); display: flex; align-items: center; justify-content: center; color: #fbbc05; font-size: 20px;">
+                  <i class="fa-solid fa-barcode"></i>
+                </div>
+                <div>
+                  <h3 style="font-size: 16.5px; font-weight: 700; color: #fff; margin: 0;">LUMORA Barcode Engine</h3>
+                  <div style="font-size: 12px; color: #9aa0a6;">Industrial Labeling & Warehouse Binning</div>
+                </div>
+              </div>
+              <span style="background: rgba(251, 188, 5, 0.18); color: #fbbc05; font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600;">Automation</span>
+            </div>
+            <p style="font-size: 13px; color: #bdc1c6; line-height: 1.5; margin-bottom: 14px;">
+              High-speed industrial thermal barcode printer driver and designer with automated SKU, lot numbering, QR codes, and TSPL/EPL integration.
+            </p>
+            <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="project-tag">LUMORA_BARCODE_PC.exe</span>
+              <span class="project-tag">LUMORA_BARCODE.apk</span>
+              <span class="project-tag">Thermal Print TSPL</span>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #3c4043; padding-top: 12px;">
+            <span style="font-size: 12px; color: #81c995; font-weight: 600;"><span class="status-dot-pulse"></span> Industrial Grade</span>
+            <span style="font-size: 12px; color: #fbbc05; font-weight: 600;">Hardware Connected</span>
+          </div>
+        </div>
+
+        <!-- Card 3: Blinkit PO x Digi ERP -->
+        <div style="background: #25272a; border: 1px solid rgba(234, 67, 53, 0.35); border-radius: 14px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(234, 67, 53, 0.15); display: flex; align-items: center; justify-content: center; color: #ea4335; font-size: 20px;">
+                  <i class="fa-solid fa-truck-fast"></i>
+                </div>
+                <div>
+                  <h3 style="font-size: 16.5px; font-weight: 700; color: #fff; margin: 0;">Blinkit PO x Digi Scanner</h3>
+                  <div style="font-size: 12px; color: #9aa0a6;">Quick-Commerce ASN & Verification</div>
+                </div>
+              </div>
+              <span style="background: rgba(234, 67, 53, 0.18); color: #ea4335; font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600;">Logistics</span>
+            </div>
+            <p style="font-size: 13px; color: #bdc1c6; line-height: 1.5; margin-bottom: 14px;">
+              High-throughput Blinkit Purchase Order fulfillment engine with instant barcode match, over/under delivery warnings, and auto invoice mapping.
+            </p>
+            <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="project-tag">Blinkit_Scanner.apk</span>
+              <span class="project-tag">Digi_Portal.apk</span>
+              <span class="project-tag">Quick Commerce</span>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #3c4043; padding-top: 12px;">
+            <span style="font-size: 12px; color: #81c995; font-weight: 600;"><span class="status-dot-pulse"></span> Zero-Error Inbound</span>
+            <span style="font-size: 12px; color: #ea4335; font-weight: 600;">Blinkit ASN Sync</span>
+          </div>
+        </div>
+
+        <!-- Card 4: DIGI One Click Print -->
+        <div style="background: #25272a; border: 1px solid rgba(52, 168, 83, 0.35); border-radius: 14px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(52, 168, 83, 0.15); display: flex; align-items: center; justify-content: center; color: #34a853; font-size: 20px;">
+                  <i class="fa-solid fa-print"></i>
+                </div>
+                <div>
+                  <h3 style="font-size: 16.5px; font-weight: 700; color: #fff; margin: 0;">DIGI One-Click Batch Print</h3>
+                  <div style="font-size: 12px; color: #9aa0a6;">High-Speed Shipping Dispatch</div>
+                </div>
+              </div>
+              <span style="background: rgba(52, 168, 83, 0.18); color: #34a853; font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600;">Automation</span>
+            </div>
+            <p style="font-size: 13px; color: #bdc1c6; line-height: 1.5; margin-bottom: 14px;">
+              Automated batch thermal printing driver processing hundreds of Flipkart, Amazon, and Meesho shipping labels in one click without dialog lag.
+            </p>
+            <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="project-tag">DIGI ONE CLICK PRINT.exe</span>
+              <span class="project-tag">DIGI_ONE_CLICK.apk</span>
+              <span class="project-tag">Batch Spooler</span>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #3c4043; padding-top: 12px;">
+            <span style="font-size: 12px; color: #81c995; font-weight: 600;"><span class="status-dot-pulse"></span> 100+ Labels/min</span>
+            <span style="font-size: 12px; color: #34a853; font-weight: 600;">Multi-Marketplace</span>
+          </div>
+        </div>
+
+        <!-- Card 5: OSLC In-Out Attendance -->
+        <div style="background: #25272a; border: 1px solid rgba(138, 180, 248, 0.35); border-radius: 14px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(138, 180, 248, 0.15); display: flex; align-items: center; justify-content: center; color: #8ab4f8; font-size: 20px;">
+                  <i class="fa-solid fa-clock-rotate-left"></i>
+                </div>
+                <div>
+                  <h3 style="font-size: 16.5px; font-weight: 700; color: #fff; margin: 0;">OSLC In-Out & Attendance</h3>
+                  <div style="font-size: 12px; color: #9aa0a6;">Biometric & Daily Shift Reporting</div>
+                </div>
+              </div>
+              <span style="background: rgba(138, 180, 248, 0.18); color: #8ab4f8; font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600;">Workforce</span>
+            </div>
+            <p style="font-size: 13px; color: #bdc1c6; line-height: 1.5; margin-bottom: 14px;">
+              Automated factory attendance and shift tracking system generating real-time daily karigar logs, overtime calculations, and WhatsApp attendance summaries.
+            </p>
+            <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="project-tag">OSLC IN OUT REPORT.exe</span>
+              <span class="project-tag">OSLC_IN_OUT.apk</span>
+              <span class="project-tag">Realtime Logs</span>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #3c4043; padding-top: 12px;">
+            <span style="font-size: 12px; color: #81c995; font-weight: 600;"><span class="status-dot-pulse"></span> Daily Automated Logs</span>
+            <span style="font-size: 12px; color: #8ab4f8; font-weight: 600;">Shift & Gate System</span>
+          </div>
+        </div>
+
+        <!-- Card 6: OSLC Local 4K Ad Maker -->
+        <div style="background: #25272a; border: 1px solid rgba(225, 48, 108, 0.35); border-radius: 14px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(225, 48, 108, 0.15); display: flex; align-items: center; justify-content: center; color: #e1306c; font-size: 20px;">
+                  <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <div>
+                  <h3 style="font-size: 16.5px; font-weight: 700; color: #fff; margin: 0;">OSLC Local 4K Ad Maker</h3>
+                  <div style="font-size: 12px; color: #9aa0a6;">AI Video & Instagram Reel Studio</div>
+                </div>
+              </div>
+              <span style="background: rgba(225, 48, 108, 0.18); color: #e1306c; font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600;">Media Studio</span>
+            </div>
+            <p style="font-size: 13px; color: #bdc1c6; line-height: 1.5; margin-bottom: 14px;">
+              Automated high-definition marketing video and commercial reel rendering studio creating branded video campaigns with audio synthesis.
+            </p>
+            <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="project-tag">OSLC 4K Ad Studio</span>
+              <span class="project-tag">FFmpeg Hardware Accel</span>
+              <span class="project-tag">Instagram 9:16</span>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #3c4043; padding-top: 12px;">
+            <span style="font-size: 12px; color: #81c995; font-weight: 600;"><span class="status-dot-pulse"></span> Ultra HD 4K</span>
+            <span style="font-size: 12px; color: #ff80ab; font-weight: 600;">Social Engine</span>
+          </div>
+        </div>
+
+        <!-- Card 7: OSLC Packing Control -->
+        <div style="background: #25272a; border: 1px solid rgba(0, 198, 255, 0.35); border-radius: 14px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(0, 198, 255, 0.15); display: flex; align-items: center; justify-content: center; color: #00c6ff; font-size: 20px;">
+                  <i class="fa-solid fa-boxes-packing"></i>
+                </div>
+                <div>
+                  <h3 style="font-size: 16.5px; font-weight: 700; color: #fff; margin: 0;">OSLC Packing Control</h3>
+                  <div style="font-size: 12px; color: #9aa0a6;">Verification & Dispatch Station</div>
+                </div>
+              </div>
+              <span style="background: rgba(0, 198, 255, 0.18); color: #00c6ff; font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600;">Quality Control</span>
+            </div>
+            <p style="font-size: 13px; color: #bdc1c6; line-height: 1.5; margin-bottom: 14px;">
+              Quality inspection gate for final dispatch ensuring garment sizes, colors, polybag barcodes, and carton master totals match purchase orders with 0% error.
+            </p>
+            <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="project-tag">OSLC Packing Control.exe</span>
+              <span class="project-tag">Packing_Control.apk</span>
+              <span class="project-tag">Barcode Verification</span>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #3c4043; padding-top: 12px;">
+            <span style="font-size: 12px; color: #81c995; font-weight: 600;"><span class="status-dot-pulse"></span> Zero-Mismatch Gate</span>
+            <span style="font-size: 12px; color: #00c6ff; font-weight: 600;">Dispatch Control</span>
+          </div>
+        </div>
+
+        <!-- Card 8: JEEL VAGHANI: THE SULTAN & LIFE -->
+        <div style="background: #25272a; border: 1px solid rgba(255, 215, 0, 0.35); border-radius: 14px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(255, 215, 0, 0.15); display: flex; align-items: center; justify-content: center; color: #ffd700; font-size: 20px;">
+                  <i class="fa-solid fa-clapperboard"></i>
+                </div>
+                <div>
+                  <h3 style="font-size: 16.5px; font-weight: 700; color: #ffd700; margin: 0;">JEEL VAGHANI: THE SULTAN</h3>
+                  <div style="font-size: 12px; color: #9aa0a6;">Feature Film Cinema & Interactive Engine</div>
+                </div>
+              </div>
+              <span style="background: rgba(255, 215, 0, 0.18); color: #ffd700; font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600;">Feature Film</span>
+            </div>
+            <p style="font-size: 13px; color: #bdc1c6; line-height: 1.5; margin-bottom: 14px;">
+              Theatrical cinematic experience showcasing Jeel Vaghani's cinematic lead roles ("The Sultan" and "Rudra") with immersive Dolby surround sound and Chapter selection.
+            </p>
+            <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="project-tag">movie.html</span>
+              <span class="project-tag">Dolby 5.1 WebAudio</span>
+              <span class="project-tag">1080p Master Stills</span>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #3c4043; padding-top: 12px;">
+            <span style="font-size: 12px; color: #81c995; font-weight: 600;"><span class="status-dot-pulse"></span> Live Stream Active</span>
+            <a href="movie.html" class="btn btn-primary" style="padding: 6px 14px; font-size: 12px; background: linear-gradient(135deg, #ffd700, #ff8c00); color: #000; font-weight: 700; border: none; text-decoration: none;">
+              <i class="fa-solid fa-play"></i> Watch Movie &rarr;
+            </a>
           </div>
         </div>
       </div>
@@ -1784,8 +2739,9 @@
             <option value="./assets/jeel-royal.jpeg">Royal Velvet Sherwani (Heritage Palace)</option>
             <option value="./assets/jeel-cyberpunk.jpeg">Cyberpunk Neon Edition (Times Square)</option>
             <option value="./assets/jeel-biker.jpeg">Mountain Motorcycle Rider</option>
-            <option value="./assets/jeel-beach.jpeg">Tropical Ocean Boardwalk</option>
-            <option value="./assets/jeel-festival.jpeg">Celebration Golden Kurta</option>
+            <option value="./assets/jeel-movie-sultan.jpg">The Sultan Mafia Emperor (Gold Throne)</option>
+            <option value="./assets/jeel-movie-rudra.jpg">Rudra Action Hero (Cinematic Combat)</option>
+            <option value="./assets/jeel-life-poster.jpg">JEEL VAGHANI: LIFE (Movie Poster)</option>
           </select>
         </div>
 
@@ -1811,8 +2767,9 @@
             <option value="./assets/jeel-royal.jpeg">Royal Velvet Sherwani (Heritage Palace)</option>
             <option value="./assets/jeel-cyberpunk.jpeg">Cyberpunk Neon Edition (Times Square)</option>
             <option value="./assets/jeel-biker.jpeg">Mountain Motorcycle Rider</option>
-            <option value="./assets/jeel-beach.jpeg">Tropical Ocean Boardwalk</option>
-            <option value="./assets/jeel-festival.jpeg">Celebration Golden Kurta</option>
+            <option value="./assets/jeel-movie-sultan.jpg">The Sultan Mafia Emperor (Gold Throne)</option>
+            <option value="./assets/jeel-movie-rudra.jpg">Rudra Action Hero (Cinematic Combat)</option>
+            <option value="./assets/jeel-life-poster.jpg">JEEL VAGHANI: LIFE (Movie Poster)</option>
           </select>
         </div>
 
@@ -1971,6 +2928,47 @@
         toggleBtn.innerHTML = '<i class="fa-solid fa-globe"></i> <span>Full Portfolio View</span>';
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
+    }
+
+    // Filter Main Google Tabs
+    function filterMainTab(tab, el) {
+      if (isPortfolioMode) {
+        toggleView();
+      }
+      document.querySelectorAll('.google-tabs .tab-item').forEach(t => t.classList.remove('active'));
+      if (el) {
+        el.classList.add('active');
+      } else {
+        const targetTab = document.getElementById(tab === 'projects' ? 'tabMainProjects' : tab === 'photos' ? 'tabMainPhotos' : tab === 'posts' ? 'tabMainPosts' : 'tabMainAll');
+        if (targetTab) targetTab.classList.add('active');
+      }
+
+      if (tab === 'projects') {
+        const sec = document.getElementById('projectsSection');
+        if (sec) sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else if (tab === 'photos') {
+        const sec = document.getElementById('visualPhotosSection');
+        if (sec) sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else if (tab === 'posts') {
+        const sec = document.getElementById('postsFeedContainer') || document.querySelector('.social-feed');
+        if (sec) sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+
+    // Filter Software Projects by Category
+    function filterProjects(cat, btn) {
+      document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      const cards = document.querySelectorAll('.project-card-item');
+      cards.forEach(card => {
+        if (cat === 'all' || card.getAttribute('data-category') === cat) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
     }
 
     // Modal Control
