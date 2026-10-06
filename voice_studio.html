@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JEEL VAGHANI: AI VOICE CLONING STUDIO 🎙️</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Outfit:wght@300;400;600;700;800&family=Noto+Sans+Gujarati:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    :root {
+      --gold: #f9ab00;
+      --red: #e50914;
+      --bg: #090a0f;
+      --surface: #14161f;
+      --border: #232738;
+      --font-title: 'Cinzel', serif;
+      --font-body: 'Outfit', sans-serif;
+      --font-gu: 'Noto Sans Gujarati', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: radial-gradient(circle at top center, #1b1e2e 0%, var(--bg) 70%);
+      color: #fff;
+      font-family: var(--font-body);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px 16px;
+    }
+
+    .header-box {
+      text-align: center;
+      max-width: 850px;
+      margin-bottom: 24px;
+    }
+
+    .badge-top {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--red), var(--gold));
+      color: #000;
+      font-weight: 800;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-family: var(--font-title);
+      font-size: 34px;
+      letter-spacing: 2px;
+      background: linear-gradient(135deg, #fff, var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 8px;
+    }
+
+    .sub-desc {
+      font-size: 16px;
+      color: #a0aec0;
+      font-family: var(--font-gu);
+      line-height: 1.5;
+    }
+
+    .studio-container {
+      width: 100%;
+      max-width: 850px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    /* Script Prompter Box */
+    .prompter-box {
+      background: rgba(0, 0, 0, 0.45);
+      border: 2px solid rgba(249, 171, 0, 0.35);
+      border-radius: 12px;
+      padding: 20px;
+      position: relative;
+    }
+
+    .prompter-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .dialogue-text-gu {
+      font-family: var(--font-gu);
+      font-size: 22px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.6;
+      margin-bottom: 12px;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .dialogue-text-hi {
+      font-family: var(--font-gu);
+      font-size: 17px;
+      color: #e2e8f0;
+      font-style: italic;
+      line-height: 1.5;
+      border-top: 1px dashed rgba(255, 255, 255, 0.15);
+      padding-top: 10px;
+    }
+
+    /* Visualizer & Timer */
+    .recorder-hud {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .timer-display {
+      font-family: monospace;
+      font-size: 38px;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 2px;
+    }
+
+    canvas#audioVisualizer {
+      width: 100%;
+      height: 90px;
+      background: #0d0f17;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    /* Control Buttons */
+    .btn-row {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .studio-btn {
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: none;
+      transition: all 0.25s ease;
+      font-family: var(--font-body);
+    }
+
+    .btn-record {
+      background: linear-gradient(135deg, #e50914, #ff4d4d);
+      color: #fff;
+      box-shadow: 0 0 25px rgba(229, 9, 20, 0.6);
+    }
+
+    .btn-record:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 35px rgba(229, 9, 20, 0.9);
+    }
+
+    .btn-record.recording {
+      animation: pulseRecord 1s infinite alternate;
+      background: #e50914;
+    }
+
+    @keyframes pulseRecord {
+      0% { box-shadow: 0 0 15px rgba(229, 9, 20, 0.5); }
+      100% { box-shadow: 0 0 40px rgba(229, 9, 20, 1); }
+    }
+
+    .btn-stop {
+      background: #2d3748;
+      color: #fff;
+    }
+
+    .btn-stop:hover {
+      background: #4a5568;
+    }
+
+    .btn-save {
+      background: linear-gradient(135deg, #f9ab00, #ffc738);
+      color: #000;
+      box-shadow: 0 0 20px rgba(249, 171, 0, 0.4);
+    }
+
+    .btn-save:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 35px rgba(249, 171, 0, 0.8);
+    }
+
+    /* Player Box for preview */
+    .preview-box {
+      display: none;
+      background: rgba(0, 0, 0, 0.35);
+      padding: 16px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      align-items: center;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .preview-box.active {
+      display: flex;
+    }
+
+    audio {
+      width: 100%;
+      max-width: 450px;
+      accent-color: var(--gold);
+    }
+
+    /* Steps Section */
+    .steps-section {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 12px;
+      padding: 20px;
+      border-left: 4px solid var(--gold);
+    }
+
+    .steps-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .steps-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 14px;
+      color: #cbd5e0;
+      font-family: var(--font-gu);
+      line-height: 1.6;
+    }
+
+    .steps-list li {
+      margin-left: 20px;
+    }
+
+    .back-nav {
+      margin-top: 20px;
+      display: flex;
+      gap: 16px;
+    }
+
+    .back-btn {
+      color: #a0aec0;
+      text-decoration: none;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+
+    .back-btn:hover {
+      color: var(--gold);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header-box">
+    <div class="badge-top">👑 AI VOICE DUBBING STUDIO</div>
+    <h1>JEEL VAGHANI VOICE CLONING</h1>
+    <p class="sub-desc">તમારો ૧ મિનિટનો અવાજ રેકોર્ડ કરો, જેથી આખી મુવીમાં તમારા અસલી અવાજમાં ગુજરાતી અને હિન્દી ડાયલોગ્સ ડબ થઈ શકે!</p>
+  </div>
+
+  <div class="studio-container">
+    
+    <!-- Prompter / Dialogue Card -->
+    <div class="prompter-box">
+      <div class="prompter-title">
+        <i class="fa-solid fa-scroll"></i>
+        <span>આ ડાયલોગ માઈક્રોફોનમાં બોલીને રેકોર્ડ કરો (TRAINING SCRIPT):</span>
+      </div>
+      <div class="dialogue-text-gu">
+        "મારી માએ કહ્યું હતું... તું ભલે ગરીબ જન્મે, પણ મરે ત્યારે દુનિયા પર તારું રાજ હોવું જોઈએ! વાયલન્સ... વાયલન્સ... વાયલન્સ! મને નથી ગમતું, હું ટાળું છું... પણ વાયલન્સને હું ગમું છું! તમારા કાયદા તમારા દેશ માટે હશે... આ સોનાની ધરતી પર કાયદો માત્ર જીલ વાઘાણીનો ચાલે છે!"
+      </div>
+      <div class="dialogue-text-hi">
+        "Violence... Violence... Violence! I don't like it, I avoid... But Violence likes me! I can't avoid! इस सोने की दुनिया पर सिर्फ़ सुल्तान जीतू भाई का क़ानून चलता है!"
+      </div>
+    </div>
+
+    <!-- Recorder HUD -->
+    <div class="recorder-hud">
+      <div class="timer-display" id="timerDisplay">00:00</div>
+      <canvas id="audioVisualizer"></canvas>
+    </div>
+
+    <!-- Buttons -->
+    <div class="btn-row">
+      <button class="studio-btn btn-record" id="recordBtn" onclick="toggleRecording()">
+        <i class="fa-solid fa-microphone" id="recIcon"></i>
+        <span id="recText">અવાજ રેકોર્ડ કરો (Start Recording)</span>
+      </button>
+
+      <button class="studio-btn btn-stop" id="stopBtn" onclick="stopRecording()" disabled>
+        <i class="fa-solid fa-square"></i>
+        <span>સ્ટોપ (Stop)</span>
+      </button>
+
+      <button class="studio-btn btn-save" id="saveBtn" onclick="saveAudioFile()" style="display: none;">
+        <i class="fa-solid fa-cloud-arrow-down"></i>
+        <span>વોઇસ સેવ કરો (Save jeel_voice.wav)</span>
+      </button>
+    </div>
+
+    <!-- Audio Preview Player -->
+    <div class="preview-box" id="previewBox">
+      <span style="font-size: 14px; font-weight: 600; color: var(--gold);">તમારો રેકોર્ડ થયેલો અવાજ સાંભળો:</span>
+      <audio id="audioPreview" controls></audio>
+    </div>
+
+    <!-- Workflow Steps -->
+    <div class="steps-section">
+      <div class="steps-title">🚀 આ વોઇસથી મુવી કેવી રીતે ડબ થશે?</div>
+      <ol class="steps-list">
+        <li><strong>સ્ટેપ ૧ (અવાજ આપો)</strong>: લાલ બટન દબાવીને ઉપર લખેલો ડાયલોગ તમારા અસલી અવાજમાં બોલો અને <strong>'વોઇસ સેવ કરો'</strong> પર ક્લિક કરો.</li>
+        <li><strong>સ્ટેપ ૨ (AI વોઇસ ક્લોનિંગ)</strong>: આ સેવ થયેલી ફાઇલ <code>d:\NOTA\JEEL\assets\jeel_voice.wav</code> તરીકે પ્રોજેક્ટમાં આવી જશે.</li>
+        <li><strong>સ્ટેપ ૩ (મુવી ડબિંગ)</strong>: AI તમારા અવાજનું મોડલ બનાવીને મુવીના તમામ પાત્રો/ડાયલોગ્સને તમારા અવાજમાં રૂપાંતરિત કરી મુવી સાઉન્ડટ્રેક સાથે મિક્સ કરી દેશે!</li>
+      </ol>
+    </div>
+
+  </div>
+
+  <div class="back-nav">
+    <a href="movie.html" class="back-btn">
+      <i class="fa-solid fa-film"></i>
+      <span>સિનેમા પ્લેયર પર જાઓ (movie.html)</span>
+    </a>
+    <span style="color: #4a5568;">•</span>
+    <a href="index.html" class="back-btn">
+      <i class="fa-solid fa-user"></i>
+      <span>જીલ વાઘાણી પ્રોફાઇલ પર જાઓ</span>
+    </a>
+  </div>
+
+  <script>
+    let mediaRecorder = null;
+    let audioChunks = [];
+    let audioBlob = null;
+    let audioUrl = null;
+    let startTime = 0;
+    let timerInterval = null;
+    let isRecording = false;
+
+    let audioContext = null;
+    let analyser = null;
+    let sourceNode = null;
+    let animFrame = null;
+
+    const canvas = document.getElementById('audioVisualizer');
+    const canvasCtx = canvas.getContext('2d');
+
+    function resizeCanvas() {
+      canvas.width = canvas.parentElement.clientWidth;
+      canvas.height = 90;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    function drawWave() {
+      animFrame = requestAnimationFrame(drawWave);
+      if (!analyser) return;
+
+      const bufferLength = analyser.frequencyBinCount;
+      const dataArray = new Uint8Array(bufferLength);
+      analyser.getByteFrequencyData(dataArray);
+
+      canvasCtx.fillStyle = '#0d0f17';
+      canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
+
+      const barWidth = (canvas.width / bufferLength) * 2.5;
+      let barHeight;
+      let x = 0;
+
+      for (let i = 0; i < bufferLength; i++) {
+        barHeight = (dataArray[i] / 255) * canvas.height;
+
+        const grad = canvasCtx.createLinearGradient(0, canvas.height, 0, 0);
+        grad.addColorStop(0, '#e50914');
+        grad.addColorStop(0.5, '#f9ab00');
+        grad.addColorStop(1, '#ffffff');
+
+        canvasCtx.fillStyle = grad;
+        canvasCtx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
+
+        x += barWidth + 1;
+      }
+    }
+
+    async function toggleRecording() {
+      if (isRecording) {
+        stopRecording();
+        return;
+      }
+
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        analyser = audioContext.createAnalyser();
+        analyser.fftSize = 128;
+        sourceNode = audioContext.createMediaStreamSource(stream);
+        sourceNode.connect(analyser);
+
+        audioChunks = [];
+        mediaRecorder = new MediaRecorder(stream);
+        mediaRecorder.ondataavailable = e => {
+          if (e.data.size > 0) audioChunks.push(e.data);
+        };
+
+        mediaRecorder.onstop = () => {
+          audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
+          audioUrl = URL.createObjectURL(audioBlob);
+          const audioPreview = document.getElementById('audioPreview');
+          audioPreview.src = audioUrl;
+          document.getElementById('previewBox').classList.add('active');
+          document.getElementById('saveBtn').style.display = 'inline-flex';
+          
+          if (animFrame) cancelAnimationFrame(animFrame);
+          canvasCtx.fillStyle = '#0d0f17';
+          canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
+          stream.getTracks().forEach(t => t.stop());
+        };
+
+        mediaRecorder.start();
+        isRecording = true;
+
+        document.getElementById('recordBtn').classList.add('recording');
+        document.getElementById('recText').innerText = "રેકોર્ડિંગ ચાલુ છે... (બોલો)";
+        document.getElementById('recIcon').className = "fa-solid fa-microphone-lines";
+        document.getElementById('stopBtn').disabled = false;
+
+        startTime = Date.now();
+        timerInterval = setInterval(() => {
+          const elapsedSec = Math.floor((Date.now() - startTime) / 1000);
+          const mins = String(Math.floor(elapsedSec / 60)).padStart(2, '0');
+          const secs = String(elapsedSec % 60).padStart(2, '0');
+          document.getElementById('timerDisplay').innerText = `${mins}:${secs}`;
+        }, 1000);
+
+        drawWave();
+
+      } catch (err) {
+        alert("માઇક્રોફોન પરમિશન નથી મળી અથવા માઇક કનેક્ટેડ નથી: " + err.message);
+      }
+    }
+
+    function stopRecording() {
+      if (!isRecording) return;
+      isRecording = false;
+      clearInterval(timerInterval);
+      if (mediaRecorder && mediaRecorder.state !== 'inactive') {
+        mediaRecorder.stop();
+      }
+
+      document.getElementById('recordBtn').classList.remove('recording');
+      document.getElementById('recText').innerText = "ફરીથી રેકોર્ડ કરો (Re-Record)";
+      document.getElementById('recIcon').className = "fa-solid fa-rotate-right";
+      document.getElementById('stopBtn').disabled = true;
+    }
+
+    function saveAudioFile() {
+      if (!audioBlob) return;
+      const a = document.createElement('a');
+      a.href = audioUrl;
+      a.download = 'jeel_voice.wav';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      alert("✅ તમારો વોઇસ 'jeel_voice.wav' તરીકે ડાઉનલોડ થઈ ગયો છે!\nતેને d:\\NOTA\\JEEL\\ ફોલ્ડરમાં મૂકો.");
+    }
+  </script>
+</body>
+</html>

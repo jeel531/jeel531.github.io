@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JEEL VAGHANI: AI FACE SWAP MOVIE STUDIO 🎭</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Outfit:wght@300;400;600;700;800&family=Noto+Sans+Gujarati:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    :root {
+      --gold: #f9ab00;
+      --red: #e50914;
+      --bg: #090a0f;
+      --surface: #14161f;
+      --border: #232738;
+      --font-title: 'Cinzel', serif;
+      --font-body: 'Outfit', sans-serif;
+      --font-gu: 'Noto Sans Gujarati', sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: radial-gradient(circle at top center, #1b1e2e 0%, var(--bg) 70%);
+      color: #fff;
+      font-family: var(--font-body);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px 16px;
+    }
+
+    .header-box {
+      text-align: center;
+      max-width: 850px;
+      margin-bottom: 24px;
+    }
+
+    .badge-top {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--red), var(--gold));
+      color: #000;
+      font-weight: 800;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-family: var(--font-title);
+      font-size: 34px;
+      letter-spacing: 2px;
+      background: linear-gradient(135deg, #fff, var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 8px;
+    }
+
+    .sub-desc {
+      font-size: 16px;
+      color: #a0aec0;
+      font-family: var(--font-gu);
+      line-height: 1.5;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 950px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    /* Comparison Box */
+    .swap-showcase {
+      display: grid;
+      grid-template-columns: 1fr 60px 1fr;
+      align-items: center;
+      gap: 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    .showcase-card {
+      text-align: center;
+    }
+
+    .showcase-card img {
+      width: 100%;
+      max-height: 320px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 2px solid rgba(255, 215, 0, 0.4);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
+    }
+
+    .showcase-card .tag {
+      font-family: var(--font-gu);
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--gold);
+      margin-top: 10px;
+    }
+
+    .arrow-icon {
+      font-size: 28px;
+      color: var(--gold);
+      text-align: center;
+      animation: pulseArrow 1.5s infinite;
+    }
+
+    @keyframes pulseArrow {
+      0%, 100% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.25); opacity: 1; color: var(--red); }
+    }
+
+    /* Steps & Tool Cards */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .tool-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: all 0.25s ease;
+    }
+
+    .tool-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(249, 171, 0, 0.2);
+    }
+
+    .tool-card h3 {
+      font-family: var(--font-title);
+      font-size: 20px;
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .tool-card p {
+      font-family: var(--font-gu);
+      font-size: 14px;
+      color: #cbd5e0;
+      line-height: 1.6;
+    }
+
+    .action-link {
+      margin-top: auto;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      text-align: center;
+      display: inline-block;
+      transition: all 0.2s ease;
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold), #ffc738);
+      color: #000;
+    }
+
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 215, 0, 0.2);
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    /* Explanation Box */
+    .guide-box {
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(249, 171, 0, 0.3);
+      border-radius: 14px;
+      padding: 24px;
+    }
+
+    .guide-box h2 {
+      font-family: var(--font-title);
+      font-size: 22px;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+
+    .guide-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      font-family: var(--font-gu);
+      font-size: 15px;
+      color: #e2e8f0;
+      line-height: 1.6;
+    }
+
+    .guide-list li {
+      margin-left: 20px;
+    }
+
+    .back-nav {
+      margin-top: 20px;
+      display: flex;
+      gap: 16px;
+    }
+
+    .nav-dot {
+      color: #4a5568;
+    }
+
+    .back-btn {
+      color: #a0aec0;
+      text-decoration: none;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+
+    .back-btn:hover {
+      color: var(--gold);
+    }
+
+    @media (max-width: 768px) {
+      .swap-showcase { grid-template-columns: 1fr; }
+      .tools-grid { grid-template-columns: 1fr; }
+      .arrow-icon { transform: rotate(90deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header-box">
+    <div class="badge-top">👑 AI FACE SWAP MOVIE TECHNOLOGY</div>
+    <h1>JEEL VAGHANI: KGF FACE SWAP STUDIO</h1>
+    <p class="sub-desc">KGF અથવા કોઈપણ ૨.૫ કલાકની મુવીમાં હીરો (રોકી ભાઈ) ના ચહેરાની જગ્યાએ જીલ વાઘાણીનો અસલી ચહેરો લગાવો!</p>
+  </div>
+
+  <div class="container">
+    
+    <!-- Showcase comparison -->
+    <div class="swap-showcase">
+      <div class="showcase-card">
+        <img src="assets/jeel-suit.jpeg" alt="તમારો અસલી ફોટો (Source Face)">
+        <div class="tag">તમારો અસલી ફોટો (SOURCE FACE)</div>
+      </div>
+
+      <div class="arrow-icon">
+        <i class="fa-solid fa-arrow-right"></i>
+      </div>
+
+      <div class="showcase-card">
+        <img src="assets/jeel-movie-sultan.jpg" alt="મુવીમાં જીલ વાઘાણી (Target Movie)">
+        <div class="tag">આખી મુવીમાં હીરો: જીલ વાઘાણી (RESULT)</div>
+      </div>
+    </div>
+
+    <!-- Explanation Box -->
+    <div class="guide-box">
+      <h2>🎬 આખી મુવીમાં ફેસ સ્વેપ કેવી રીતે થશે?</h2>
+      <ol class="guide-list">
+        <li><strong>સ્ટેપ ૧ (તમારો ફોટો)</strong>: તમારી પાસે <code>assets/jeel-suit.jpeg</code> અથવા <code>assets/jeel-royal.jpeg</code> નો હાઈ-ક્વોલિટી ફોટો પહેલેથી તૈયાર છે!</li>
+        <li><strong>સ્ટેપ ૨ (મુવી ફાઇલ)</strong>: તમારી પાસે KGF ની અથવા કોઈપણ મુવીની વિડીયો ફાઇલ (દા.ત. ૫ મિનિટનો સીન અથવા આખી મુવી) હોવી જોઈએ.</li>
+        <li><strong>સ્ટેપ ૩ (AI પ્રોસેસિંગ)</strong>: AI વિડીયોની દરેક ફ્રેમ સ્કેન કરશે અને યશના ચહેરા પર જીલ વાઘાણીનો ચહેરો, દાઢી અને આંખો પરફેક્ટ મેચ કરી દેશે!</li>
+      </ol>
+    </div>
+
+    <!-- Tools Grid -->
+    <div class="tools-grid">
+      
+      <!-- Tool 1: Google Colab Free Cloud GPU -->
+      <div class="tool-card">
+        <h3><i class="fa-solid fa-cloud-bolt"></i> Google Colab (ફ્રી ક્લાઉડ GPU)</h3>
+        <p>કમ્પ્યુટરમાં ગ્રાફિક્સ કાર્ડ ન હોય તો પણ ગૂગલના ફ્રી Tesla T4 સુપર-કમ્પ્યુટર પર ૧-ક્લિકમાં FaceFusion સોફ્ટવેર ચાલે છે અને આખી મુવી ફેસ-સ્વેપ કરી આપે છે.</p>
+        <a href="https://github.com/facefusion/facefusion-colab" target="_blank" rel="noopener noreferrer" class="action-link btn-gold">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> FaceFusion Colab ઓપન કરો
+        </a>
+      </div>
+
+      <!-- Tool 2: Online 1-Click Face Swap -->
+      <div class="tool-card">
+        <h3><i class="fa-solid fa-wand-magic-sparkles"></i> 1-Click Online Web Tools</h3>
+        <p>કોઈપણ કોડિંગ વગર સીધો વિડીયો અને જીલ વાઘાણીનો ફોટો અપલોડ કરો અને ૧ મિનિટમાં ફેસ-સ્વેપ થયેલો વિડીયો ડાઉનલોડ કરો (જેમ કે Remaker AI, Vidnoz, DeepSwapper).</p>
+        <a href="https://remaker.ai/face-swap/video-swap" target="_blank" rel="noopener noreferrer" class="action-link btn-outline">
+          <i class="fa-solid fa-play"></i> Remaker Video Face Swap
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="back-nav">
+    <a href="movie.html" class="back-btn">
+      <i class="fa-solid fa-film"></i>
+      <span>સિનેમા પ્લેયર પર જાઓ (movie.html)</span>
+    </a>
+    <span class="nav-dot">•</span>
+    <a href="voice_studio.html" class="back-btn">
+      <i class="fa-solid fa-microphone"></i>
+      <span>વોઇસ સ્ટુડિયો પર જાઓ</span>
+    </a>
+    <span class="nav-dot">•</span>
+    <a href="index.html" class="back-btn">
+      <i class="fa-solid fa-user"></i>
+      <span>જીલ વાઘાણી પ્રોફાઇલ</span>
+    </a>
+  </div>
+
+</body>
+</html>
