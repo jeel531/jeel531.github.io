@@ -1024,13 +1024,210 @@
       overflow-x: auto;
     }
 
-    /* Lightbox for Photos */
-    .lightbox-img {
-      max-width: 90%;
-      max-height: 85vh;
-      border-radius: 12px;
+    /* ========================================================
+       INTERACTIVE LIGHTBOX PHOTO STUDIO (FULLSCREEN VIEWER)
+       ======================================================== */
+    .lightbox-viewer-box {
+      width: 95vw;
+      max-width: 1050px;
+      height: 90vh;
+      max-height: 840px;
+      background: rgba(22, 23, 27, 0.98);
+      border: 1px solid #3c4043;
+      border-radius: 18px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.95);
+      position: relative;
+    }
+    .lightbox-topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 20px;
+      background: #25272a;
+      border-bottom: 1px solid #3c4043;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .lightbox-photo-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .lightbox-photo-title {
+      font-size: 16.5px;
+      font-weight: 700;
+      color: #fff;
+    }
+    .lightbox-photo-desc {
+      font-size: 12.5px;
+      color: #9aa0a6;
+    }
+    .lightbox-top-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .lightbox-counter-badge {
+      background: #303134;
+      color: #8ab4f8;
+      border: 1px solid #3c4043;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .lightbox-stage {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      padding: 14px;
+      overflow: hidden;
+      background: radial-gradient(circle at center, #1b1d22 0%, #0e0f12 100%);
+    }
+    .lightbox-nav-btn {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: rgba(32, 33, 36, 0.85);
+      border: 1px solid #5f6368;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 17px;
+      transition: all 0.2s ease;
+      z-index: 10;
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
+    }
+    .lightbox-nav-btn:hover {
+      background: #8ab4f8;
+      color: #202124;
+      border-color: #8ab4f8;
+      transform: scale(1.08);
+    }
+    .lightbox-main-img {
+      max-width: 82%;
+      max-height: 100%;
       object-fit: contain;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.9);
+      border-radius: 10px;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.8);
+    }
+    .lightbox-thumbs-bar {
+      height: 84px;
+      background: #18191d;
+      border-top: 1px solid #3c4043;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0 16px;
+      overflow-x: auto;
+      scrollbar-width: thin;
+    }
+    .lightbox-thumb-item {
+      width: 62px;
+      height: 62px;
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+      border: 2px solid transparent;
+      opacity: 0.6;
+      transition: all 0.2s ease;
+      flex-shrink: 0;
+    }
+    .lightbox-thumb-item:hover {
+      opacity: 0.95;
+      transform: translateY(-2px);
+    }
+    .lightbox-thumb-item.active {
+      opacity: 1;
+      border-color: #8ab4f8;
+      box-shadow: 0 0 12px rgba(138, 180, 248, 0.6);
+    }
+    .lightbox-thumb-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ========================================================
+       PROJECT DEEP-DIVE MODAL & ARCHITECTURE SPEC STYLES
+       ======================================================== */
+    .project-modal-box {
+      max-width: 840px;
+      width: 95vw;
+      background: #25272a;
+      border: 1px solid #3c4043;
+      border-radius: 18px;
+      padding: 26px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.9);
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    .project-detail-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 18px;
+      border-bottom: 1px solid #3c4043;
+      padding-bottom: 16px;
+    }
+    .project-specs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 14px;
+      margin: 18px 0;
+    }
+    .project-spec-card {
+      background: #303134;
+      border: 1px solid #3c4043;
+      border-radius: 12px;
+      padding: 14px;
+    }
+    .project-spec-title {
+      font-size: 11.5px;
+      color: #9aa0a6;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+    .project-spec-val {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.4;
+    }
+    .project-feature-checklist {
+      list-style: none;
+      padding: 0;
+      margin: 14px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .project-feature-checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 13.5px;
+      color: #bdc1c6;
+      line-height: 1.45;
+    }
+    .project-feature-checklist li i {
+      color: #81c995;
+      margin-top: 3px;
+      flex-shrink: 0;
     }
 
     /* Portfolio Section (when switched) */
@@ -1647,7 +1844,7 @@
           <div class="projects-cards-grid" id="projectsCardsGrid">
 
             <!-- Project 1: OSLC ERP -->
-            <div class="project-card-item" data-category="erp">
+            <div class="project-card-item" data-category="erp" onclick="openProjectModal('oslc_erp')" style="cursor: pointer;">
               <div>
                 <div class="project-card-top">
                   <div class="project-card-icon" style="background: rgba(66, 133, 244, 0.15); color: #8ab4f8; border-color: rgba(66, 133, 244, 0.3);">
@@ -1670,12 +1867,14 @@
               </div>
               <div class="project-card-bottom">
                 <span class="project-status-pill"><span class="status-dot-pulse"></span> Active Factory Production</span>
-                <span style="font-size: 11.5px; color: #9aa0a6;">V17 Enterprise</span>
+                <button class="btn btn-outline" style="font-size: 11.5px; padding: 4px 10px; color: #8ab4f8; border-color: #8ab4f8;" onclick="event.stopPropagation(); openProjectModal('oslc_erp')">
+                  <i class="fa-solid fa-circle-info"></i> View Details & Architecture
+                </button>
               </div>
             </div>
 
             <!-- Project 2: LUMORA Barcode Automation -->
-            <div class="project-card-item" data-category="automation">
+            <div class="project-card-item" data-category="automation" onclick="openProjectModal('lumora_barcode')" style="cursor: pointer;">
               <div>
                 <div class="project-card-top">
                   <div class="project-card-icon" style="background: rgba(249, 171, 0, 0.15); color: #ffd700; border-color: rgba(249, 171, 0, 0.3);">
@@ -1698,12 +1897,14 @@
               </div>
               <div class="project-card-bottom">
                 <span class="project-status-pill"><span class="status-dot-pulse"></span> 100K+ Labels Processed</span>
-                <span style="font-size: 11.5px; color: #ffd700;">Drop & Print</span>
+                <button class="btn btn-outline" style="font-size: 11.5px; padding: 4px 10px; color: #ffd700; border-color: #ffd700;" onclick="event.stopPropagation(); openProjectModal('lumora_barcode')">
+                  <i class="fa-solid fa-circle-info"></i> View Details & Architecture
+                </button>
               </div>
             </div>
 
             <!-- Project 3: Blinkit PO x Digi ERP -->
-            <div class="project-card-item" data-category="logistics">
+            <div class="project-card-item" data-category="logistics" onclick="openProjectModal('blinkit_scanner')" style="cursor: pointer;">
               <div>
                 <div class="project-card-top">
                   <div class="project-card-icon" style="background: rgba(234, 67, 53, 0.15); color: #ff8a80; border-color: rgba(234, 67, 53, 0.3);">
@@ -1726,12 +1927,14 @@
               </div>
               <div class="project-card-bottom">
                 <span class="project-status-pill"><span class="status-dot-pulse"></span> Live Marketplace Sync</span>
-                <span style="font-size: 11.5px; color: #ff8a80;">Quick-Commerce</span>
+                <button class="btn btn-outline" style="font-size: 11.5px; padding: 4px 10px; color: #ff8a80; border-color: #ff8a80;" onclick="event.stopPropagation(); openProjectModal('blinkit_scanner')">
+                  <i class="fa-solid fa-circle-info"></i> View Details & Architecture
+                </button>
               </div>
             </div>
 
             <!-- Project 4: DIGI One-Click Batch Print -->
-            <div class="project-card-item" data-category="automation">
+            <div class="project-card-item" data-category="automation" onclick="openProjectModal('digi_print')" style="cursor: pointer;">
               <div>
                 <div class="project-card-top">
                   <div class="project-card-icon" style="background: rgba(52, 168, 83, 0.15); color: #81c995; border-color: rgba(52, 168, 83, 0.3);">
@@ -1754,12 +1957,14 @@
               </div>
               <div class="project-card-bottom">
                 <span class="project-status-pill"><span class="status-dot-pulse"></span> 400% Speed Improvement</span>
-                <span style="font-size: 11.5px; color: #81c995;">Zero Jam Spool</span>
+                <button class="btn btn-outline" style="font-size: 11.5px; padding: 4px 10px; color: #81c995; border-color: #81c995;" onclick="event.stopPropagation(); openProjectModal('digi_print')">
+                  <i class="fa-solid fa-circle-info"></i> View Details & Architecture
+                </button>
               </div>
             </div>
 
             <!-- Project 5: OSLC In-Out Workforce Tracker -->
-            <div class="project-card-item" data-category="erp">
+            <div class="project-card-item" data-category="erp" onclick="openProjectModal('oslc_attendance')" style="cursor: pointer;">
               <div>
                 <div class="project-card-top">
                   <div class="project-card-icon" style="background: rgba(197, 138, 249, 0.15); color: #c58af9; border-color: rgba(197, 138, 249, 0.3);">
@@ -1782,12 +1987,14 @@
               </div>
               <div class="project-card-bottom">
                 <span class="project-status-pill"><span class="status-dot-pulse"></span> Factory Deployed</span>
-                <span style="font-size: 11.5px; color: #c58af9;">Daily In/Out</span>
+                <button class="btn btn-outline" style="font-size: 11.5px; padding: 4px 10px; color: #c58af9; border-color: #c58af9;" onclick="event.stopPropagation(); openProjectModal('oslc_attendance')">
+                  <i class="fa-solid fa-circle-info"></i> View Details & Architecture
+                </button>
               </div>
             </div>
 
             <!-- Project 6: OSLC Local 4K Ad & Reel Maker -->
-            <div class="project-card-item" data-category="media">
+            <div class="project-card-item" data-category="media" onclick="openProjectModal('oslc_ad_maker')" style="cursor: pointer;">
               <div>
                 <div class="project-card-top">
                   <div class="project-card-icon" style="background: rgba(225, 48, 108, 0.15); color: #ff80ab; border-color: rgba(225, 48, 108, 0.3);">
@@ -1810,12 +2017,14 @@
               </div>
               <div class="project-card-bottom">
                 <span class="project-status-pill"><span class="status-dot-pulse"></span> 4K Ultra-HD Output</span>
-                <span style="font-size: 11.5px; color: #ff80ab;">AI Automation</span>
+                <button class="btn btn-outline" style="font-size: 11.5px; padding: 4px 10px; color: #ff80ab; border-color: #ff80ab;" onclick="event.stopPropagation(); openProjectModal('oslc_ad_maker')">
+                  <i class="fa-solid fa-circle-info"></i> View Details & Architecture
+                </button>
               </div>
             </div>
 
             <!-- Project 7: OSLC Packing Control Station -->
-            <div class="project-card-item" data-category="logistics">
+            <div class="project-card-item" data-category="logistics" onclick="openProjectModal('oslc_packing_control')" style="cursor: pointer;">
               <div>
                 <div class="project-card-top">
                   <div class="project-card-icon" style="background: rgba(0, 210, 255, 0.15); color: #00d2ff; border-color: rgba(0, 210, 255, 0.3);">
@@ -1838,12 +2047,14 @@
               </div>
               <div class="project-card-bottom">
                 <span class="project-status-pill"><span class="status-dot-pulse"></span> 0% Dispatch Error Rate</span>
-                <span style="font-size: 11.5px; color: #00d2ff;">Quality Pass</span>
+                <button class="btn btn-outline" style="font-size: 11.5px; padding: 4px 10px; color: #00d2ff; border-color: #00d2ff;" onclick="event.stopPropagation(); openProjectModal('oslc_packing_control')">
+                  <i class="fa-solid fa-circle-info"></i> View Details & Architecture
+                </button>
               </div>
             </div>
 
             <!-- Project 8: JEEL VAGHANI: THE SULTAN & LIFE -->
-            <div class="project-card-item" data-category="media">
+            <div class="project-card-item" data-category="media" onclick="openProjectModal('the_sultan_film')" style="cursor: pointer;">
               <div>
                 <div class="project-card-top">
                   <div class="project-card-icon" style="background: linear-gradient(135deg, rgba(229, 9, 20, 0.2), rgba(249, 171, 0, 0.2)); color: #ffd700; border-color: rgba(249, 171, 0, 0.4);">
@@ -1866,7 +2077,14 @@
               </div>
               <div class="project-card-bottom">
                 <span class="project-status-pill"><span class="status-dot-pulse"></span> Live Cinema Player</span>
-                <a href="movie.html" style="font-size: 12px; color: #ffd700; font-weight: 700; text-decoration: none;">Watch Movie &rarr;</a>
+                <div style="display: flex; gap: 8px;">
+                  <button class="btn btn-outline" style="font-size: 11.5px; padding: 4px 10px; color: #ffd700; border-color: #ffd700;" onclick="event.stopPropagation(); openProjectModal('the_sultan_film')">
+                    <i class="fa-solid fa-circle-info"></i> Details
+                  </button>
+                  <a href="movie.html" class="btn btn-primary" style="font-size: 11.5px; padding: 4px 10px; background: linear-gradient(135deg, #ffd700, #ff8c00); color: #000; font-weight: 700; text-decoration: none;">
+                    Watch Movie &rarr;
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -2382,7 +2600,7 @@
 
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 18px;">
         <!-- Card 1: OSLC ERP -->
-        <div style="background: #25272a; border: 1px solid rgba(66, 133, 244, 0.35); border-radius: 14px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div style="background: #25272a; border: 1px solid rgba(66, 133, 244, 0.35); border-radius: 14px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer;" onclick="openProjectModal('oslc_erp')">
           <div>
             <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
               <div style="display: flex; align-items: center; gap: 12px;">
@@ -2408,12 +2626,14 @@
           </div>
           <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #3c4043; padding-top: 12px;">
             <span style="font-size: 12px; color: #81c995; font-weight: 600;"><span class="status-dot-pulse"></span> Active in Production</span>
-            <span style="font-size: 12px; color: #8ab4f8; font-weight: 600;">Desktop + Mobile</span>
+            <button class="btn btn-outline" style="font-size: 11.5px; padding: 4px 10px; color: #8ab4f8; border-color: #8ab4f8;" onclick="event.stopPropagation(); openProjectModal('oslc_erp')">
+              <i class="fa-solid fa-circle-info"></i> View Details
+            </button>
           </div>
         </div>
 
         <!-- Card 2: LUMORA Barcode -->
-        <div style="background: #25272a; border: 1px solid rgba(251, 188, 5, 0.35); border-radius: 14px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div style="background: #25272a; border: 1px solid rgba(251, 188, 5, 0.35); border-radius: 14px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer;" onclick="openProjectModal('lumora_barcode')">
           <div>
             <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
               <div style="display: flex; align-items: center; gap: 12px;">
@@ -2438,12 +2658,14 @@
           </div>
           <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #3c4043; padding-top: 12px;">
             <span style="font-size: 12px; color: #81c995; font-weight: 600;"><span class="status-dot-pulse"></span> Industrial Grade</span>
-            <span style="font-size: 12px; color: #fbbc05; font-weight: 600;">Hardware Connected</span>
+            <button class="btn btn-outline" style="font-size: 11.5px; padding: 4px 10px; color: #ffd700; border-color: #ffd700;" onclick="event.stopPropagation(); openProjectModal('lumora_barcode')">
+              <i class="fa-solid fa-circle-info"></i> View Details
+            </button>
           </div>
         </div>
 
         <!-- Card 3: Blinkit PO x Digi ERP -->
-        <div style="background: #25272a; border: 1px solid rgba(234, 67, 53, 0.35); border-radius: 14px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div style="background: #25272a; border: 1px solid rgba(234, 67, 53, 0.35); border-radius: 14px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer;" onclick="openProjectModal('blinkit_scanner')">
           <div>
             <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
               <div style="display: flex; align-items: center; gap: 12px;">
@@ -2468,12 +2690,14 @@
           </div>
           <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #3c4043; padding-top: 12px;">
             <span style="font-size: 12px; color: #81c995; font-weight: 600;"><span class="status-dot-pulse"></span> Zero-Error Inbound</span>
-            <span style="font-size: 12px; color: #ea4335; font-weight: 600;">Blinkit ASN Sync</span>
+            <button class="btn btn-outline" style="font-size: 11.5px; padding: 4px 10px; color: #ff8a80; border-color: #ff8a80;" onclick="event.stopPropagation(); openProjectModal('blinkit_scanner')">
+              <i class="fa-solid fa-circle-info"></i> View Details
+            </button>
           </div>
         </div>
 
         <!-- Card 4: DIGI One Click Print -->
-        <div style="background: #25272a; border: 1px solid rgba(52, 168, 83, 0.35); border-radius: 14px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div style="background: #25272a; border: 1px solid rgba(52, 168, 83, 0.35); border-radius: 14px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer;" onclick="openProjectModal('digi_print')">
           <div>
             <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
               <div style="display: flex; align-items: center; gap: 12px;">
@@ -2498,12 +2722,14 @@
           </div>
           <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #3c4043; padding-top: 12px;">
             <span style="font-size: 12px; color: #81c995; font-weight: 600;"><span class="status-dot-pulse"></span> 100+ Labels/min</span>
-            <span style="font-size: 12px; color: #34a853; font-weight: 600;">Multi-Marketplace</span>
+            <button class="btn btn-outline" style="font-size: 11.5px; padding: 4px 10px; color: #81c995; border-color: #81c995;" onclick="event.stopPropagation(); openProjectModal('digi_print')">
+              <i class="fa-solid fa-circle-info"></i> View Details
+            </button>
           </div>
         </div>
 
         <!-- Card 5: OSLC In-Out Attendance -->
-        <div style="background: #25272a; border: 1px solid rgba(138, 180, 248, 0.35); border-radius: 14px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div style="background: #25272a; border: 1px solid rgba(138, 180, 248, 0.35); border-radius: 14px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer;" onclick="openProjectModal('oslc_attendance')">
           <div>
             <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
               <div style="display: flex; align-items: center; gap: 12px;">
@@ -2528,12 +2754,14 @@
           </div>
           <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #3c4043; padding-top: 12px;">
             <span style="font-size: 12px; color: #81c995; font-weight: 600;"><span class="status-dot-pulse"></span> Daily Automated Logs</span>
-            <span style="font-size: 12px; color: #8ab4f8; font-weight: 600;">Shift & Gate System</span>
+            <button class="btn btn-outline" style="font-size: 11.5px; padding: 4px 10px; color: #8ab4f8; border-color: #8ab4f8;" onclick="event.stopPropagation(); openProjectModal('oslc_attendance')">
+              <i class="fa-solid fa-circle-info"></i> View Details
+            </button>
           </div>
         </div>
 
         <!-- Card 6: OSLC Local 4K Ad Maker -->
-        <div style="background: #25272a; border: 1px solid rgba(225, 48, 108, 0.35); border-radius: 14px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div style="background: #25272a; border: 1px solid rgba(225, 48, 108, 0.35); border-radius: 14px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer;" onclick="openProjectModal('oslc_ad_maker')">
           <div>
             <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
               <div style="display: flex; align-items: center; gap: 12px;">
@@ -2558,12 +2786,14 @@
           </div>
           <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #3c4043; padding-top: 12px;">
             <span style="font-size: 12px; color: #81c995; font-weight: 600;"><span class="status-dot-pulse"></span> Ultra HD 4K</span>
-            <span style="font-size: 12px; color: #ff80ab; font-weight: 600;">Social Engine</span>
+            <button class="btn btn-outline" style="font-size: 11.5px; padding: 4px 10px; color: #ff80ab; border-color: #ff80ab;" onclick="event.stopPropagation(); openProjectModal('oslc_ad_maker')">
+              <i class="fa-solid fa-circle-info"></i> View Details
+            </button>
           </div>
         </div>
 
         <!-- Card 7: OSLC Packing Control -->
-        <div style="background: #25272a; border: 1px solid rgba(0, 198, 255, 0.35); border-radius: 14px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div style="background: #25272a; border: 1px solid rgba(0, 198, 255, 0.35); border-radius: 14px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer;" onclick="openProjectModal('oslc_packing_control')">
           <div>
             <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
               <div style="display: flex; align-items: center; gap: 12px;">
@@ -2588,12 +2818,14 @@
           </div>
           <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #3c4043; padding-top: 12px;">
             <span style="font-size: 12px; color: #81c995; font-weight: 600;"><span class="status-dot-pulse"></span> Zero-Mismatch Gate</span>
-            <span style="font-size: 12px; color: #00c6ff; font-weight: 600;">Dispatch Control</span>
+            <button class="btn btn-outline" style="font-size: 11.5px; padding: 4px 10px; color: #00c6ff; border-color: #00c6ff;" onclick="event.stopPropagation(); openProjectModal('oslc_packing_control')">
+              <i class="fa-solid fa-circle-info"></i> View Details
+            </button>
           </div>
         </div>
 
         <!-- Card 8: JEEL VAGHANI: THE SULTAN & LIFE -->
-        <div style="background: #25272a; border: 1px solid rgba(255, 215, 0, 0.35); border-radius: 14px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div style="background: #25272a; border: 1px solid rgba(255, 215, 0, 0.35); border-radius: 14px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer;" onclick="openProjectModal('the_sultan_film')">
           <div>
             <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
               <div style="display: flex; align-items: center; gap: 12px;">
@@ -2618,9 +2850,14 @@
           </div>
           <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #3c4043; padding-top: 12px;">
             <span style="font-size: 12px; color: #81c995; font-weight: 600;"><span class="status-dot-pulse"></span> Live Stream Active</span>
-            <a href="movie.html" class="btn btn-primary" style="padding: 6px 14px; font-size: 12px; background: linear-gradient(135deg, #ffd700, #ff8c00); color: #000; font-weight: 700; border: none; text-decoration: none;">
-              <i class="fa-solid fa-play"></i> Watch Movie &rarr;
-            </a>
+            <div style="display: flex; gap: 8px;">
+              <button class="btn btn-outline" style="font-size: 11.5px; padding: 4px 10px; color: #ffd700; border-color: #ffd700;" onclick="event.stopPropagation(); openProjectModal('the_sultan_film')">
+                <i class="fa-solid fa-circle-info"></i> Details
+              </button>
+              <a href="movie.html" class="btn btn-primary" style="padding: 6px 14px; font-size: 12px; background: linear-gradient(135deg, #ffd700, #ff8c00); color: #000; font-weight: 700; border: none; text-decoration: none;">
+                <i class="fa-solid fa-play"></i> Watch Movie &rarr;
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -2783,9 +3020,121 @@
     </div>
   </div>
 
-  <!-- MODAL: LIGHTBOX IMAGE VIEWER -->
-  <div class="modal-overlay" id="lightboxModal" onclick="closeModal('lightboxModal')">
-    <img id="lightboxImg" class="lightbox-img" src="" alt="Full view">
+  <!-- MODAL: INTERACTIVE LIGHTBOX PHOTO STUDIO (FULLSCREEN VIEWER) -->
+  <div class="modal-overlay" id="lightboxModal" onclick="if(event.target === this) closeModal('lightboxModal')">
+    <div class="lightbox-viewer-box" onclick="event.stopPropagation()">
+      <div class="lightbox-topbar">
+        <div class="lightbox-photo-meta">
+          <div class="lightbox-photo-title" id="lightboxTitle">Photo Title</div>
+          <div class="lightbox-photo-desc" id="lightboxDesc">Photo Description</div>
+        </div>
+        <div class="lightbox-top-actions">
+          <span class="lightbox-counter-badge" id="lightboxCounter">1 / 12</span>
+          <a id="lightboxDownloadBtn" href="./assets/jeel-suit.jpeg" download="jeel-vaghani-hd.jpg" class="btn btn-outline" style="font-size: 12.5px; padding: 6px 12px; border-color: #8ab4f8; color: #8ab4f8;">
+            <i class="fa-solid fa-download"></i> Download HD
+          </a>
+          <button class="modal-close" style="position: static; width: 34px; height: 34px;" onclick="closeModal('lightboxModal')">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+      <div class="lightbox-stage">
+        <button class="lightbox-nav-btn" onclick="prevLightboxPhoto(event)" title="Previous Photo (Left Arrow)">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <img id="lightboxImg" class="lightbox-main-img" src="./assets/jeel-suit.jpeg" alt="Jeel Vaghani Full View">
+        <button class="lightbox-nav-btn" onclick="nextLightboxPhoto(event)" title="Next Photo (Right Arrow)">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+      <div class="lightbox-thumbs-bar" id="lightboxThumbsBar">
+        <!-- Rendered dynamically via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: ENTERPRISE PROJECT DEEP-DIVE & ARCHITECTURE VIEWER -->
+  <div class="modal-overlay" id="projectDetailModal" onclick="if(event.target === this) closeModal('projectDetailModal')">
+    <div class="project-modal-box" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal('projectDetailModal')"><i class="fa-solid fa-xmark"></i></button>
+      <div class="project-detail-header">
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <div id="projModalIconBox" style="width: 52px; height: 52px; border-radius: 14px; background: rgba(66, 133, 244, 0.15); display: flex; align-items: center; justify-content: center; font-size: 24px; color: #8ab4f8; border: 1px solid rgba(66, 133, 244, 0.3);">
+            <i class="fa-solid fa-industry" id="projModalIcon"></i>
+          </div>
+          <div>
+            <h3 style="font-size: 20px; font-weight: 700; color: #fff; margin: 0;" id="projModalTitle">System Title</h3>
+            <div style="font-size: 13px; color: #9aa0a6; margin-top: 3px;" id="projModalSubtitle">Subtitle & Category</div>
+          </div>
+        </div>
+        <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+          <span id="projModalBadge" style="background: rgba(66, 133, 244, 0.18); color: #8ab4f8; font-size: 12px; padding: 4px 10px; border-radius: 12px; font-weight: 600;">Enterprise ERP</span>
+          <span style="background: rgba(52, 168, 83, 0.18); color: #81c995; border: 1px solid #34a853; font-size: 12px; padding: 4px 10px; border-radius: 12px; font-weight: 600;" id="projModalStatus">
+            <span class="status-dot-pulse"></span> Deployed
+          </span>
+        </div>
+      </div>
+
+      <div style="font-size: 14px; color: #bdc1c6; line-height: 1.6; margin-bottom: 18px;" id="projModalSummary">
+        Comprehensive platform overview.
+      </div>
+
+      <!-- Quick Specs Grid -->
+      <div class="project-specs-grid">
+        <div class="project-spec-card">
+          <div class="project-spec-title"><i class="fa-solid fa-laptop-code"></i> Target Platforms</div>
+          <div class="project-spec-val" id="projModalPlatforms">Windows Desktop (.exe) + Android APK</div>
+        </div>
+        <div class="project-spec-card">
+          <div class="project-spec-title"><i class="fa-solid fa-file-shield"></i> Binary Package Details</div>
+          <div class="project-spec-val" id="projModalFiles">OSLC ERP.exe | OSLC_ERP.apk</div>
+        </div>
+        <div class="project-spec-card">
+          <div class="project-spec-title"><i class="fa-solid fa-server"></i> System Architecture</div>
+          <div class="project-spec-val" id="projModalArch">Client-Server & Local Offline Cache</div>
+        </div>
+      </div>
+
+      <!-- Key Capabilities & Production Features -->
+      <div style="margin: 20px 0;">
+        <div style="font-size: 14px; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 10px;">
+          <i class="fa-solid fa-list-check" style="color: #8ab4f8;"></i> Key Production Capabilities & Modules
+        </div>
+        <ul class="project-feature-checklist" id="projModalFeatureList">
+          <!-- Dynamically populated -->
+        </ul>
+      </div>
+
+      <!-- Technology Stack Tags -->
+      <div style="margin: 20px 0;">
+        <div style="font-size: 13px; font-weight: 600; color: #9aa0a6; margin-bottom: 8px;">TECHNOLOGY & HARDWARE DRIVERS:</div>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;" id="projModalTechTags">
+          <!-- Tags -->
+        </div>
+      </div>
+
+      <!-- Live Simulator Output Box -->
+      <div id="projSimulatorBox" style="display: none; background: #1a1c20; border: 1px solid #3c4043; border-radius: 12px; padding: 14px; margin: 18px 0; font-family: monospace; font-size: 12.5px; color: #81c995; line-height: 1.5;">
+        <div style="display: flex; justify-content: space-between; color: #8ab4f8; margin-bottom: 6px; font-weight: 600;">
+          <span><i class="fa-solid fa-terminal"></i> Live Diagnostic & Simulation Output:</span>
+          <span style="color: #ffd700;">OK 200</span>
+        </div>
+        <div id="projSimulatorLogs">Connecting to system daemon...</div>
+      </div>
+
+      <!-- Action Footer -->
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 24px; padding-top: 18px; border-top: 1px solid #3c4043;">
+        <div style="font-size: 12.5px; color: #81c995; display: flex; align-items: center; gap: 6px;">
+          <i class="fa-solid fa-circle-check"></i> Architected & Engineered by Jeel Vaghani (100% Verified)
+        </div>
+        <div style="display: flex; gap: 10px;">
+          <button class="btn btn-outline" onclick="closeModal('projectDetailModal')">Close</button>
+          <button class="btn btn-primary" id="projModalLaunchBtn" onclick="runProjectSimulator()">
+            <i class="fa-solid fa-play"></i> Run Live Demo Simulation
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- FLOATING REPORT BUTTON (BOTTOM-RIGHT) -->
@@ -2979,12 +3328,422 @@
       document.getElementById(id).classList.remove('active');
     }
 
-    // Lightbox image viewer
-    function viewPhoto(src) {
-      const modal = document.getElementById('lightboxModal');
+    // ========================================================
+    // INTERACTIVE LIGHTBOX PHOTO STUDIO (ALL 12 AUTHENTIC PHOTOS)
+    // ========================================================
+    const galleryPhotos = [
+      {
+        src: './assets/jeel-suit.jpeg',
+        title: 'Corporate Executive',
+        desc: 'Luxury Balcony View · Sunset Golden Hour Shoot'
+      },
+      {
+        src: './assets/jeel-royal.jpeg',
+        title: 'Royal Heritage Sherwani',
+        desc: 'Velvet Embroidery · Royal Palace Courtyard Shoot'
+      },
+      {
+        src: './assets/jeel-cyberpunk.jpeg',
+        title: 'Cyberpunk Neon Edition',
+        desc: 'Times Square NYC · High-Tech LED Cyberpunk Aesthetic'
+      },
+      {
+        src: './assets/jeel-biker.jpeg',
+        title: 'Mountain Highway Cruiser',
+        desc: 'Royal Enfield Cruiser · Misty Mountain Highway'
+      },
+      {
+        src: './assets/jeel-movie-sultan.jpg',
+        title: 'The Sultan Mafia Emperor',
+        desc: 'Gold Throne Royal Portrait · Feature Film Lead Role'
+      },
+      {
+        src: './assets/jeel-movie-rudra.jpg',
+        title: 'Rudra Action Hero',
+        desc: 'Cinematic Combat Martial Arts Still · Action Lead'
+      },
+      {
+        src: './assets/jeel-life-poster.jpg',
+        title: 'JEEL VAGHANI: LIFE Theatrical Poster',
+        desc: 'Official 4K Blockbuster Movie Key Art & Cinema Poster'
+      },
+      {
+        src: './assets/jeel-life-1-romance.jpg',
+        title: 'Sunset Romance Scene',
+        desc: 'Film Scene 1 · Emotional Narrative & Sunset Seashore'
+      },
+      {
+        src: './assets/jeel-life-2-threat.jpg',
+        title: 'Palace Standoff Scene',
+        desc: 'Film Scene 2 · High Tension Royal Palace Protective Standoff'
+      },
+      {
+        src: './assets/jeel-life-3-combat.jpg',
+        title: 'Rain Martial Combat Scene',
+        desc: 'Film Scene 3 · Heavy Rain Martial Arts Stunt Combat'
+      },
+      {
+        src: './assets/movie-scene-3-chase.jpg',
+        title: 'Highway Car Shootout Scene',
+        desc: 'Film Scene 4 · High-Speed Highway Shootout & Pursuit'
+      },
+      {
+        src: './assets/jeel-life-5-climax.jpg',
+        title: 'Fire Walk Climax Victory',
+        desc: 'Film Scene 5 · Dramatic Resolution & Fire Walk Victory'
+      }
+    ];
+
+    let currentPhotoIdx = 0;
+
+    function initLightboxThumbs() {
+      const thumbsContainer = document.getElementById('lightboxThumbsBar');
+      if (!thumbsContainer) return;
+      thumbsContainer.innerHTML = '';
+      galleryPhotos.forEach((item, index) => {
+        const thumb = document.createElement('div');
+        thumb.className = 'lightbox-thumb-item' + (index === currentPhotoIdx ? ' active' : '');
+        thumb.id = 'lb-thumb-' + index;
+        thumb.onclick = (e) => {
+          e.stopPropagation();
+          viewPhoto(index);
+        };
+        thumb.innerHTML = `<img src="${item.src}" alt="${item.title}" loading="lazy">`;
+        thumbsContainer.appendChild(thumb);
+      });
+    }
+
+    function viewPhoto(srcOrIndex) {
+      if (typeof srcOrIndex === 'number') {
+        currentPhotoIdx = srcOrIndex;
+      } else {
+        const clean = String(srcOrIndex).replace('./', '');
+        const found = galleryPhotos.findIndex(p => p.src === srcOrIndex || p.src.includes(clean) || clean.includes(p.src.replace('./', '')));
+        currentPhotoIdx = found >= 0 ? found : 0;
+      }
+
+      renderCurrentLightbox();
+      openModal('lightboxModal');
+    }
+
+    function renderCurrentLightbox() {
+      const current = galleryPhotos[currentPhotoIdx];
+      if (!current) return;
+
       const img = document.getElementById('lightboxImg');
-      img.src = src;
-      modal.classList.add('active');
+      const title = document.getElementById('lightboxTitle');
+      const desc = document.getElementById('lightboxDesc');
+      const counter = document.getElementById('lightboxCounter');
+      const downloadBtn = document.getElementById('lightboxDownloadBtn');
+
+      if (img) {
+        img.style.opacity = '0.3';
+        img.style.transform = 'scale(0.96)';
+        setTimeout(() => {
+          img.src = current.src;
+          img.alt = current.title;
+          img.style.opacity = '1';
+          img.style.transform = 'scale(1)';
+        }, 120);
+      }
+      if (title) title.textContent = current.title;
+      if (desc) desc.textContent = current.desc;
+      if (counter) counter.textContent = `${currentPhotoIdx + 1} / ${galleryPhotos.length}`;
+      if (downloadBtn) {
+        downloadBtn.href = current.src;
+        downloadBtn.download = current.title.toLowerCase().replace(/[^a-z0-9]+/g, '-') + '-hd.jpg';
+      }
+
+      // Update thumbnail active states & scroll into view
+      document.querySelectorAll('.lightbox-thumb-item').forEach((t, i) => {
+        if (i === currentPhotoIdx) {
+          t.classList.add('active');
+          t.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        } else {
+          t.classList.remove('active');
+        }
+      });
+    }
+
+    function nextLightboxPhoto(e) {
+      if (e) e.stopPropagation();
+      currentPhotoIdx = (currentPhotoIdx + 1) % galleryPhotos.length;
+      renderCurrentLightbox();
+    }
+
+    function prevLightboxPhoto(e) {
+      if (e) e.stopPropagation();
+      currentPhotoIdx = (currentPhotoIdx - 1 + galleryPhotos.length) % galleryPhotos.length;
+      renderCurrentLightbox();
+    }
+
+    // Keyboard navigation (Left, Right, Escape)
+    document.addEventListener('keydown', (e) => {
+      const lbModal = document.getElementById('lightboxModal');
+      if (lbModal && lbModal.classList.contains('active')) {
+        if (e.key === 'ArrowRight') {
+          nextLightboxPhoto();
+        } else if (e.key === 'ArrowLeft') {
+          prevLightboxPhoto();
+        } else if (e.key === 'Escape') {
+          closeModal('lightboxModal');
+        }
+      }
+      const projModal = document.getElementById('projectDetailModal');
+      if (projModal && projModal.classList.contains('active')) {
+        if (e.key === 'Escape') {
+          closeModal('projectDetailModal');
+        }
+      }
+    });
+
+    // ========================================================
+    // ENTERPRISE PROJECT DEEP-DIVE MODAL & ARCHITECTURE SYSTEM
+    // ========================================================
+    const projectsData = {
+      oslc_erp: {
+        title: "OSLC ERP Master Ecosystem",
+        badge: "Enterprise ERP",
+        icon: "fa-solid fa-industry",
+        iconColor: "#8ab4f8",
+        subtitle: "Apparel Manufacturing & WIP Lifecycle Solution",
+        platforms: "Windows 10/11 Desktop (.EXE) + Android Mobile (.APK) + LAN Cloud Sync",
+        files: "OSLC ERP.exe (~85 MB) | OSLC_ERP.apk (~28 MB)",
+        arch: "Relational SQL Database with Multi-PC Concurrent Karigar Gatepass Spooler",
+        summary: "OSLC ERP is an end-to-end industrial manufacturing platform engineered by Jeel Vaghani to digitize garment factories. From raw fabric inwards and cutting lot breakdown to karigar job-work gate passes, stitching, washing, packaging, and real-time WIP shortage reporting, it ensures zero missing pieces across production lines.",
+        features: [
+          "Automated Cutting Lot Creation with ratio-based fabric breakdown",
+          "Real-time Karigar Job-Work Gate Pass generation with QR verification",
+          "Live Pending WIP (Work-in-Progress) shortage matrix across all floors",
+          "Subcontractor dispatch notes with instant WhatsApp & PDF printing",
+          "Multi-user LAN concurrent sync preventing inventory discrepancies"
+        ],
+        techTags: ["Desktop Runtime (.NET/Win32)", "SQLite & Cloud DB", "Thermal TSPL Print Engine", "Multi-Device Android APK", "Real-Time WIP Calculation"],
+        simCommand: "Simulating OSLC ERP Lot Inward #LOT-2026-904... Fabric lot calculated (3,400 meters). 14 Karigar gate passes issued. Pending WIP balance: 0. Status: ONLINE."
+      },
+      lumora_barcode: {
+        title: "LUMORA Barcode & Label Automation Engine",
+        badge: "Industrial Automation",
+        icon: "fa-solid fa-barcode",
+        iconColor: "#ffd700",
+        subtitle: "High-Speed Thermal Barcode & Warehouse Binning Engine",
+        platforms: "Windows PC Driver (.EXE) + Android Mobile (.APK) + TSC / Zebra Protocol",
+        files: "LUMORA_BARCODE_PC.exe (~42 MB) | LUMORA_BARCODE.apk (~18 MB)",
+        arch: "Raw Hardware Socket & Serial Driver with Direct TSPL / EPL / ZPL Byte Streaming",
+        summary: "LUMORA is a high-speed industrial barcode generation and printing engine architected by Jeel Vaghani. Bypassing Windows print spooler delays, it sends raw TSPL commands directly to TSC and Zebra thermal barcode printers over USB/Ethernet to print hundreds of Code128 and QR stickers per minute without freezing.",
+        features: [
+          "Direct TSPL / EPL / ZPL hardware thermal printer command generator",
+          "Bulk CSV and Excel import for instant 1-click batch label printing",
+          "Customizable label templates with lot, SKU, color, and size mapping",
+          "Live barcode preview with instant DPI scaling (203 & 300 DPI)",
+          "Zero-dialog print engine preventing Windows print spooler freezes"
+        ],
+        techTags: ["LUMORA_BARCODE_PC.exe", "LUMORA_BARCODE.apk", "Raw TSPL Sockets", "TSC Industrial Printers", "Bulk CSV Parser"],
+        simCommand: "Connecting to TSC TE244 via USB... Streaming 250 Code-128 barcode labels (40x25mm). DPI: 203. Print speed: 4 ips. Status: 250/250 printed in 1.4s. Zero errors."
+      },
+      blinkit_scanner: {
+        title: "Blinkit PO x Digi ERP Automated Scanner",
+        badge: "Quick-Commerce Logistics",
+        icon: "fa-solid fa-bolt",
+        iconColor: "#ff8a80",
+        subtitle: "Instant Inbound & ASN Purchase Order Fulfillment Scanner",
+        platforms: "Android Industrial Handheld (.APK) + Web Cloud Portal",
+        files: "Blinkit_Scanner.apk (~22 MB) | Digi_Portal.apk (~19 MB)",
+        arch: "Camera Autofocus & Laser Barcode Hook with Real-Time Quick-Commerce ASN Verification",
+        summary: "Engineered specifically for high-velocity quick-commerce delivery centers (Blinkit, Zepto, Flipkart Quick). Scans incoming cartons and individual polybags at dock doors, verifies item counts in real-time against Blinkit Purchase Orders, and creates instant Advance Shipping Notices (ASN) with 0% error.",
+        features: [
+          "Instant laser barcode and camera scan verification",
+          "Automated over-delivery and shortage warning buzzer",
+          "Direct synchronization with Digi ERP master purchase ledger",
+          "Carton level barcode aggregation for instant truck dispatch",
+          "Exportable ASN packing slips with verified timestamps"
+        ],
+        techTags: ["Android Barcode API", "Digi Cloud REST Engine", "Quick-Commerce ASN Parser", "Offline-First Sync", "Blinkit PO Validator"],
+        simCommand: "Simulating Blinkit PO #BKT-991204 verification... 120 SKU polybags scanned. Master carton count: 10/10 matched. ASN generated. Status: 100% Inbound Passed."
+      },
+      digi_print: {
+        title: "DIGI One-Click Batch Print Engine",
+        badge: "E-Commerce Dispatch",
+        icon: "fa-solid fa-print",
+        iconColor: "#81c995",
+        subtitle: "High-Throughput Multi-Marketplace Label Processing",
+        platforms: "Windows Spooler (.EXE) + Android Mobile (.APK)",
+        files: "DIGI ONE CLICK PRINT.exe (~55 MB) | DIGI_ONE_CLICK.apk (~21 MB)",
+        arch: "Automated PDF Vector Parser, 4x6 Crop Engine & Silent Background Thermal Spooler",
+        summary: "E-commerce fulfillment centers packing Flipkart, Amazon, and Meesho orders struggle with print dialog delays. DIGI One-Click batch engine ingests multi-page shipping PDFs, automatically crops the 4x6 thermal shipping label, rotates orientation, and sends them directly to thermal printers without dialog lag.",
+        features: [
+          "Automatic PDF label crop & 4x6 thermal sticker formatting",
+          "Multi-channel support (Flipkart, Amazon Easy Ship, Meesho, Delhivery)",
+          "Background silent printing spooler processing 120+ pages/minute",
+          "Auto duplicate label detection preventing double shipping",
+          "Single-click bulk queue processing"
+        ],
+        techTags: ["DIGI ONE CLICK PRINT.exe", "PDF Vector Cropper", "Silent Thermal Spooler", "Flipkart/Amazon Engine"],
+        simCommand: "Parsing bulk manifest PDF (500 pages)... 500 shipping labels auto-cropped to 4x6. Spooling to Thermal Printer 1. Status: Dispatched 500 orders without single dialog prompt."
+      },
+      oslc_attendance: {
+        title: "OSLC In-Out & Attendance System",
+        badge: "Workforce Management",
+        icon: "fa-solid fa-clock-rotate-left",
+        iconColor: "#8ab4f8",
+        subtitle: "Biometric & Digital Shift Gatepass Reporting",
+        platforms: "Windows Server (.EXE) + Android Attendance APK",
+        files: "OSLC IN OUT REPORT.exe (~38 MB) | OSLC_IN_OUT_REPORT.apk (~16 MB)",
+        arch: "RFID / Barcode USB Hook with Daily Shift Hours & WhatsApp Summary Dispatcher",
+        summary: "Factory workforce management solution developed to maintain accurate work shifts. Workers tap in and out at security gates; the engine calculates shift hours, overtime (OT), late-mark deductions, and dispatches daily attendance summaries directly to management WhatsApp groups.",
+        features: [
+          "Karigar RFID & Barcode badge tap-in and tap-out",
+          "Automated shift hours & overtime (OT) wage calculations",
+          "Real-time floor strength dashboard showing present workers",
+          "Automated daily end-of-shift WhatsApp report generation",
+          "Seamless integration with OSLC ERP payroll master"
+        ],
+        techTags: ["OSLC IN OUT REPORT.exe", "OSLC_IN_OUT_REPORT.apk", "RFID/Barcode USB Hook", "Shift Wage Calculator", "WhatsApp Cloud Sync"],
+        simCommand: "Simulating Shift In-Out Report... 84 workers logged present. Overtime calculated: 32 hrs. WhatsApp daily shift summary dispatched to management. Status: All records synced."
+      },
+      oslc_ad_maker: {
+        title: "OSLC Local 4K Ad & Reel Maker Studio",
+        badge: "AI Media Studio",
+        icon: "fa-solid fa-wand-magic-sparkles",
+        iconColor: "#ff80ab",
+        subtitle: "Automated Commercial Video & 9:16 Instagram Reel Generator",
+        platforms: ["PC Video Studio (Windows) + Mobile Reel Studio (.APK)", "Web Studio"],
+        files: "OSLC 4K Ad Studio (~110 MB) | OSLC_LOCAL_4K_AD_MAKER (~35 MB)",
+        arch: "GPU-Accelerated NVENC Video Pipeline with Canvas 4K Composition and Audio Synthesis",
+        summary: "Created to automate digital advertising campaigns for lifestyle products. Combines photoshoot images, animated typography, and soundtrack beats to render ultra-high-definition 4K video ads and vertical 9:16 Instagram Reels in seconds.",
+        features: [
+          "Hardware-accelerated NVENC / GPU video rendering pipeline",
+          "Preset 9:16 Instagram Reels, 1:1 Square Posts, and 16:9 Cinema formats",
+          "Automated beat-matched transitions and typography overlays",
+          "Integrated voiceover synthesis and background music library",
+          "Direct 1-click export for Instagram, YouTube Shorts, and WhatsApp"
+        ],
+        techTags: ["OSLC 4K Ad Studio Engine", "FFmpeg Hardware Accel", "WebAudio & Canvas 4K", "Instagram 9:16 Reel Exporter"],
+        simCommand: "Rendering 9:16 Instagram Reel at 4K 60fps... Adding beat-synced motion transitions. Audio track normalized. Export complete: 38.4 MB MP4. Status: Ready for Instagram publish."
+      },
+      oslc_packing_control: {
+        title: "OSLC Packing Control Station",
+        badge: "Quality Assurance",
+        icon: "fa-solid fa-boxes-packing",
+        iconColor: "#00c6ff",
+        subtitle: "Zero-Mismatch Final Carton Inspection & Verification Gate",
+        platforms: "Station PC (.EXE) + Handheld Terminal APK",
+        files: "OSLC Packing Control.exe (~45 MB) | OSLC_Packing_Control.apk (~17 MB)",
+        arch: "Dual Barcode Scan Verification Engine with Hardware Audio/Visual Alarm System",
+        summary: "The final quality check before cartons leave the factory floor. Stationed at the packing belt, operators scan polybag tags and carton codes; the software immediately verifies SKU, size ratios, and order counts to prevent packing mistakes.",
+        features: [
+          "Dual-scan verification: Master Carton vs Individual Garment Polybag",
+          "Audio-visual buzzer alert for mismatched color, size, or duplicate scan",
+          "Real-time packing list generation with box weights and totals",
+          "Sealing tape barcode generation lock upon carton completion",
+          "Complete historical audit log of every packed carton"
+        ],
+        techTags: ["OSLC Packing Control.exe", "OSLC_Packing_Control.apk", "Sound FX Alerts", "Local SQLite Engine", "Carton Verification Gate"],
+        simCommand: "Checking Carton #CTN-554... 40 polybags scanned. Size breakdown: S:10, M:10, L:10, XL:10. 100% Match with Purchase Order. Sealing barcode issued. Status: Verified."
+      },
+      the_sultan_film: {
+        title: "JEEL VAGHANI: THE SULTAN & LIFE",
+        badge: "Cinema & Media Production",
+        icon: "fa-solid fa-clapperboard",
+        iconColor: "#ffd700",
+        subtitle: "Theatrical Cinematic Film Experience & WebAudio Surround Engine",
+        platforms: "Web Cinema Player (movie.html) + Dolby 5.1 WebAudio + Chapter Selector",
+        files: "Interactive Feature Cinema Web App (movie.html)",
+        arch: "Dolby Atmos WebAudio Synthesizer with 4K Stills and Widescreen Interactive Cinema UI",
+        summary: "Official action blockbuster and romantic action feature starring Jeel Vaghani in dual lead avatars ('The Sultan' and 'Rudra'). Features interactive chapter navigation, theatrical audio master, and 4K production stills.",
+        features: [
+          "Interactive multi-scene cinema player with Chapter selection",
+          "Custom synthesized Dolby 5.1 surround sound audio atmosphere",
+          "4K Theatrical stills and teaser clips showcasing fight stunts & romance",
+          "Full mobile and desktop responsive widescreen cinema mode",
+          "Direct Instagram and Google Knowledge Panel media linking"
+        ],
+        techTags: ["movie.html", "WebAudio 3D Spatial Engine", "HTML5 Video & Canvas", "4K HDR Media Assets", "Dolby Atmos Master"],
+        simCommand: "Initializing Dolby 5.1 WebAudio Spatial Nodes... Loading 4K Scene Chapters: Entry, Combat, Shootout, Climax. Status: Streaming live in 1080p Full HD on movie.html."
+      }
+    };
+
+    let activeProjectKey = 'oslc_erp';
+
+    function openProjectModal(key) {
+      const data = projectsData[key];
+      if (!data) return;
+      activeProjectKey = key;
+
+      document.getElementById('projModalTitle').textContent = data.title;
+      document.getElementById('projModalSubtitle').textContent = data.subtitle;
+      document.getElementById('projModalBadge').textContent = data.badge;
+      document.getElementById('projModalSummary').textContent = data.summary;
+      document.getElementById('projModalPlatforms').textContent = data.platforms;
+      document.getElementById('projModalFiles').textContent = data.files;
+      document.getElementById('projModalArch').textContent = data.arch;
+
+      const iconEl = document.getElementById('projModalIcon');
+      if (iconEl) iconEl.className = data.icon;
+      const iconBox = document.getElementById('projModalIconBox');
+      if (iconBox) {
+        iconBox.style.color = data.iconColor || '#8ab4f8';
+      }
+
+      // Feature checklist
+      const featureListEl = document.getElementById('projModalFeatureList');
+      if (featureListEl) {
+        featureListEl.innerHTML = '';
+        data.features.forEach(f => {
+          const li = document.createElement('li');
+          li.innerHTML = `<i class="fa-solid fa-circle-check"></i> <span>${f}</span>`;
+          featureListEl.appendChild(li);
+        });
+      }
+
+      // Tech tags
+      const techTagsEl = document.getElementById('projModalTechTags');
+      if (techTagsEl) {
+        techTagsEl.innerHTML = '';
+        data.techTags.forEach(t => {
+          const span = document.createElement('span');
+          span.className = 'project-tag';
+          span.textContent = t;
+          techTagsEl.appendChild(span);
+        });
+      }
+
+      // Reset simulator box
+      const simBox = document.getElementById('projSimulatorBox');
+      if (simBox) simBox.style.display = 'none';
+
+      const launchBtn = document.getElementById('projModalLaunchBtn');
+      if (launchBtn) {
+        if (key === 'the_sultan_film') {
+          launchBtn.innerHTML = '<i class="fa-solid fa-play"></i> Watch Movie (movie.html)';
+          launchBtn.onclick = () => window.location.href = 'movie.html';
+        } else {
+          launchBtn.innerHTML = '<i class="fa-solid fa-play"></i> Run Live Demo Simulation';
+          launchBtn.onclick = runProjectSimulator;
+        }
+      }
+
+      openModal('projectDetailModal');
+    }
+
+    function runProjectSimulator() {
+      const simBox = document.getElementById('projSimulatorBox');
+      const simLogs = document.getElementById('projSimulatorLogs');
+      const data = projectsData[activeProjectKey];
+      if (!simBox || !simLogs || !data) return;
+
+      simBox.style.display = 'block';
+      simLogs.innerHTML = '<span style="color: #ffd700;"><i class="fa-solid fa-spinner fa-spin"></i> Initializing system runtime and verifying binary integrity...</span>';
+
+      setTimeout(() => {
+        simLogs.innerHTML = `
+          <div style="color: #81c995; margin-bottom: 4px;">✔ System binary verified: <strong>${escapeHtml(data.files.split('|')[0].trim())}</strong></div>
+          <div style="color: #8ab4f8; margin-bottom: 4px;">✔ Architecture initialized: <strong>${escapeHtml(data.arch)}</strong></div>
+          <div style="background: rgba(0,0,0,0.4); padding: 8px 12px; border-radius: 6px; border-left: 3px solid #81c995; margin-top: 8px; color: #fff;">
+            ${escapeHtml(data.simCommand)}
+          </div>
+        `;
+      }, 700);
     }
 
     // Search bar suggestions handling
@@ -3194,19 +3953,23 @@
       const rawUrl = (input.value || '').trim();
 
       if (!rawUrl) {
-        alert('Please paste an Instagram link (e.g. https://www.instagram.com/reel/...)');
+        alert('Please paste an Instagram link (e.g. https://www.instagram.com/reel/... or https://www.instagram.com/p/...)');
         input.focus();
         return;
       }
 
       const isReel = rawUrl.includes('/reel/');
+      const coverPhoto = galleryPhotos && galleryPhotos.length 
+        ? galleryPhotos[Math.floor(Math.random() * galleryPhotos.length)].src 
+        : './assets/jeel-suit.jpeg';
+
       const newPost = {
         id: 'ig_' + Date.now(),
         isInstagram: true,
         isReel: isReel,
         url: rawUrl,
-        caption: isReel ? "Check out my new reel on Instagram! Click to view on @vaghani_01 🔥🎬" : "New update from Instagram! Follow @vaghani_01 for official photos & stories 📸✨",
-        imageUrl: './assets/jeel-suit.jpeg',
+        caption: isReel ? "New Reel on Instagram (@vaghani_01)! Watch the original video on Instagram 🔥🎬" : "New update from Instagram! Follow @vaghani_01 for official photos & stories 📸✨",
+        imageUrl: coverPhoto,
         timeStr: 'Just now · Live Sync',
         likes: '140+',
         comments: '28+'
@@ -3218,8 +3981,13 @@
       input.value = '';
       if (feedback) {
         feedback.style.display = 'block';
-        feedback.innerHTML = '<i class="fa-solid fa-circle-check"></i> ✅ Your Instagram post has been successfully synced to Google Feed!';
-        setTimeout(() => { feedback.style.display = 'none'; }, 4000);
+        feedback.innerHTML = '<i class="fa-solid fa-circle-check"></i> ✅ Your Instagram post has been successfully synced to Google Feed! (100% Free)';
+        setTimeout(() => { feedback.style.display = 'none'; }, 5000);
+      }
+
+      const cardEl = document.getElementById('post-card-' + newPost.id);
+      if (cardEl) {
+        cardEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
     }
 
@@ -3551,10 +4319,12 @@
 
     // Auto-initialize on page load
     document.addEventListener('DOMContentLoaded', () => {
+      initLightboxThumbs();
       loadSavedPosts();
       recordLiveVisitor();
     });
     if (document.readyState === 'interactive' || document.readyState === 'complete') {
+      initLightboxThumbs();
       loadSavedPosts();
       recordLiveVisitor();
     }
