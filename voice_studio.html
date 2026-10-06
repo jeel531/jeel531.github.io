@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="gu">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -299,7 +299,7 @@
   <div class="header-box">
     <div class="badge-top">👑 AI VOICE DUBBING STUDIO</div>
     <h1>JEEL VAGHANI VOICE CLONING</h1>
-    <p class="sub-desc">તમારો ૧ મિનિટનો અવાજ રેકોર્ડ કરો, જેથી આખી મુવીમાં તમારા અસલી અવાજમાં ગુજરાતી અને હિન્દી ડાયલોગ્સ ડબ થઈ શકે!</p>
+    <p class="sub-desc">Record your 1-minute voice sample so the full movie dialogues can be voiced in your authentic tone.</p>
   </div>
 
   <div class="studio-container">
@@ -308,13 +308,13 @@
     <div class="prompter-box">
       <div class="prompter-title">
         <i class="fa-solid fa-scroll"></i>
-        <span>આ ડાયલોગ માઈક્રોફોનમાં બોલીને રેકોર્ડ કરો (TRAINING SCRIPT):</span>
+        <span>Speak this dialogue into your microphone (TRAINING SCRIPT):</span>
       </div>
-      <div class="dialogue-text-gu">
-        "મારી માએ કહ્યું હતું... તું ભલે ગરીબ જન્મે, પણ મરે ત્યારે દુનિયા પર તારું રાજ હોવું જોઈએ! વાયલન્સ... વાયલન્સ... વાયલન્સ! મને નથી ગમતું, હું ટાળું છું... પણ વાયલન્સને હું ગમું છું! તમારા કાયદા તમારા દેશ માટે હશે... આ સોનાની ધરતી પર કાયદો માત્ર જીલ વાઘાણીનો ચાલે છે!"
+      <div class="dialogue-text-gu" style="font-family: inherit; font-size: 19px; line-height: 1.6;">
+        "My mother used to say... It doesn't matter if you are born into struggle, but when you stand tall, the world should know your name! Violence... Violence... Violence! I don't like it, I avoid! But violence likes me... I can't avoid! On this golden land, only the word of Jeel Vaghani rules!"
       </div>
       <div class="dialogue-text-hi">
-        "Violence... Violence... Violence! I don't like it, I avoid... But Violence likes me! I can't avoid! इस सोने की दुनिया पर सिर्फ़ सुल्तान जीतू भाई का क़ानून चलता है!"
+        "Violence... Violence... Violence! I don't like it, I avoid... But Violence likes me! I can't avoid! On this golden empire, only the rule of Sultan Jeel Vaghani stands!"
       </div>
     </div>
 
@@ -328,33 +328,33 @@
     <div class="btn-row">
       <button class="studio-btn btn-record" id="recordBtn" onclick="toggleRecording()">
         <i class="fa-solid fa-microphone" id="recIcon"></i>
-        <span id="recText">અવાજ રેકોર્ડ કરો (Start Recording)</span>
+        <span id="recText">Start Recording Voice</span>
       </button>
 
       <button class="studio-btn btn-stop" id="stopBtn" onclick="stopRecording()" disabled>
         <i class="fa-solid fa-square"></i>
-        <span>સ્ટોપ (Stop)</span>
+        <span>Stop</span>
       </button>
 
       <button class="studio-btn btn-save" id="saveBtn" onclick="saveAudioFile()" style="display: none;">
         <i class="fa-solid fa-cloud-arrow-down"></i>
-        <span>વોઇસ સેવ કરો (Save jeel_voice.wav)</span>
+        <span>Save Voice (Download jeel_voice.wav)</span>
       </button>
     </div>
 
     <!-- Audio Preview Player -->
     <div class="preview-box" id="previewBox">
-      <span style="font-size: 14px; font-weight: 600; color: var(--gold);">તમારો રેકોર્ડ થયેલો અવાજ સાંભળો:</span>
+      <span style="font-size: 14px; font-weight: 600; color: var(--gold);">Listen to Recorded Voice Preview:</span>
       <audio id="audioPreview" controls></audio>
     </div>
 
     <!-- Workflow Steps -->
     <div class="steps-section">
-      <div class="steps-title">🚀 આ વોઇસથી મુવી કેવી રીતે ડબ થશે?</div>
+      <div class="steps-title">🚀 How Voice Cloning Works for Movie Dubbing:</div>
       <ol class="steps-list">
-        <li><strong>સ્ટેપ ૧ (અવાજ આપો)</strong>: લાલ બટન દબાવીને ઉપર લખેલો ડાયલોગ તમારા અસલી અવાજમાં બોલો અને <strong>'વોઇસ સેવ કરો'</strong> પર ક્લિક કરો.</li>
-        <li><strong>સ્ટેપ ૨ (AI વોઇસ ક્લોનિંગ)</strong>: આ સેવ થયેલી ફાઇલ <code>d:\NOTA\JEEL\assets\jeel_voice.wav</code> તરીકે પ્રોજેક્ટમાં આવી જશે.</li>
-        <li><strong>સ્ટેપ ૩ (મુવી ડબિંગ)</strong>: AI તમારા અવાજનું મોડલ બનાવીને મુવીના તમામ પાત્રો/ડાયલોગ્સને તમારા અવાજમાં રૂપાંતરિત કરી મુવી સાઉન્ડટ્રેક સાથે મિક્સ કરી દેશે!</li>
+        <li><strong>Step 1 (Record Voice)</strong>: Press the red button, speak the dialogue in your clear voice, and click <strong>'Save Voice'</strong>.</li>
+        <li><strong>Step 2 (AI Voice Cloning)</strong>: The downloaded sample <code>assets/jeel_voice.wav</code> is used as your digital voice profile.</li>
+        <li><strong>Step 3 (Movie Dubbing)</strong>: The AI synthesizes the dialogues across the scenes in your authentic tone and mixes with the cinematic score!</li>
       </ol>
     </div>
 
@@ -363,12 +363,12 @@
   <div class="back-nav">
     <a href="movie.html" class="back-btn">
       <i class="fa-solid fa-film"></i>
-      <span>સિનેમા પ્લેયર પર જાઓ (movie.html)</span>
+      <span>Go to Cinema Player (movie.html)</span>
     </a>
     <span style="color: #4a5568;">•</span>
     <a href="index.html" class="back-btn">
       <i class="fa-solid fa-user"></i>
-      <span>જીલ વાઘાણી પ્રોફાઇલ પર જાઓ</span>
+      <span>Go to Jeel Vaghani Profile</span>
     </a>
   </div>
 
@@ -464,7 +464,7 @@
         isRecording = true;
 
         document.getElementById('recordBtn').classList.add('recording');
-        document.getElementById('recText').innerText = "રેકોર્ડિંગ ચાલુ છે... (બોલો)";
+        document.getElementById('recText').innerText = "Recording in progress... (Speak clearly)";
         document.getElementById('recIcon').className = "fa-solid fa-microphone-lines";
         document.getElementById('stopBtn').disabled = false;
 
@@ -479,7 +479,7 @@
         drawWave();
 
       } catch (err) {
-        alert("માઇક્રોફોન પરમિશન નથી મળી અથવા માઇક કનેક્ટેડ નથી: " + err.message);
+        alert("Microphone permission not granted or mic not connected: " + err.message);
       }
     }
 
@@ -492,7 +492,7 @@
       }
 
       document.getElementById('recordBtn').classList.remove('recording');
-      document.getElementById('recText').innerText = "ફરીથી રેકોર્ડ કરો (Re-Record)";
+      document.getElementById('recText').innerText = "Re-Record Voice";
       document.getElementById('recIcon').className = "fa-solid fa-rotate-right";
       document.getElementById('stopBtn').disabled = true;
     }
@@ -505,7 +505,7 @@
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
-      alert("✅ તમારો વોઇસ 'jeel_voice.wav' તરીકે ડાઉનલોડ થઈ ગયો છે!\nતેને d:\\NOTA\\JEEL\\ ફોલ્ડરમાં મૂકો.");
+      alert("✅ Your voice sample has been downloaded as 'jeel_voice.wav'!\nSave it to your project folder.");
     }
   </script>
 </body>
