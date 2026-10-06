@@ -8,12 +8,12 @@
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://jeel531.github.io/assets/jeel-suit.jpeg</image:loc>
-      <image:title>Jeel Vaghani - Official Business Developer</image:title>
+      <image:title>Jeel Vaghani - Business Developer &amp; Entrepreneur</image:title>
       <image:caption>Official portrait of Jeel Vaghani</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://jeel531.github.io/assets/jeel-royal.jpeg</image:loc>
-      <image:title>Jeel Vaghani - Royal Heritage Edition</image:title>
+      <image:title>Jeel Vaghani - Royal Heritage Sherwani</image:title>
       <image:caption>Jeel Vaghani in Royal Traditional Attire</image:caption>
     </image:image>
     <image:image>
@@ -22,14 +22,49 @@
       <image:caption>Jeel Vaghani Times Square Cyberpunk Edition</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://jeel531.github.io/assets/jeel-movie-rudra.jpg</image:loc>
-      <image:title>Jeel Vaghani - Rudra Film Project</image:title>
-      <image:caption>Jeel Vaghani Rudra Project</image:caption>
+      <image:loc>https://jeel531.github.io/assets/jeel-biker.jpeg</image:loc>
+      <image:title>Jeel Vaghani - Mountain Highway Cruiser</image:title>
+      <image:caption>Jeel Vaghani Royal Enfield Mountain Highway Cruiser</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://jeel531.github.io/assets/jeel-movie-sultan.jpg</image:loc>
-      <image:title>Jeel Vaghani - Sultan Project</image:title>
-      <image:caption>Jeel Vaghani Sultan Project</image:caption>
+      <image:title>Jeel Vaghani - The Sultan Mafia Emperor</image:title>
+      <image:caption>Jeel Vaghani in THE SULTAN lead role</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jeel531.github.io/assets/jeel-movie-rudra.jpg</image:loc>
+      <image:title>Jeel Vaghani - Rudra Martial Arts Combat</image:title>
+      <image:caption>Jeel Vaghani as Rudra Action Hero</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jeel531.github.io/assets/jeel-life-poster.jpg</image:loc>
+      <image:title>JEEL VAGHANI: LIFE Theatrical Poster</image:title>
+      <image:caption>Official 4K Blockbuster Movie Key Art</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jeel531.github.io/assets/jeel-life-1-romance.jpg</image:loc>
+      <image:title>Jeel Vaghani - Sunset Romance Scene</image:title>
+      <image:caption>Movie Scene 1 Sunset Romance</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jeel531.github.io/assets/jeel-life-2-threat.jpg</image:loc>
+      <image:title>Jeel Vaghani - Palace Standoff Scene</image:title>
+      <image:caption>Movie Scene 2 Palace Standoff</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jeel531.github.io/assets/jeel-life-3-combat.jpg</image:loc>
+      <image:title>Jeel Vaghani - Rain Martial Combat Scene</image:title>
+      <image:caption>Movie Scene 3 Rain Martial Combat</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jeel531.github.io/assets/movie-scene-3-chase.jpg</image:loc>
+      <image:title>Jeel Vaghani - Highway Car Shootout Scene</image:title>
+      <image:caption>Movie Scene 4 Highway Car Chase</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jeel531.github.io/assets/jeel-life-5-climax.jpg</image:loc>
+      <image:title>Jeel Vaghani - Fire Walk Climax Victory</image:title>
+      <image:caption>Movie Scene 5 Fire Walk Climax Victory</image:caption>
     </image:image>
   </url>
   <url>
@@ -40,6 +75,12 @@
   </url>
   <url>
     <loc>https://jeel531.github.io/face_swap_studio.html</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jeel531.github.io/voice_studio.html</loc>
     <lastmod>2026-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
