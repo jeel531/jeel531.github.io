@@ -718,31 +718,17 @@
       color: #e8eaed;
     }
 
-    /* Main Layout: Google 2-Column Search Results + Celebrity Knowledge Panel */
+    /* Main Layout: Google Unified Search Results (1:1 with Screenshot 3) */
     .main-content {
       max-width: 1360px;
       margin: 0 auto;
-      padding: 16px 24px 60px 24px;
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(380px, 450px);
-      gap: 36px;
-      align-items: start;
+      padding: 10px 24px 60px 24px;
+      display: block;
     }
 
     @media (max-width: 1024px) {
       .main-content {
-        display: flex;
-        flex-direction: column;
-        padding: 12px 16px 50px 16px;
-        gap: 20px;
-      }
-      .right-col {
-        order: -1; /* Puts the Celebrity Knowledge Panel AT THE VERY TOP on mobile/laptop! */
-        width: 100%;
-      }
-      .knowledge-panel {
-        position: static !important;
-        margin-bottom: 8px;
+        padding: 10px 16px 50px 16px;
       }
       .google-top-row {
         flex-direction: column;
@@ -756,8 +742,10 @@
       }
     }
 
-    /* Left Column: Posts, Search Results & Updates */
+    /* Column: Posts, Search Results & Updates */
     .left-col {
+      width: 100%;
+      max-width: 1020px;
       display: flex;
       flex-direction: column;
       gap: 20px;
@@ -2636,6 +2624,25 @@
             <button class="kp-share-btn" onclick="copyWebsiteUrl()" title="Bookmark profile"><i class="fa-regular fa-bookmark"></i></button>
           </div>
         </div>
+
+        <!-- Google Celebrity Action Pills (1-Click Hub) -->
+        <div class="kp-action-pills-row" style="margin-top: 12px;">
+          <a href="#" onclick="executeGoogleSearch('jeel vaghani'); return false;" class="kp-action-pill active">
+            <i class="fa-solid fa-globe"></i> Overview
+          </a>
+          <button class="kp-action-pill kp-pill-install" onclick="downloadMasterInstaller()">
+            <i class="fa-solid fa-download"></i> Install 23 Apps
+          </button>
+          <a href="https://www.instagram.com/vaghani_01/" target="_blank" class="kp-action-pill">
+            <i class="fa-brands fa-instagram" style="color: #e1306c;"></i> Instagram
+          </a>
+          <a href="https://github.com/jeel531" target="_blank" class="kp-action-pill">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+          <a href="movie.html" class="kp-action-pill">
+            <i class="fa-solid fa-film" style="color: #ffd700;"></i> The Sultan Movie
+          </a>
+        </div>
       </div>
 
       <!-- 4-COLUMN HERO GRID (1:1 MATCH OF SCREENSHOT 3) -->
@@ -2761,6 +2768,18 @@
             <div class="celeb-detail-row">
               <span class="celeb-detail-label">Organizations</span>
               <span class="celeb-detail-val">Om Sai Letes Creation (OSLC) · Tech Innovations Gujarat</span>
+            </div>
+            <div class="celeb-detail-row">
+              <span class="celeb-detail-label">Education</span>
+              <span class="celeb-detail-val">Computer Engineering & Business Systems, Gujarat</span>
+            </div>
+            <div class="celeb-detail-row">
+              <span class="celeb-detail-label">Profiles</span>
+              <span class="celeb-detail-val">
+                <a href="https://www.instagram.com/vaghani_01/" target="_blank" style="color: #8ab4f8; margin-right: 12px; text-decoration: none;"><i class="fa-brands fa-instagram" style="color: #e1306c;"></i> Instagram</a>
+                <a href="https://github.com/jeel531" target="_blank" style="color: #8ab4f8; margin-right: 12px; text-decoration: none;"><i class="fa-brands fa-github"></i> GitHub</a>
+                <a href="https://linkedin.com" target="_blank" style="color: #8ab4f8; text-decoration: none;"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+              </span>
             </div>
           </div>
         </div>
@@ -3910,186 +3929,6 @@
 
         </div>
       </div>
-
-      <!-- RIGHT COLUMN: GOOGLE KNOWLEDGE PANEL (EXACT MATCH OF SCREENSHOT 2) -->
-      <aside class="right-col">
-        <div class="knowledge-panel">
-
-          <!-- Knowledge Panel Header (100% Authentic Google Celebrity Box) -->
-          <div class="kp-header">
-            <div class="kp-title-row">
-              <div>
-                <div style="display: flex; align-items: center; gap: 10px;">
-                  <h1 class="kp-name">Jeel Vaghani</h1>
-                  <button class="kp-audio-btn" onclick="pronounceName()" title="Listen to pronunciation of Jeel Vaghani">
-                    <i class="fa-solid fa-volume-high"></i>
-                  </button>
-                </div>
-                <div class="kp-subtitle">
-                  <span>Business Developer & Software Architect</span>
-                  <span class="kp-verified-chip"><i class="fa-solid fa-circle-check"></i> Verified Entity</span>
-                </div>
-                <div style="font-size: 12px; color: #81c995; margin-top: 3px;">Public Figure · Entrepreneur · Actor · Gujarat, India</div>
-              </div>
-              <div style="display: flex; gap: 8px;">
-                <button class="kp-share-btn" onclick="shareProfile()" title="Share entity"><i class="fa-solid fa-share-nodes"></i></button>
-                <button class="kp-share-btn" onclick="copyWebsiteUrl()" title="Copy website link"><i class="fa-regular fa-bookmark"></i></button>
-              </div>
-            </div>
-
-            <!-- Google Celebrity Action Pills -->
-            <div class="kp-action-pills-row">
-              <a href="#" onclick="executeGoogleSearch('jeel vaghani'); return false;" class="kp-action-pill active">
-                <i class="fa-solid fa-globe"></i> Overview
-              </a>
-              <button class="kp-action-pill kp-pill-install" onclick="downloadMasterInstaller()">
-                <i class="fa-solid fa-download"></i> Install 23 Apps
-              </button>
-              <a href="https://www.instagram.com/vaghani_01/" target="_blank" class="kp-action-pill">
-                <i class="fa-brands fa-instagram" style="color: #e1306c;"></i> Instagram
-              </a>
-              <a href="https://github.com/jeel531" target="_blank" class="kp-action-pill">
-                <i class="fa-brands fa-github"></i> GitHub
-              </a>
-              <a href="movie.html" class="kp-action-pill">
-                <i class="fa-solid fa-film" style="color: #ffd700;"></i> The Sultan
-              </a>
-            </div>
-          </div>
-
-          <!-- Photos Carousel Grid (Like Hina Khan's Photo Grid) -->
-          <div class="kp-photos-grid">
-            <div class="kp-photo-main" style="position: relative; cursor: pointer;" onclick="window.location.href='movie.html'">
-              <img src="./assets/jeel-life-poster.jpg" alt="Jeel Vaghani - Life Movie Poster" class="kp-photo-img">
-              <span class="photo-source-badge" style="background: linear-gradient(135deg, #ffd700, #e50914); color: #000; font-weight: 800;">🎬 Movie Poster</span>
-            </div>
-            <div class="kp-photo-side">
-              <img src="./assets/jeel-life-1-romance.jpg" alt="Jeel Vaghani Sunset Romance" class="kp-photo-img" onclick="window.location.href='movie.html'">
-            </div>
-            <div class="kp-photo-side">
-              <img src="./assets/jeel-life-3-combat.jpg" alt="Jeel Vaghani Martial Arts Combat" class="kp-photo-img" onclick="window.location.href='movie.html'">
-            </div>
-            <div class="kp-photo-side">
-              <img src="./assets/jeel-life-2-threat.jpg" alt="Jeel Vaghani Palace Protective Stand" class="kp-photo-img" onclick="window.location.href='movie.html'">
-            </div>
-            <div class="kp-photo-side">
-              <img src="./assets/jeel-life-5-climax.jpg" alt="Jeel Vaghani Climax Couple Fire Walk" class="kp-photo-img" onclick="window.location.href='movie.html'">
-            </div>
-          </div>
-
-          <!-- Quick Fact Cards (Age, Nationality, Residence, Profession) -->
-          <div class="kp-quick-facts">
-            <div class="fact-card">
-              <div class="fact-label">Age</div>
-              <div class="fact-value">23 years</div>
-              <div class="fact-sub">23 April 2003</div>
-            </div>
-            <div class="fact-card">
-              <div class="fact-label">Profession</div>
-              <div class="fact-value">Business Developer</div>
-              <div class="fact-sub">IT & Corporate Growth</div>
-            </div>
-          </div>
-
-          <!-- Social Profiles -->
-          <div class="kp-social-profiles">
-            <div class="social-handles-grid">
-              <a href="https://www.instagram.com/vaghani_01/" target="_blank" rel="noopener noreferrer" class="social-handle-item">
-                <div class="social-handle-left">
-                  <div class="social-icon-circle icon-insta"><i class="fa-brands fa-instagram"></i></div>
-                  <div class="social-handle-text">
-                    <span class="social-handle-name">Instagram</span>
-                    <span class="social-handle-followers">@vaghani_01 · 1,779 Followers · 9 Posts</span>
-                  </div>
-                </div>
-                <i class="fa-solid fa-arrow-up-right-from-square" style="color: #9aa0a6; font-size: 13px;"></i>
-              </a>
-
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-handle-item">
-                <div class="social-handle-left">
-                  <div class="social-icon-circle icon-linkedin"><i class="fa-brands fa-linkedin-in"></i></div>
-                  <div class="social-handle-text">
-                    <span class="social-handle-name">LinkedIn</span>
-                    <span class="social-handle-followers">Jeel Vaghani · Professional Network</span>
-                  </div>
-                </div>
-                <i class="fa-solid fa-arrow-up-right-from-square" style="color: #9aa0a6; font-size: 13px;"></i>
-              </a>
-
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-handle-item">
-                <div class="social-handle-left">
-                  <div class="social-icon-circle icon-twitter"><i class="fa-brands fa-x-twitter"></i></div>
-                  <div class="social-handle-text">
-                    <span class="social-handle-name">X (Twitter)</span>
-                    <span class="social-handle-followers">@jeelvaghani · Thoughts & Tech</span>
-                  </div>
-                </div>
-                <i class="fa-solid fa-arrow-up-right-from-square" style="color: #9aa0a6; font-size: 13px;"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- About / Wikipedia Style Summary -->
-          <div class="kp-about">
-            <div class="kp-section-title">About</div>
-            <p class="kp-about-text">
-              <strong>Jeel Vaghani</strong> is a professional Business Developer and digital strategist based in Gujarat, India. Specializing in business expansion, client acquisition, and technology partnerships, he combines corporate leadership with a dynamic personal brand across social platforms.
-            </p>
-            <a href="#" onclick="openModal('guideModal'); return false;" class="kp-about-source">
-              <i class="fa-solid fa-database"></i> Source: Google Knowledge Graph & Wikidata
-            </a>
-          </div>
-
-          <!-- Structured Details Table (Google Verified Entity Attributes) -->
-          <div class="kp-details-list">
-            <div class="kp-detail-row">
-              <div class="kp-detail-label">Full name</div>
-              <div class="kp-detail-val">Jeel Vaghani (જીલ વાઘાણી)</div>
-            </div>
-            <div class="kp-detail-row">
-              <div class="kp-detail-label">Born</div>
-              <div class="kp-detail-val">23 April 2003 (age 23 years), Gujarat, India</div>
-            </div>
-            <div class="kp-detail-row">
-              <div class="kp-detail-label">Profession</div>
-              <div class="kp-detail-val">Business Developer, Systems Architect, Actor</div>
-            </div>
-            <div class="kp-detail-row">
-              <div class="kp-detail-label">Notable works</div>
-              <div class="kp-detail-val">OSLC ERP Suite, LUMORA Barcode Engine, <a href="movie.html">The Sultan (Movie)</a></div>
-            </div>
-            <div class="kp-detail-row">
-              <div class="kp-detail-label">Movies</div>
-              <div class="kp-detail-val"><a href="movie.html">Jeel Vaghani: The Sultan (2026)</a>, Rudra (Action)</div>
-            </div>
-            <div class="kp-detail-row">
-              <div class="kp-detail-label">Organizations</div>
-              <div class="kp-detail-val">Om Sai Letes Creation (OSLC), Digi Systems</div>
-            </div>
-            <div class="kp-detail-row">
-              <div class="kp-detail-label">Nationality</div>
-              <div class="kp-detail-val">Indian</div>
-            </div>
-            <div class="kp-detail-row">
-              <div class="kp-detail-label">Height</div>
-              <div class="kp-detail-val">5 ft 10 in (1.78 m)</div>
-            </div>
-            <div class="kp-detail-row">
-              <div class="kp-detail-label">Education</div>
-              <div class="kp-detail-val">Computer Engineering & Business Systems, Gujarat</div>
-            </div>
-          </div>
-
-          <!-- Claim Knowledge Panel Action -->
-          <div class="kp-claim-box">
-            <span class="claim-text">Claim this knowledge panel?</span>
-            <span class="claim-link" onclick="openModal('guideModal')">
-              Get verified <i class="fa-solid fa-arrow-right"></i>
-            </span>
-          </div>
-
-        </div>
-      </aside>
 
     </main>
 
