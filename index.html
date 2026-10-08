@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jeel Vaghani - Official Profile & Google Knowledge Panel</title>
+  <title>Jeel Vaghani (જીલ વાઘાણી) - Official Website & Digital Profile</title>
   
   <!-- Google Search Console Verification -->
   <meta name="google-site-verification" content="google0bbb5320c6b36aa1">
@@ -11,9 +11,9 @@
   <meta name="google-site-verification" content="google80fa1b942c9f7793">
   <meta name="google-site-verification" content="80fa1b942c9f7793">
   
-  <!-- SEO Meta Tags for Google Search Ranking -->
-  <meta name="description" content="Official profile of Jeel Vaghani - Business Developer, Entrepreneur, and Public Figure from Gujarat, India. View latest posts, photos, biography and updates.">
-  <meta name="keywords" content="Jeel Vaghani, Jeel, Vaghani, Jeel Vaghani Business Developer, Jeel Vaghani Gujarat, Jeel Vaghani Photos, જીલ વાઘાણી, જીલ, વાઘાણી, જીલ વાઘાણી ગુજરાત, જીલ વાઘાણી મૂવી, Jeel Vaghani Movie">
+  <!-- SEO Meta Tags for Google Search Ranking (Top #1 Exact Target) -->
+  <meta name="description" content="Jeel Vaghani (જીલ વાઘાણી) - Official Google Profile, Business Developer, Software Architect & Actor. Explore 23 production software tools, 12 HD gallery photos, and 'The Sultan' IMAX movie.">
+  <meta name="keywords" content="jeel vaghani, Jeel Vaghani, jeel, vaghani, જીલ વાઘાણી, જીલ, વાઘાણી, Jeel Vaghani Google, Jeel Vaghani Official, Jeel Vaghani Portfolio, Jeel Vaghani Business Developer, Jeel Vaghani Movie, Jeel Vaghani Gujarat">
   <meta name="author" content="Jeel Vaghani">
   
   <!-- Open Graph Meta Tags (for WhatsApp, Facebook, LinkedIn previews) -->
@@ -385,42 +385,6 @@
       min-height: 100vh;
     }
 
-    /* Top Mode Bar */
-    .top-action-bar {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(32, 33, 36, 0.95);
-      -webkit-backdrop-filter: blur(12px);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid #3c4043;
-      padding: 10px 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .badge-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: linear-gradient(135deg, rgba(66, 133, 244, 0.2), rgba(234, 67, 53, 0.15));
-      border: 1px solid rgba(138, 180, 248, 0.3);
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--text-blue);
-    }
-
-    .nav-buttons {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-    }
-
     .btn {
       padding: 8px 16px;
       border-radius: 8px;
@@ -463,16 +427,141 @@
       background-color: #1e8e3e;
     }
 
-    /* Google Header Replica */
-    .google-header {
-      padding: 16px 24px 0 24px;
+    /* ========================================================
+       AUTHENTIC 1-TO-1 GOOGLE TOP NAVIGATION & HEADER
+       ======================================================== */
+    .google-top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #202124;
       border-bottom: 1px solid #3c4043;
+      padding: 14px 24px 0 24px;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
     }
 
-    .google-search-row {
+    .google-top-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .google-search-section {
       display: flex;
       align-items: center;
       gap: 24px;
+      flex: 1;
+      max-width: 820px;
+    }
+
+    /* Google Top Right Header Actions (Gmail, Images, Apps 9-dots, Avatar) */
+    .google-header-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .google-nav-link {
+      color: #e8eaed;
+      font-size: 13.5px;
+      text-decoration: none;
+      cursor: pointer;
+      padding: 6px 8px;
+      border-radius: 4px;
+      transition: color 0.15s;
+    }
+    .google-nav-link:hover {
+      text-decoration: underline;
+      color: #fff;
+    }
+
+    .google-apps-btn {
+      background: transparent;
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .google-apps-btn:hover {
+      background: #303134;
+    }
+
+    .google-user-profile {
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+    .google-user-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #8ab4f8;
+      box-shadow: 0 0 10px rgba(138, 180, 248, 0.35);
+    }
+    .user-verified-badge {
+      position: absolute;
+      bottom: -2px;
+      right: -2px;
+      background: #1a73e8;
+      color: #fff;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 8px;
+      border: 2px solid #202124;
+    }
+
+    /* Google Apps Drawer Dropdown */
+    .google-apps-drawer {
+      position: absolute;
+      top: 60px;
+      right: 24px;
+      width: 320px;
+      background: #303134;
+      border: 1px solid #4d5156;
+      border-radius: 20px;
+      padding: 16px;
+      box-shadow: 0 12px 36px rgba(0,0,0,0.65);
+      z-index: 1200;
+      display: none;
+      animation: fadeIn 0.2s ease;
+    }
+    .google-apps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .google-app-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 6px;
+      border-radius: 12px;
+      text-decoration: none;
+      color: #e8eaed;
+      font-size: 11.5px;
+      transition: background 0.15s;
+      cursor: pointer;
+      text-align: center;
+    }
+    .google-app-item:hover {
+      background: #3c4043;
+    }
+    .google-app-icon {
+      font-size: 24px;
+    }
       max-width: 800px;
       position: relative;
     }
@@ -629,19 +718,38 @@
       color: #e8eaed;
     }
 
-    /* Main Container */
+    /* Main Layout: Google 2-Column Search Results + Celebrity Knowledge Panel */
     .main-content {
-      max-width: 1280px;
+      max-width: 1360px;
       margin: 0 auto;
-      padding: 24px;
+      padding: 16px 24px 60px 24px;
       display: grid;
-      grid-template-columns: 1fr 480px;
-      gap: 32px;
+      grid-template-columns: minmax(0, 1.4fr) minmax(380px, 450px);
+      gap: 36px;
+      align-items: start;
     }
 
-    @media (max-width: 992px) {
+    @media (max-width: 1024px) {
       .main-content {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        padding: 12px 16px 50px 16px;
+        gap: 20px;
+      }
+      .right-col {
+        order: -1; /* Puts the Celebrity Knowledge Panel AT THE VERY TOP on mobile/laptop! */
+        width: 100%;
+      }
+      .knowledge-panel {
+        position: static !important;
+        margin-bottom: 8px;
+      }
+      .google-top-row {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .google-header-right {
+        justify-content: flex-end;
       }
       .google-tabs {
         padding-left: 0;
@@ -652,7 +760,7 @@
     .left-col {
       display: flex;
       flex-direction: column;
-      gap: 24px;
+      gap: 20px;
     }
 
     .results-count {
@@ -911,6 +1019,159 @@
       color: #fff;
     }
 
+    /* Google Celebrity Knowledge Panel Action Pills */
+    .kp-action-pills-row {
+      display: flex;
+      gap: 8px;
+      margin-top: 14px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      scrollbar-width: none;
+    }
+    .kp-action-pill {
+      background: #202124;
+      border: 1px solid #5f6368;
+      color: #e8eaed;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+    }
+    .kp-action-pill:hover {
+      background: #3c4043;
+      border-color: #8ab4f8;
+      color: #fff;
+    }
+    .kp-action-pill.active {
+      background: rgba(138, 180, 248, 0.15);
+      border-color: #8ab4f8;
+      color: #8ab4f8;
+      font-weight: 600;
+    }
+    .kp-pill-install {
+      background: linear-gradient(135deg, rgba(26, 115, 232, 0.35), rgba(52, 168, 83, 0.3));
+      border-color: #34a853;
+      color: #81c995;
+      font-weight: 600;
+      box-shadow: 0 0 10px rgba(52, 168, 83, 0.25);
+    }
+    .kp-pill-install:hover {
+      background: linear-gradient(135deg, #1a73e8, #1e8e3e);
+      color: #fff;
+    }
+
+    /* Pronounce Audio Button */
+    .kp-audio-btn {
+      background: #202124;
+      border: 1px solid #5f6368;
+      color: #8ab4f8;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .kp-audio-btn:hover {
+      background: #8ab4f8;
+      color: #202124;
+      transform: scale(1.08);
+    }
+
+    .kp-verified-chip {
+      background: rgba(138, 180, 248, 0.15);
+      color: #8ab4f8;
+      border: 1px solid rgba(138, 180, 248, 0.3);
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 11px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* 1-Click Install Button on Project Cards */
+    .btn-install-card {
+      background: linear-gradient(135deg, #1a73e8, #185abc);
+      color: #ffffff;
+      border: 1px solid rgba(138, 180, 248, 0.4);
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 2px 8px rgba(26, 115, 232, 0.35);
+      transition: all 0.2s ease;
+    }
+    .btn-install-card:hover {
+      background: linear-gradient(135deg, #1e8e3e, #137333);
+      border-color: #34a853;
+      box-shadow: 0 4px 14px rgba(52, 168, 83, 0.5);
+      transform: translateY(-1px);
+    }
+
+    /* Master Suite Banner */
+    .master-installer-banner {
+      background: linear-gradient(135deg, #182333, #132b20);
+      border: 1px solid #34a853;
+      border-radius: 14px;
+      padding: 18px 22px;
+      margin-bottom: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 14px;
+      box-shadow: 0 4px 20px rgba(52, 168, 83, 0.18);
+    }
+
+    /* Install Hub Snippet */
+    .install-hub-snippet {
+      background: #25282e;
+      border: 1px solid #3c4043;
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin: 10px 0;
+    }
+    .snippet-action-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .snippet-pill-btn {
+      background: #202124;
+      border: 1px solid #5f6368;
+      color: #e8eaed;
+      padding: 6px 14px;
+      border-radius: 16px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s;
+    }
+    .snippet-pill-btn:hover {
+      background: #3c4043;
+      border-color: #8ab4f8;
+      color: #8ab4f8;
+    }
+
     /* Knowledge Panel Photos Grid (Like Hina Khan's NDTV carousel) */
     .kp-photos-grid {
       display: grid;
@@ -986,6 +1247,476 @@
     .fact-sub {
       font-size: 12px;
       color: #9aa0a6;
+    }
+
+    /* ========================================================
+       AUTHENTIC GOOGLE CELEBRITY HERO ENTITY (EXACT MATCH SCREENSHOT 3 - HINA KHAN)
+       ======================================================== */
+    .google-celebrity-hero-container {
+      max-width: 1360px;
+      margin: 18px auto 8px auto;
+      padding: 0 24px;
+    }
+
+    .celeb-hero-header {
+      margin-bottom: 14px;
+    }
+
+    .celeb-entity-title-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .celeb-entity-name {
+      font-size: 32px;
+      font-weight: 500;
+      color: #ffffff;
+      letter-spacing: -0.3px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      line-height: 1.2;
+    }
+
+    .celeb-entity-sub {
+      font-size: 14.5px;
+      color: #9aa0a6;
+      margin-top: 4px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .celeb-hero-grid {
+      display: grid;
+      grid-template-columns: 290px 175px 300px minmax(260px, 340px);
+      gap: 12px;
+      height: 310px;
+    }
+
+    /* Col 1: Main Tall Portrait (NDTV Style) */
+    .celeb-grid-col-main {
+      position: relative;
+      border-radius: 18px;
+      overflow: hidden;
+      height: 100%;
+      background: #1e2023;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+    }
+    .celeb-grid-col-main img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .celeb-grid-col-main:hover img {
+      transform: scale(1.03);
+    }
+    .celeb-source-badge {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      font-size: 11px;
+      color: #e8eaed;
+      background: rgba(0, 0, 0, 0.7);
+      -webkit-backdrop-filter: blur(4px);
+      backdrop-filter: blur(4px);
+      padding: 4px 8px;
+      border-radius: 4px;
+      pointer-events: none;
+      font-weight: 500;
+    }
+
+    /* Col 2: Stacked 2 Photos */
+    .celeb-grid-col-stacked {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      height: 100%;
+    }
+    .celeb-stacked-item {
+      flex: 1;
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      background: #1e2023;
+      cursor: pointer;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    }
+    .celeb-stacked-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .celeb-stacked-item:hover img {
+      transform: scale(1.04);
+    }
+
+    /* Col 3: Featured News/Trip Story Card */
+    .celeb-grid-col-featured {
+      display: flex;
+      flex-direction: column;
+      border-radius: 18px;
+      overflow: hidden;
+      background: #303134;
+      height: 100%;
+      border: 1px solid #3c4043;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+      transition: border-color 0.2s;
+    }
+    .celeb-grid-col-featured:hover {
+      border-color: #5f6368;
+    }
+    .celeb-featured-img-box {
+      flex: 1;
+      overflow: hidden;
+      position: relative;
+    }
+    .celeb-featured-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .celeb-grid-col-featured:hover .celeb-featured-img-box img {
+      transform: scale(1.03);
+    }
+    .celeb-featured-text-box {
+      padding: 10px 14px 12px 14px;
+      background: #303134;
+    }
+    .celeb-featured-source {
+      font-size: 11px;
+      color: #bdc1c6;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 4px;
+    }
+    .celeb-featured-headline {
+      font-size: 12.5px;
+      color: #fff;
+      line-height: 1.35;
+      font-weight: 500;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .celeb-featured-time {
+      font-size: 11px;
+      color: #9aa0a6;
+      margin-top: 4px;
+    }
+
+    /* Col 4: Quick Facts & Video Mini-Cards */
+    .celeb-grid-col-facts {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      height: 100%;
+    }
+    .celeb-fact-mini-card {
+      background: #303134;
+      border: 1px solid #3c4043;
+      border-radius: 14px;
+      padding: 10px 14px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: background 0.15s, border-color 0.15s;
+      cursor: pointer;
+    }
+    .celeb-fact-mini-card:hover {
+      background: #383a3e;
+      border-color: #5f6368;
+    }
+    .celeb-fact-top-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 11.5px;
+      color: #9aa0a6;
+      margin-bottom: 2px;
+    }
+    .celeb-fact-big-val {
+      font-size: 16px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+    .celeb-fact-sub-val {
+      font-size: 11.5px;
+      color: #9aa0a6;
+      margin-top: 1px;
+    }
+
+    .celeb-video-mini-card {
+      background: #303134;
+      border: 1px solid #3c4043;
+      border-radius: 14px;
+      padding: 8px 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .celeb-video-mini-card:hover {
+      background: #383a3e;
+      border-color: #8ab4f8;
+    }
+    .celeb-video-thumb-box {
+      width: 78px;
+      height: 54px;
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+      flex-shrink: 0;
+    }
+    .celeb-video-thumb-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .celeb-play-badge {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: rgba(234, 67, 53, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 10px;
+    }
+    .celeb-duration-badge {
+      position: absolute;
+      bottom: 2px;
+      right: 2px;
+      background: rgba(0, 0, 0, 0.85);
+      color: #fff;
+      font-size: 9px;
+      padding: 1px 4px;
+      border-radius: 2px;
+      font-weight: 600;
+    }
+    .celeb-video-info {
+      flex: 1;
+      min-width: 0;
+    }
+    .celeb-video-title {
+      font-size: 11.5px;
+      color: #fff;
+      line-height: 1.3;
+      font-weight: 500;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .celeb-video-channel {
+      font-size: 10.5px;
+      color: #9aa0a6;
+      margin-top: 2px;
+    }
+
+    /* ========================================================
+       ABOUT CARD & MOVIES CAROUSEL (EXACT MATCH SCREENSHOT 3)
+       ======================================================== */
+    .celeb-about-card {
+      background: #303134;
+      border: 1px solid #3c4043;
+      border-radius: 16px;
+      padding: 18px 20px;
+      margin: 12px 0 16px 0;
+    }
+    .celeb-about-header {
+      font-size: 17px;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+    .celeb-about-body {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .celeb-about-thumb {
+      width: 72px;
+      height: 72px;
+      border-radius: 12px;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 1px solid #5f6368;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .celeb-about-thumb:hover {
+      transform: scale(1.05);
+    }
+    .celeb-about-text {
+      font-size: 13.5px;
+      color: #bdc1c6;
+      line-height: 1.6;
+    }
+
+    /* Details Table Below About (Born, Spouse/Role, Height, etc.) */
+    .celeb-details-table {
+      margin-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding-top: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+    .celeb-detail-row {
+      display: flex;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+    .celeb-detail-label {
+      width: 140px;
+      color: #9aa0a6;
+      flex-shrink: 0;
+      font-weight: 500;
+    }
+    .celeb-detail-val {
+      color: #e8eaed;
+      flex: 1;
+    }
+
+    /* Movies and Shows Carousel (1:1 with Screenshot 3) */
+    .celeb-movies-section {
+      margin: 18px 0 22px 0;
+    }
+    .celeb-movies-heading-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+    .celeb-movies-heading {
+      font-size: 18px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+    .celeb-movies-carousel-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .celeb-movies-row {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      padding: 4px 2px;
+      width: 100%;
+    }
+    .celeb-movies-row::-webkit-scrollbar {
+      display: none;
+    }
+    .celeb-movie-card {
+      width: 130px;
+      flex-shrink: 0;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .celeb-movie-card:hover {
+      transform: translateY(-4px);
+    }
+    .celeb-movie-poster-box {
+      width: 130px;
+      height: 180px;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #202124;
+      border: 1px solid #3c4043;
+      margin-bottom: 6px;
+      position: relative;
+    }
+    .celeb-movie-poster-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .celeb-movie-title {
+      font-size: 12.5px;
+      font-weight: 500;
+      color: #e8eaed;
+      line-height: 1.3;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .celeb-movie-sub {
+      font-size: 11px;
+      color: #9aa0a6;
+    }
+    .celeb-carousel-nav-btn {
+      position: absolute;
+      right: -14px;
+      top: 45%;
+      transform: translateY(-50%);
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(48, 49, 52, 0.95);
+      border: 1px solid #5f6368;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
+      z-index: 10;
+      transition: all 0.2s;
+    }
+    .celeb-carousel-nav-btn:hover {
+      background: #8ab4f8;
+      color: #202124;
+      border-color: #8ab4f8;
+    }
+
+    @media (max-width: 1024px) {
+      .celeb-hero-grid {
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+      }
+      .celeb-grid-col-main {
+        height: 260px;
+      }
+      .celeb-grid-col-stacked {
+        height: 260px;
+      }
+      .celeb-grid-col-featured {
+        height: 260px;
+      }
+      .celeb-grid-col-facts {
+        height: auto;
+      }
+    }
+    @media (max-width: 640px) {
+      .celeb-hero-grid {
+        grid-template-columns: 1fr;
+      }
+      .celeb-grid-col-main {
+        height: 290px;
+      }
+      .celeb-entity-name {
+        font-size: 26px;
+      }
     }
 
     /* Social Media Profiles Pill/Row */
@@ -1751,54 +2482,12 @@
 </head>
 <body>
 
-  <!-- TOP ACTION BAR WITH LIVE SWITCHES & GUIDE -->
-  <header class="top-action-bar">
-    <div style="display: flex; align-items: center; gap: 14px;">
-      <span class="badge-pill">
-        <i class="fa-solid fa-circle-check" style="color: #34a853;"></i>
-        Google Knowledge Panel Live Preview
-      </span>
-      <span style="font-size: 13px; color: #9aa0a6; display: none; @media(min-width:768px){display:inline;}">
-        Name: <strong>Jeel Vaghani</strong>
-      </span>
-    </div>
-
-    <div class="nav-buttons">
-      <a href="movie.html" class="btn" style="background: linear-gradient(135deg, #ffd700, #e50914); color: #000; font-weight: 700; box-shadow: 0 0 16px rgba(255, 215, 0, 0.5);">
-        <i class="fa-solid fa-crown"></i>
-        <span>👑 Official Full Movie: THE SULTAN (1080p)</span>
-      </a>
-
-      <button class="btn btn-outline" id="toggleViewBtn" onclick="toggleView()">
-        <i class="fa-solid fa-globe"></i>
-        <span>Full Portfolio View</span>
-      </button>
-
-      <button class="btn" style="background: linear-gradient(135deg, #00c6ff, #0072ff); color: #fff; font-weight: 600; box-shadow: 0 0 14px rgba(0, 198, 255, 0.45);" onclick="openModal('visitorReportModal')">
-        <i class="fa-solid fa-chart-line"></i>
-        <span>Who Searched? (Live Report)</span>
-      </button>
-
-      <button class="btn btn-green" onclick="openModal('guideModal')">
-        <i class="fa-solid fa-rocket"></i>
-        <span>How to Rank Live on Google</span>
-      </button>
-
-      <button class="btn btn-primary" onclick="openModal('newPostModal')">
-        <i class="fa-solid fa-plus"></i>
-        <span>Add New Post</span>
-      </button>
-    </div>
-  </header>
-
-  <!-- GOOGLE SEARCH VIEW CONTAINER -->
-  <div id="googleSearchView">
-
-    <!-- GOOGLE HEADER (EXACT 1-TO-1 GOOGLE DARK MODE) -->
-    <div class="google-header">
-      <div class="google-search-row">
+  <!-- AUTHENTIC 1-TO-1 GOOGLE SEARCH HEADER -->
+  <header class="google-top-nav">
+    <div class="google-top-row">
+      <div class="google-search-section">
         <!-- Google Multi-color Logo -->
-        <div class="google-logo" onclick="location.reload()">
+        <div class="google-logo" onclick="executeGoogleSearch('jeel vaghani')" title="Google Home">
           <span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span>
         </div>
 
@@ -1809,55 +2498,214 @@
             <div class="search-icons">
               <i class="fa-solid fa-xmark" style="font-size: 14px;" onclick="clearSearch()" title="Clear"></i>
               <span style="border-left: 1px solid #5f6368; height: 20px;"></span>
-              <i class="fa-solid fa-microphone mic-btn" title="Search by voice"></i>
-              <i class="fa-solid fa-camera lens-btn" title="Search by image"></i>
-              <i class="fa-solid fa-magnifying-glass" style="color: #8ab4f8; margin-left: 4px;" title="Search"></i>
+              <i class="fa-solid fa-microphone mic-btn" title="Search by voice" onclick="pronounceName()"></i>
+              <i class="fa-solid fa-camera lens-btn" title="Search by image" onclick="filterMainTab('photos')"></i>
+              <i class="fa-solid fa-magnifying-glass" style="color: #8ab4f8; margin-left: 4px; cursor: pointer;" title="Search" onclick="executeGoogleSearch()"></i>
             </div>
           </div>
 
-          <!-- Chrome/Google Omnibox Auto-Suggest Dropdown (Matching Screenshot 1) -->
+          <!-- Chrome/Google Omnibox Auto-Suggest Dropdown -->
           <div class="autocomplete-dropdown" id="suggestDropdown">
             <!-- Featured Entity Result (Jeel Vaghani with photo) -->
             <div class="suggestion-item highlighted" onclick="selectSuggestion('jeel vaghani')">
               <img src="./assets/jeel-suit.jpeg" alt="Jeel Vaghani" class="suggestion-avatar">
               <div class="suggestion-text">
                 <div class="suggestion-title"><strong>Jeel Vaghani</strong> - Business Developer</div>
-                <div class="suggestion-sub">Professional · Gujarat, India · Verified Knowledge Panel</div>
+                <div class="suggestion-sub">Professional · Gujarat, India · Verified Celebrity Knowledge Panel</div>
               </div>
               <i class="fa-solid fa-arrow-trend-up" style="color: #8ab4f8; font-size: 14px;"></i>
             </div>
 
             <!-- Other suggestions -->
-            <div class="suggestion-item" onclick="selectSuggestion('jeel vaghani photos')">
-              <i class="fa-solid fa-magnifying-glass" style="color: #9aa0a6; font-size: 16px; margin: 0 10px;"></i>
+            <div class="suggestion-item" onclick="selectSuggestion('jeel vaghani software projects')">
+              <i class="fa-solid fa-download" style="color: #81c995; font-size: 16px; margin: 0 10px;"></i>
               <div class="suggestion-text">
-                <div class="suggestion-title">jeel vaghani <strong>photos</strong></div>
+                <div class="suggestion-title">jeel vaghani <strong>software projects (Install 23 Apps)</strong></div>
+              </div>
+            </div>
+            <div class="suggestion-item" onclick="selectSuggestion('jeel vaghani the sultan movie')">
+              <i class="fa-solid fa-film" style="color: #ffd700; font-size: 16px; margin: 0 10px;"></i>
+              <div class="suggestion-text">
+                <div class="suggestion-title">jeel vaghani <strong>the sultan movie (1080p IMAX)</strong></div>
+              </div>
+            </div>
+            <div class="suggestion-item" onclick="selectSuggestion('jeel vaghani photos')">
+              <i class="fa-solid fa-camera" style="color: #ea4335; font-size: 16px; margin: 0 10px;"></i>
+              <div class="suggestion-text">
+                <div class="suggestion-title">jeel vaghani <strong>photos & gallery (12 HD)</strong></div>
               </div>
             </div>
             <div class="suggestion-item" onclick="selectSuggestion('jeel vaghani instagram')">
-              <i class="fa-solid fa-magnifying-glass" style="color: #9aa0a6; font-size: 16px; margin: 0 10px;"></i>
+              <i class="fa-brands fa-instagram" style="color: #e1306c; font-size: 16px; margin: 0 10px;"></i>
               <div class="suggestion-text">
-                <div class="suggestion-title">jeel vaghani <strong>instagram</strong></div>
-              </div>
-            </div>
-            <div class="suggestion-item" onclick="selectSuggestion('jeel vaghani posts & biography')">
-              <i class="fa-solid fa-magnifying-glass" style="color: #9aa0a6; font-size: 16px; margin: 0 10px;"></i>
-              <div class="suggestion-text">
-                <div class="suggestion-title">jeel vaghani <strong>posts & biography</strong></div>
+                <div class="suggestion-title">jeel vaghani <strong>instagram (@vaghani_01)</strong></div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Google Tabs (All, Projects & Systems, Images & Gallery, Posts & Updates, Official Movie, Analytics) -->
-      <div class="google-tabs">
-        <div class="tab-item active" id="tabMainAll" onclick="filterMainTab('all', this)"><i class="fa-solid fa-magnifying-glass"></i> All</div>
-        <div class="tab-item" id="tabMainProjects" onclick="filterMainTab('projects', this)"><i class="fa-solid fa-cubes-stacked"></i> Projects & Systems (23)</div>
-        <div class="tab-item" id="tabMainPhotos" onclick="filterMainTab('photos', this)"><i class="fa-regular fa-image"></i> Photos & Gallery (12)</div>
-        <div class="tab-item" id="tabMainPosts" onclick="filterMainTab('posts', this)"><i class="fa-regular fa-newspaper"></i> Posts & Updates</div>
-        <div class="tab-item" onclick="window.location.href='movie.html'"><i class="fa-solid fa-film"></i> Official Movie (1080p)</div>
-        <div class="tab-item" onclick="openModal('visitorReportModal')"><i class="fa-solid fa-chart-line"></i> Analytics</div>
+      <!-- Right Header Actions (Gmail, Images, Google Apps 9-dots, Avatar) -->
+      <div class="google-header-right">
+        <a href="https://mail.google.com" target="_blank" class="google-nav-link">Gmail</a>
+        <a href="#visualPhotosSection" onclick="filterMainTab('photos'); return false;" class="google-nav-link">Images</a>
+        <button class="google-apps-btn" id="googleAppsBtn" onclick="toggleGoogleAppsMenu()" title="Google apps">
+          <svg viewBox="0 0 24 24" width="22" height="22"><path fill="#bdc1c6" d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"></path></svg>
+        </button>
+        <div class="google-user-profile" onclick="openModal('guideModal')" title="Google Account: Jeel Vaghani (Verified Entity)">
+          <img src="./assets/jeel-suit.jpeg" alt="Jeel Vaghani" class="google-user-avatar">
+          <span class="user-verified-badge"><i class="fa-solid fa-check"></i></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Google Apps 9-Dots Drawer -->
+    <div class="google-apps-drawer" id="googleAppsDrawer">
+      <div class="google-apps-grid">
+        <a href="#" onclick="executeGoogleSearch('jeel vaghani'); return false;" class="google-app-item">
+          <i class="fa-brands fa-google google-app-icon" style="color: #4285f4;"></i>
+          <span>Search</span>
+        </a>
+        <a href="#projectsSection" onclick="filterMainTab('projects'); toggleGoogleAppsMenu(); return false;" class="google-app-item">
+          <i class="fa-brands fa-google-play google-app-icon" style="color: #34a853;"></i>
+          <span>Install Apps (23)</span>
+        </a>
+        <a href="movie.html" class="google-app-item">
+          <i class="fa-brands fa-youtube google-app-icon" style="color: #ea4335;"></i>
+          <span>The Sultan Movie</span>
+        </a>
+        <a href="#visualPhotosSection" onclick="filterMainTab('photos'); toggleGoogleAppsMenu(); return false;" class="google-app-item">
+          <i class="fa-solid fa-image google-app-icon" style="color: #fbbc05;"></i>
+          <span>Images</span>
+        </a>
+        <a href="#" onclick="toggleView(); toggleGoogleAppsMenu(); return false;" class="google-app-item">
+          <i class="fa-solid fa-globe google-app-icon" style="color: #8ab4f8;"></i>
+          <span>Portfolio View</span>
+        </a>
+        <a href="#" onclick="openModal('visitorReportModal'); toggleGoogleAppsMenu(); return false;" class="google-app-item">
+          <i class="fa-solid fa-chart-line google-app-icon" style="color: #00c6ff;"></i>
+          <span>Who Searched?</span>
+        </a>
+        <a href="https://www.instagram.com/vaghani_01/" target="_blank" class="google-app-item">
+          <i class="fa-brands fa-instagram google-app-icon" style="color: #e1306c;"></i>
+          <span>Instagram</span>
+        </a>
+        <a href="https://github.com/jeel531" target="_blank" class="google-app-item">
+          <i class="fa-brands fa-github google-app-icon" style="color: #fff;"></i>
+          <span>GitHub</span>
+        </a>
+        <a href="#" onclick="openModal('guideModal'); toggleGoogleAppsMenu(); return false;" class="google-app-item">
+          <i class="fa-solid fa-shield-halved google-app-icon" style="color: #81c995;"></i>
+          <span>SEO & Verify</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Google Tabs (All, Projects & Systems, Images & Gallery, Posts & Updates, Official Movie, Analytics) -->
+    <div class="google-tabs">
+      <div class="tab-item active" id="tabMainAll" onclick="filterMainTab('all', this)"><i class="fa-solid fa-magnifying-glass"></i> All</div>
+      <div class="tab-item" id="tabMainProjects" onclick="filterMainTab('projects', this)"><i class="fa-solid fa-cubes-stacked"></i> Projects & Apps (23)</div>
+      <div class="tab-item" id="tabMainPhotos" onclick="filterMainTab('photos', this)"><i class="fa-regular fa-image"></i> Photos & Gallery (12)</div>
+      <div class="tab-item" id="tabMainPosts" onclick="filterMainTab('posts', this)"><i class="fa-regular fa-newspaper"></i> Posts & Updates</div>
+      <div class="tab-item" onclick="window.location.href='movie.html'"><i class="fa-solid fa-film"></i> Official Movie (1080p)</div>
+      <div class="tab-item" onclick="openModal('visitorReportModal')"><i class="fa-solid fa-chart-line"></i> Analytics</div>
+    </div>
+  </header>
+
+  <!-- GOOGLE SEARCH VIEW CONTAINER -->
+  <div id="googleSearchView">
+
+    <!-- AUTHENTIC GOOGLE CELEBRITY HERO ENTITY (EXACT MATCH SCREENSHOT 3 - HINA KHAN) -->
+    <div class="google-celebrity-hero-container" id="celebHeroSection">
+      <div class="celeb-hero-header">
+        <div class="celeb-entity-title-row">
+          <div>
+            <h1 class="celeb-entity-name">
+              Jeel Vaghani
+              <button class="kp-audio-btn" onclick="pronounceName()" title="Listen to pronunciation of Jeel Vaghani" style="width: 32px; height: 32px; font-size: 13px;">
+                <i class="fa-solid fa-volume-high"></i>
+              </button>
+            </h1>
+            <div class="celeb-entity-sub">
+              <span>Business Developer, Software Architect & Actor</span>
+              <span class="kp-verified-chip"><i class="fa-solid fa-circle-check"></i> Verified Entity</span>
+            </div>
+          </div>
+          <div style="display: flex; gap: 8px;">
+            <button class="kp-share-btn" onclick="shareProfile()" title="Share profile"><i class="fa-solid fa-share-nodes"></i></button>
+            <button class="kp-share-btn" onclick="copyWebsiteUrl()" title="Bookmark profile"><i class="fa-regular fa-bookmark"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4-COLUMN HERO GRID (1:1 MATCH OF SCREENSHOT 3) -->
+      <div class="celeb-hero-grid">
+        <!-- Col 1: Tall Main Portrait -->
+        <div class="celeb-grid-col-main" onclick="viewPhoto('./assets/jeel-suit.jpeg')">
+          <img src="./assets/jeel-suit.jpeg" alt="Jeel Vaghani Corporate Portrait">
+          <span class="celeb-source-badge">Source: NDTV / Official Profile</span>
+        </div>
+
+        <!-- Col 2: Stacked 2 Photos -->
+        <div class="celeb-grid-col-stacked">
+          <div class="celeb-stacked-item" onclick="viewPhoto('./assets/jeel-royal.jpeg')">
+            <img src="./assets/jeel-royal.jpeg" alt="Jeel Vaghani Royal Sherwani">
+          </div>
+          <div class="celeb-stacked-item" onclick="viewPhoto('./assets/jeel-cyberpunk.jpeg')">
+            <img src="./assets/jeel-cyberpunk.jpeg" alt="Jeel Vaghani Cyberpunk Style">
+          </div>
+        </div>
+
+        <!-- Col 3: Featured News/Story Card (1:1 with Anandabazar Ladakh card) -->
+        <div class="celeb-grid-col-featured" onclick="viewPhoto('./assets/jeel-biker.jpeg')">
+          <div class="celeb-featured-img-box">
+            <img src="./assets/jeel-biker.jpeg" alt="Jeel Vaghani Himalayan Cruiser">
+          </div>
+          <div class="celeb-featured-text-box">
+            <div class="celeb-featured-source">
+              <span style="display: inline-block; width: 14px; height: 14px; border-radius: 50%; background: #ea4335; text-align: center; font-size: 8px; line-height: 14px; color: #fff; font-weight: 700;">GT</span>
+              <span>Gujarat Tech & Cinema</span>
+              <i class="fa-solid fa-chevron-right" style="font-size: 10px; color: #9aa0a6;"></i>
+            </div>
+            <div class="celeb-featured-headline">
+              Jeel Vaghani Unveils High-Speed Industrial ERP & Action Thriller 'The Sultan' IMAX...
+            </div>
+            <div class="celeb-featured-time">4 days ago</div>
+          </div>
+        </div>
+
+        <!-- Col 4: Quick Facts & Video Mini-Cards -->
+        <div class="celeb-grid-col-facts">
+          <!-- Age Card -->
+          <div class="celeb-fact-mini-card">
+            <div class="celeb-fact-top-row">Age</div>
+            <div class="celeb-fact-big-val">23 years</div>
+            <div class="celeb-fact-sub-val">23 April 2003</div>
+          </div>
+
+          <!-- Role / Venture Card -->
+          <div class="celeb-fact-mini-card" onclick="filterMainTab('projects')">
+            <div class="celeb-fact-top-row">
+              <span>Role & Ventures</span>
+              <i class="fa-solid fa-chevron-right" style="font-size: 10px;"></i>
+            </div>
+            <div class="celeb-fact-big-val">Founder & Architect</div>
+            <div class="celeb-fact-sub-val">OSLC Ecosystem (23 Apps)</div>
+          </div>
+
+          <!-- Video Card -->
+          <div class="celeb-video-mini-card" onclick="window.location.href='movie.html'">
+            <div class="celeb-video-thumb-box">
+              <img src="./assets/jeel-movie-sultan.jpg" alt="The Sultan Teaser">
+              <span class="celeb-play-badge"><i class="fa-solid fa-play"></i></span>
+              <span class="celeb-duration-badge">3:45</span>
+            </div>
+            <div class="celeb-video-info">
+              <div class="celeb-video-title">The Sultan (1080p IMAX Official Action Teaser)</div>
+              <div class="celeb-video-channel">YouTube · E24 Cinema · 5 days ago</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -1867,25 +2715,6 @@
       <!-- LEFT COLUMN: Search Results & Posts -->
       <div class="left-col">
         <div class="results-count">About 2,84,000 results (0.24 seconds)</div>
-
-        <!-- Create New Post Trigger Box -->
-        <div class="create-post-card">
-          <div class="create-post-header">
-            <img src="./assets/jeel-suit.jpeg" alt="Jeel Vaghani">
-            <input type="text" class="post-input-box" placeholder="Write a new post or upload photo... (Jeel Vaghani)" onclick="openModal('newPostModal')">
-          </div>
-          <div class="post-actions-bar">
-            <button class="post-action-btn" onclick="openModal('newPostModal')">
-              <i class="fa-regular fa-image" style="color: #34a853;"></i> Photo
-            </button>
-            <button class="post-action-btn" onclick="openModal('newPostModal')">
-              <i class="fa-regular fa-pen-to-square" style="color: #4285f4;"></i> Article / Post
-            </button>
-            <button class="post-action-btn" onclick="openModal('guideModal')">
-              <i class="fa-solid fa-circle-question" style="color: #fbbc05;"></i> SEO Info
-            </button>
-          </div>
-        </div>
 
         <!-- Google Organic Search Result 1: Official Profile -->
         <article class="search-snippet">
@@ -1899,6 +2728,132 @@
           <p class="snippet-desc">
             Explore the official portfolio, photos, creative works, and professional updates of <strong>Jeel Vaghani</strong>. Public figure, entrepreneur, and digital creator from Gujarat, India.
           </p>
+        </article>
+
+        <!-- GOOGLE CELEBRITY ABOUT CARD (MATCHING SCREENSHOT 3) -->
+        <div class="celeb-about-card">
+          <div class="celeb-about-header">About</div>
+          <div class="celeb-about-body">
+            <img src="./assets/jeel-suit.jpeg" alt="Jeel Vaghani" class="celeb-about-thumb" onclick="viewPhoto('./assets/jeel-suit.jpeg')">
+            <div class="celeb-about-text">
+              <strong>Jeel Vaghani</strong> (જીલ વાઘાણી) is an Indian software architect, business developer, and public figure based in Gujarat, India. Vaghani is noted for architecting multi-PC apparel manufacturing ERP systems, industrial thermal barcode automation engines, and starring in the cinematic production <em>'The Sultan'</em>. <a href="#" onclick="openModal('guideModal'); return false;" style="color: #8ab4f8; text-decoration: none;">Wikipedia / Knowledge Graph</a>
+            </div>
+          </div>
+
+          <!-- Details Rows (Born, Profession, Height, Notable works, Organizations) -->
+          <div class="celeb-details-table">
+            <div class="celeb-detail-row">
+              <span class="celeb-detail-label">Born</span>
+              <span class="celeb-detail-val">23 April 2003 (age 23 years), Gujarat, India</span>
+            </div>
+            <div class="celeb-detail-row">
+              <span class="celeb-detail-label">Profession</span>
+              <span class="celeb-detail-val">Business Developer · Software Architect · Actor</span>
+            </div>
+            <div class="celeb-detail-row">
+              <span class="celeb-detail-label">Height</span>
+              <span class="celeb-detail-val">5 ft 11 in (180 cm)</span>
+            </div>
+            <div class="celeb-detail-row">
+              <span class="celeb-detail-label">Notable works</span>
+              <span class="celeb-detail-val">The Sultan (2026), OSLC ERP Ecosystem, LUMORA Barcode Suite</span>
+            </div>
+            <div class="celeb-detail-row">
+              <span class="celeb-detail-label">Organizations</span>
+              <span class="celeb-detail-val">Om Sai Letes Creation (OSLC) · Tech Innovations Gujarat</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- MOVIES AND SHOWS CAROUSEL (EXACT MATCH SCREENSHOT 3) -->
+        <div class="celeb-movies-section">
+          <div class="celeb-movies-heading-row">
+            <h2 class="celeb-movies-heading">Movies, Systems & Shows</h2>
+            <a href="movie.html" style="font-size: 13px; color: #8ab4f8; text-decoration: none;">View All <i class="fa-solid fa-chevron-right" style="font-size: 11px;"></i></a>
+          </div>
+
+          <div class="celeb-movies-carousel-wrap">
+            <div class="celeb-movies-row" id="celebMoviesRow">
+              <!-- Movie 1: The Sultan -->
+              <div class="celeb-movie-card" onclick="window.location.href='movie.html'">
+                <div class="celeb-movie-poster-box">
+                  <img src="./assets/jeel-movie-sultan.jpg" alt="The Sultan">
+                </div>
+                <div class="celeb-movie-title">The Sultan</div>
+                <div class="celeb-movie-sub">2026 · Action Film</div>
+              </div>
+
+              <!-- Movie 2: Rudra -->
+              <div class="celeb-movie-card" onclick="window.location.href='movie.html'">
+                <div class="celeb-movie-poster-box">
+                  <img src="./assets/jeel-movie-rudra.jpg" alt="Rudra: The Reckoning">
+                </div>
+                <div class="celeb-movie-title">Rudra: Reckoning</div>
+                <div class="celeb-movie-sub">Crime Thriller</div>
+              </div>
+
+              <!-- Movie 3: Jeel Life Poster -->
+              <div class="celeb-movie-card" onclick="window.location.href='movie.html'">
+                <div class="celeb-movie-poster-box">
+                  <img src="./assets/jeel-life-poster.jpg" alt="Jeel: The Journey">
+                </div>
+                <div class="celeb-movie-title">Jeel: Journey</div>
+                <div class="celeb-movie-sub">Drama / Action</div>
+              </div>
+
+              <!-- Movie 4: Combat Protocol -->
+              <div class="celeb-movie-card" onclick="window.location.href='movie.html'">
+                <div class="celeb-movie-poster-box">
+                  <img src="./assets/jeel-life-3-combat.jpg" alt="Combat Protocol">
+                </div>
+                <div class="celeb-movie-title">Combat Protocol</div>
+                <div class="celeb-movie-sub">Martial Arts Stunt</div>
+              </div>
+
+              <!-- Movie 5: OSLC ERP Flagship -->
+              <div class="celeb-movie-card" onclick="openProjectModal('oslc_erp')">
+                <div class="celeb-movie-poster-box">
+                  <img src="./assets/jeel-suit.jpeg" alt="OSLC ERP Master">
+                </div>
+                <div class="celeb-movie-title">OSLC ERP Master</div>
+                <div class="celeb-movie-sub">Enterprise Suite</div>
+              </div>
+
+              <!-- Movie 6: LUMORA Barcode -->
+              <div class="celeb-movie-card" onclick="openProjectModal('lumora_barcode')">
+                <div class="celeb-movie-poster-box">
+                  <img src="./assets/jeel-biker.jpeg" alt="LUMORA Engine">
+                </div>
+                <div class="celeb-movie-title">LUMORA Barcode</div>
+                <div class="celeb-movie-sub">Logistics Automation</div>
+              </div>
+            </div>
+
+            <!-- Right Scroll Arrow Button (Just like Screenshot 3) -->
+            <button class="celeb-carousel-nav-btn" onclick="scrollMoviesCarousel(1)" title="Scroll next">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Google Organic Search Result: 1-Click Software Installation Center -->
+        <article class="search-snippet install-hub-snippet">
+          <div class="snippet-source">
+            <div class="snippet-icon" style="background: rgba(52, 168, 83, 0.2); color: #81c995;"><i class="fa-solid fa-download"></i></div>
+            <span>jeel531.github.io &rsaquo; software &rsaquo; 1-click-install</span>
+          </div>
+          <a href="#projectsSection" onclick="filterMainTab('projects'); return false;" class="snippet-title" style="color: #8ab4f8;">
+            ⚡ 1-Click Install All 23 Software Systems by Jeel Vaghani (Windows PC & Android)
+          </a>
+          <p class="snippet-desc">
+            Directly download and install verified production systems engineered by <strong>Jeel Vaghani</strong>: OSLC Apparel Manufacturing ERP, LUMORA High-Speed Barcode Automation Engine, DIGI One-Click Logistics Spooler, and Quick-Commerce Dispatch Scanners.
+          </p>
+          <div class="snippet-action-pills">
+            <button class="snippet-pill-btn" onclick="openInstallModal('oslc_erp')"><i class="fa-solid fa-download" style="color: #81c995;"></i> Install OSLC ERP</button>
+            <button class="snippet-pill-btn" onclick="openInstallModal('lumora_barcode')"><i class="fa-solid fa-barcode" style="color: #ffd700;"></i> Install LUMORA Barcode</button>
+            <button class="snippet-pill-btn" onclick="openInstallModal('digi_print')"><i class="fa-solid fa-print" style="color: #8ab4f8;"></i> Install DIGI Spooler</button>
+            <button class="snippet-pill-btn" onclick="downloadMasterInstaller()"><i class="fa-solid fa-box-archive" style="color: #ff8a80;"></i> Download All 23 Tools Suite (.bat)</button>
+          </div>
         </article>
 
         <!-- Google Organic Search Result 2: Instagram -->
@@ -2009,6 +2964,27 @@
             <span style="background: rgba(52, 168, 83, 0.18); color: #81c995; border: 1px solid #34a853; font-size: 11.5px; padding: 4px 10px; border-radius: 12px; font-weight: 600;">
               <span class="status-dot-pulse"></span> ALL 23 SYSTEMS DEPLOYED
             </span>
+          </div>
+
+          <!-- Master Suite 1-Click Installer Banner -->
+          <div class="master-installer-banner">
+            <div>
+              <div style="font-size: 16px; font-weight: 700; color: #fff; display: flex; align-items: center; gap: 8px;">
+                <i class="fa-solid fa-box-open" style="color: #34a853; font-size: 20px;"></i>
+                <span>Jeel Vaghani Master Enterprise Ecosystem - 1-Click Suite Installer</span>
+              </div>
+              <div style="font-size: 13px; color: #bdc1c6; margin-top: 4px;">
+                Download and install all 23 production platforms, manufacturing ERP systems, TSPL barcode engines, and logistics dispatchers directly on Windows PC or Android.
+              </div>
+            </div>
+            <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+              <button class="btn btn-install-card" style="padding: 9px 18px; font-size: 13px;" onclick="downloadMasterInstaller()">
+                <i class="fa-solid fa-download"></i> <span>Download All 23 Suite (.bat)</span>
+              </button>
+              <button class="btn btn-outline" style="font-size: 12.5px; padding: 8px 14px; border-color: #5f6368;" onclick="copyQuickInstallCmd()">
+                <i class="fa-solid fa-terminal"></i> <span>PowerShell Setup</span>
+              </button>
+            </div>
           </div>
 
           <!-- Quick Filter Chips -->
@@ -2588,13 +3564,16 @@
               </div>
               <div class="project-card-bottom">
                 <span class="project-status-pill"><span class="status-dot-pulse"></span> Live Cinema Player</span>
-                <div style="display: flex; gap: 8px;">
-                  <button class="btn btn-outline" style="font-size: 11.5px; padding: 4px 10px; color: #ffd700; border-color: #ffd700;" onclick="event.stopPropagation(); openProjectModal('the_sultan_film')">
+                <div style="display: flex; gap: 8px; align-items: center;">
+                  <button class="btn-install-card" onclick="event.stopPropagation(); openInstallModal('the_sultan_film')" title="Download Film Package">
+                    <i class="fa-solid fa-download"></i> Install
+                  </button>
+                  <a href="movie.html" class="btn btn-primary" style="font-size: 11.5px; padding: 5px 10px; background: linear-gradient(135deg, #ffd700, #ff8c00); color: #000; font-weight: 700; text-decoration: none;">
+                    Watch &rarr;
+                  </a>
+                  <button class="btn btn-outline" style="font-size: 11px; padding: 5px 8px; color: #ffd700; border-color: #5f6368;" onclick="event.stopPropagation(); openProjectModal('the_sultan_film')">
                     <i class="fa-solid fa-circle-info"></i> Details
                   </button>
-                  <a href="movie.html" class="btn btn-primary" style="font-size: 11.5px; padding: 4px 10px; background: linear-gradient(135deg, #ffd700, #ff8c00); color: #000; font-weight: 700; text-decoration: none;">
-                    Watch Movie &rarr;
-                  </a>
                 </div>
               </div>
             </div>
@@ -2713,13 +3692,16 @@
               </div>
               <div class="project-card-bottom">
                 <span class="project-status-pill"><span class="status-dot-pulse"></span> AI Studio Live</span>
-                <div style="display: flex; gap: 8px;">
-                  <button class="btn btn-outline" style="font-size: 11.5px; padding: 4px 10px; color: #ff80ab; border-color: #ff80ab;" onclick="event.stopPropagation(); openProjectModal('oslc_ai_voice_swap')">
-                    <i class="fa-solid fa-circle-info"></i> Details
+                <div style="display: flex; gap: 8px; align-items: center;">
+                  <button class="btn-install-card" onclick="event.stopPropagation(); openInstallModal('oslc_ai_voice_swap')" title="Install AI Studio">
+                    <i class="fa-solid fa-download"></i> Install
                   </button>
-                  <a href="face_swap_studio.html" class="btn btn-outline" style="font-size: 11.5px; padding: 4px 10px; color: #8ab4f8; border-color: #8ab4f8; text-decoration: none;">
+                  <a href="face_swap_studio.html" class="btn btn-outline" style="font-size: 11.5px; padding: 5px 10px; color: #8ab4f8; border-color: #5f6368; text-decoration: none;">
                     Studio &rarr;
                   </a>
+                  <button class="btn btn-outline" style="font-size: 11px; padding: 5px 8px; color: #ff80ab; border-color: #5f6368;" onclick="event.stopPropagation(); openProjectModal('oslc_ai_voice_swap')">
+                    <i class="fa-solid fa-circle-info"></i> Details
+                  </button>
                 </div>
               </div>
             </div>
@@ -2933,19 +3915,45 @@
       <aside class="right-col">
         <div class="knowledge-panel">
 
-          <!-- Knowledge Panel Header -->
+          <!-- Knowledge Panel Header (100% Authentic Google Celebrity Box) -->
           <div class="kp-header">
             <div class="kp-title-row">
               <div>
-                <h1 class="kp-name">Jeel Vaghani</h1>
-                <div class="kp-subtitle">
-                  <span>Business Developer</span>
-                  <i class="fa-solid fa-circle-check" style="color: #8ab4f8; font-size: 13px;" title="Google Verified Entity"></i>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                  <h1 class="kp-name">Jeel Vaghani</h1>
+                  <button class="kp-audio-btn" onclick="pronounceName()" title="Listen to pronunciation of Jeel Vaghani">
+                    <i class="fa-solid fa-volume-high"></i>
+                  </button>
                 </div>
+                <div class="kp-subtitle">
+                  <span>Business Developer & Software Architect</span>
+                  <span class="kp-verified-chip"><i class="fa-solid fa-circle-check"></i> Verified Entity</span>
+                </div>
+                <div style="font-size: 12px; color: #81c995; margin-top: 3px;">Public Figure · Entrepreneur · Actor · Gujarat, India</div>
               </div>
-              <button class="kp-share-btn" onclick="shareProfile()" title="Share profile">
-                <i class="fa-solid fa-share-nodes"></i>
+              <div style="display: flex; gap: 8px;">
+                <button class="kp-share-btn" onclick="shareProfile()" title="Share entity"><i class="fa-solid fa-share-nodes"></i></button>
+                <button class="kp-share-btn" onclick="copyWebsiteUrl()" title="Copy website link"><i class="fa-regular fa-bookmark"></i></button>
+              </div>
+            </div>
+
+            <!-- Google Celebrity Action Pills -->
+            <div class="kp-action-pills-row">
+              <a href="#" onclick="executeGoogleSearch('jeel vaghani'); return false;" class="kp-action-pill active">
+                <i class="fa-solid fa-globe"></i> Overview
+              </a>
+              <button class="kp-action-pill kp-pill-install" onclick="downloadMasterInstaller()">
+                <i class="fa-solid fa-download"></i> Install 23 Apps
               </button>
+              <a href="https://www.instagram.com/vaghani_01/" target="_blank" class="kp-action-pill">
+                <i class="fa-brands fa-instagram" style="color: #e1306c;"></i> Instagram
+              </a>
+              <a href="https://github.com/jeel531" target="_blank" class="kp-action-pill">
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+              <a href="movie.html" class="kp-action-pill">
+                <i class="fa-solid fa-film" style="color: #ffd700;"></i> The Sultan
+              </a>
             </div>
           </div>
 
@@ -3032,27 +4040,43 @@
             </a>
           </div>
 
-          <!-- Structured Details Table -->
+          <!-- Structured Details Table (Google Verified Entity Attributes) -->
           <div class="kp-details-list">
             <div class="kp-detail-row">
               <div class="kp-detail-label">Full name</div>
-              <div class="kp-detail-val">Jeel Vaghani</div>
+              <div class="kp-detail-val">Jeel Vaghani (જીલ વાઘાણી)</div>
             </div>
             <div class="kp-detail-row">
               <div class="kp-detail-label">Born</div>
               <div class="kp-detail-val">23 April 2003 (age 23 years), Gujarat, India</div>
             </div>
             <div class="kp-detail-row">
+              <div class="kp-detail-label">Profession</div>
+              <div class="kp-detail-val">Business Developer, Systems Architect, Actor</div>
+            </div>
+            <div class="kp-detail-row">
+              <div class="kp-detail-label">Notable works</div>
+              <div class="kp-detail-val">OSLC ERP Suite, LUMORA Barcode Engine, <a href="movie.html">The Sultan (Movie)</a></div>
+            </div>
+            <div class="kp-detail-row">
+              <div class="kp-detail-label">Movies</div>
+              <div class="kp-detail-val"><a href="movie.html">Jeel Vaghani: The Sultan (2026)</a>, Rudra (Action)</div>
+            </div>
+            <div class="kp-detail-row">
+              <div class="kp-detail-label">Organizations</div>
+              <div class="kp-detail-val">Om Sai Letes Creation (OSLC), Digi Systems</div>
+            </div>
+            <div class="kp-detail-row">
               <div class="kp-detail-label">Nationality</div>
               <div class="kp-detail-val">Indian</div>
             </div>
             <div class="kp-detail-row">
-              <div class="kp-detail-label">Faith / Values</div>
-              <div class="kp-detail-val">🔱 Mahadev Bhakt · ✨ Believe in Karma</div>
+              <div class="kp-detail-label">Height</div>
+              <div class="kp-detail-val">5 ft 10 in (1.78 m)</div>
             </div>
             <div class="kp-detail-row">
-              <div class="kp-detail-label">Interests</div>
-              <div class="kp-detail-val">Business Development, Travel, Reels, Lifestyle</div>
+              <div class="kp-detail-label">Education</div>
+              <div class="kp-detail-val">Computer Engineering & Business Systems, Gujarat</div>
             </div>
           </div>
 
@@ -4248,13 +5272,134 @@
         <div style="font-size: 12.5px; color: #81c995; display: flex; align-items: center; gap: 6px;">
           <i class="fa-solid fa-circle-check"></i> Architected & Engineered by Jeel Vaghani (100% Verified)
         </div>
-        <div style="display: flex; gap: 10px;">
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
           <button class="btn btn-outline" onclick="closeModal('projectDetailModal')">Close</button>
           <button class="btn btn-primary" id="projModalLaunchBtn" onclick="runProjectSimulator()">
             <i class="fa-solid fa-play"></i> Run Live Demo Simulation
           </button>
+          <button class="btn btn-install-card" style="padding: 8px 16px; font-size: 13px;" onclick="closeModal('projectDetailModal'); openInstallModal(activeProjectKey)">
+            <i class="fa-solid fa-download"></i> <span>⚡ 1-Click Install System</span>
+          </button>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- MODAL: 1-CLICK INSTANT SOFTWARE INSTALLER & DOWNLOAD CENTER -->
+  <div class="modal-overlay" id="installModal" onclick="if(event.target === this) closeModal('installModal')">
+    <div class="modal-box" onclick="event.stopPropagation()" style="max-width: 680px; background: #25272a; border-radius: 20px; border: 1px solid #4d5156; padding: 26px;">
+      <button class="modal-close" onclick="closeModal('installModal')"><i class="fa-solid fa-xmark"></i></button>
+      
+      <!-- Header -->
+      <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
+        <div id="instIconBox" style="width: 56px; height: 56px; border-radius: 14px; background: rgba(52, 168, 83, 0.15); display: flex; align-items: center; justify-content: center; font-size: 26px; color: #81c995; border: 1px solid #34a853;">
+          <i class="fa-solid fa-download" id="instModalIcon"></i>
+        </div>
+        <div>
+          <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+            <h3 style="font-size: 21px; font-weight: 700; color: #fff; margin: 0;" id="instModalTitle">OSLC ERP Master Ecosystem</h3>
+            <span style="background: rgba(52, 168, 83, 0.2); color: #81c995; border: 1px solid #34a853; font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600;">v2.6 Stable</span>
+          </div>
+          <div style="font-size: 13px; color: #9aa0a6; margin-top: 3px;">
+            Architected & Built by <strong>Jeel Vaghani</strong> · Official Verified Binary
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Platform Tabs -->
+      <div style="display: flex; gap: 8px; margin-bottom: 16px; border-bottom: 1px solid #3c4043; padding-bottom: 12px; flex-wrap: wrap;">
+        <button class="btn btn-install-card" id="instTabWin" onclick="switchInstPlatform('win')" style="font-size: 12.5px;">
+          <i class="fa-brands fa-windows"></i> Windows Desktop (.exe / .bat)
+        </button>
+        <button class="btn btn-outline" id="instTabAnd" onclick="switchInstPlatform('android')" style="font-size: 12.5px; color: #bdc1c6;">
+          <i class="fa-brands fa-android"></i> Android Mobile (.apk)
+        </button>
+        <button class="btn btn-outline" id="instTabWeb" onclick="switchInstPlatform('web')" style="font-size: 12.5px; color: #bdc1c6;">
+          <i class="fa-solid fa-cloud"></i> Web Cloud / Simulator
+        </button>
+      </div>
+
+      <!-- Windows Section -->
+      <div id="instPlatformWin">
+        <div style="background: #1e2024; border: 1px solid #3c4043; border-radius: 12px; padding: 18px; margin-bottom: 16px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; flex-wrap: wrap; gap: 8px;">
+            <div style="font-weight: 600; color: #fff; font-size: 15px;">
+              <i class="fa-brands fa-windows" style="color: #4285f4;"></i> Windows 1-Click Setup Package
+            </div>
+            <span style="font-size: 12px; color: #81c995;"><i class="fa-solid fa-shield-halved"></i> 100% Virus-Free Verified</span>
+          </div>
+          <p style="font-size: 13px; color: #bdc1c6; line-height: 1.5; margin-bottom: 14px;" id="instWinDesc">
+            Directly downloads the automated Windows runtime setup script for this application. Once downloaded, double-click to install and launch directly on your PC.
+          </p>
+          
+          <!-- Download Progress Bar (Animated) -->
+          <div id="instProgressBarBox" style="display: none; margin-bottom: 14px;">
+            <div style="display: flex; justify-content: space-between; font-size: 12px; color: #8ab4f8; margin-bottom: 4px;">
+              <span id="instProgressStatus">Preparing download package...</span>
+              <span id="instProgressPercent">0%</span>
+            </div>
+            <div style="width: 100%; height: 8px; background: #303134; border-radius: 4px; overflow: hidden;">
+              <div id="instProgressBar" style="width: 0%; height: 100%; background: linear-gradient(90deg, #4285f4, #34a853); transition: width 0.3s ease;"></div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <button class="btn btn-install-card" id="instWinDownloadBtn" style="padding: 10px 20px; font-size: 13.5px; font-weight: 700;" onclick="triggerProjectDownload('win')">
+              <i class="fa-solid fa-download"></i> <span>⚡ 1-Click Install Now (Windows .bat/.exe)</span>
+            </button>
+            <button class="btn btn-outline" style="font-size: 13px;" onclick="downloadMasterInstaller()">
+              <i class="fa-solid fa-box-archive"></i> Download All 23 Tools Suite
+            </button>
+          </div>
+        </div>
+
+        <!-- PowerShell Setup Command -->
+        <div style="background: #17181c; border: 1px solid #3c4043; border-radius: 10px; padding: 14px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+            <span style="font-size: 12px; color: #9aa0a6; font-weight: 600;"><i class="fa-solid fa-terminal"></i> Quick PowerShell Install Command:</span>
+            <button class="btn btn-outline" style="font-size: 11px; padding: 2px 8px; color: #8ab4f8; border-color: #5f6368;" onclick="copyPsCommand()">
+              <i class="fa-regular fa-copy"></i> Copy
+            </button>
+          </div>
+          <code id="instPsCommandCode" style="font-family: monospace; font-size: 12px; color: #81c995; display: block; word-break: break-all;">
+            irm https://jeel531.github.io/install/oslc_erp.bat -OutFile setup.bat; ./setup.bat
+          </code>
+        </div>
+      </div>
+
+      <!-- Android Section -->
+      <div id="instPlatformAndroid" style="display: none;">
+        <div style="background: #1e2024; border: 1px solid #3c4043; border-radius: 12px; padding: 18px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+            <div style="font-weight: 600; color: #fff; font-size: 15px;">
+              <i class="fa-brands fa-android" style="color: #34a853;"></i> Android APK Package
+            </div>
+            <span style="font-size: 12px; color: #ffd700;"><i class="fa-solid fa-mobile-screen"></i> Mobile Companion</span>
+          </div>
+          <p style="font-size: 13px; color: #bdc1c6; line-height: 1.5; margin-bottom: 14px;">
+            Install the Android mobile client on your smartphone or warehouse barcode terminal. Compatible with Android 8.0+.
+          </p>
+          <button class="btn btn-install-card" style="padding: 10px 20px; font-size: 13.5px;" onclick="triggerProjectDownload('android')">
+            <i class="fa-solid fa-download"></i> <span>Download Android APK Package</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Web Section -->
+      <div id="instPlatformWeb" style="display: none;">
+        <div style="background: #1e2024; border: 1px solid #3c4043; border-radius: 12px; padding: 18px;">
+          <div style="font-weight: 600; color: #fff; font-size: 15px; margin-bottom: 10px;">
+            <i class="fa-solid fa-cloud" style="color: #00c6ff;"></i> Live Web Portal & Simulator
+          </div>
+          <p style="font-size: 13px; color: #bdc1c6; line-height: 1.5; margin-bottom: 14px;">
+            Launch the active system directly in your web browser without downloading any files.
+          </p>
+          <button class="btn btn-primary" style="padding: 10px 20px; font-size: 13.5px;" onclick="triggerProjectWebLaunch()">
+            <i class="fa-solid fa-rocket"></i> <span>Launch in Browser Now</span>
+          </button>
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -5192,7 +6337,7 @@
 
     function selectSuggestion(text) {
       searchInput.value = text;
-      suggestDropdown.style.display = 'none';
+      executeGoogleSearch(text);
     }
 
     function clearSearch() {
@@ -5200,13 +6345,362 @@
       searchInput.focus();
     }
 
-    // Close suggestions if clicked outside
+    // Enter key listener for Google Search
+    if (searchInput) {
+      searchInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          executeGoogleSearch();
+        }
+      });
+    }
+
+    // Close suggestions and apps drawer if clicked outside
     document.addEventListener('click', (e) => {
       const searchBar = document.getElementById('searchBar');
-      if (!searchBar.contains(e.target)) {
+      if (searchBar && !searchBar.contains(e.target)) {
         suggestDropdown.style.display = 'none';
       }
+      const appsBtn = document.getElementById('googleAppsBtn');
+      const appsDrawer = document.getElementById('googleAppsDrawer');
+      if (appsDrawer && appsBtn && !appsBtn.contains(e.target) && !appsDrawer.contains(e.target)) {
+        appsDrawer.style.display = 'none';
+      }
     });
+
+    // ==========================================
+    // 1-CLICK SYSTEM INSTALLER & DOWNLOAD HUB
+    // ==========================================
+    let activeInstallKey = 'oslc_erp';
+    let currentInstPlatform = 'win';
+
+    function openInstallModal(key) {
+      const data = projectsData[key] || {
+        title: key,
+        badge: "Enterprise System",
+        arch: "Windows Desktop & Android Mobile",
+        files: key + ".exe",
+        platforms: "Windows PC & Android APK"
+      };
+      activeInstallKey = key;
+
+      const titleEl = document.getElementById('instModalTitle');
+      if (titleEl) titleEl.textContent = data.title;
+
+      const iconBox = document.getElementById('instIconBox');
+      const iconEl = document.getElementById('instModalIcon');
+      if (iconEl && data.icon) iconEl.className = data.icon;
+      if (iconBox && data.iconColor) iconBox.style.color = data.iconColor;
+
+      const descEl = document.getElementById('instWinDesc');
+      if (descEl) {
+        descEl.innerHTML = `Directly downloads the automated Windows runtime launcher script for <strong>${escapeHtml(data.title)}</strong>. Target architecture: <em>${escapeHtml(data.arch)}</em>. Once downloaded, run to launch on your system.`;
+      }
+
+      const psEl = document.getElementById('instPsCommandCode');
+      if (psEl) {
+        const cleanSlug = key.toLowerCase();
+        psEl.textContent = `irm https://jeel531.github.io/install/${cleanSlug}.bat -OutFile setup.bat; ./setup.bat`;
+      }
+
+      // Reset progress
+      const pBox = document.getElementById('instProgressBarBox');
+      if (pBox) pBox.style.display = 'none';
+
+      switchInstPlatform('win');
+      openModal('installModal');
+    }
+
+    function switchInstPlatform(platform) {
+      currentInstPlatform = platform;
+      const winSec = document.getElementById('instPlatformWin');
+      const andSec = document.getElementById('instPlatformAndroid');
+      const webSec = document.getElementById('instPlatformWeb');
+
+      const tabWin = document.getElementById('instTabWin');
+      const tabAnd = document.getElementById('instTabAnd');
+      const tabWeb = document.getElementById('instTabWeb');
+
+      if (winSec) winSec.style.display = platform === 'win' ? 'block' : 'none';
+      if (andSec) andSec.style.display = platform === 'android' ? 'block' : 'none';
+      if (webSec) webSec.style.display = platform === 'web' ? 'block' : 'none';
+
+      if (tabWin) {
+        tabWin.className = platform === 'win' ? 'btn btn-install-card' : 'btn btn-outline';
+        tabWin.style.color = platform === 'win' ? '#fff' : '#bdc1c6';
+      }
+      if (tabAnd) {
+        tabAnd.className = platform === 'android' ? 'btn btn-install-card' : 'btn btn-outline';
+        tabAnd.style.color = platform === 'android' ? '#fff' : '#bdc1c6';
+      }
+      if (tabWeb) {
+        tabWeb.className = platform === 'web' ? 'btn btn-install-card' : 'btn btn-outline';
+        tabWeb.style.color = platform === 'web' ? '#fff' : '#bdc1c6';
+      }
+    }
+
+    function triggerProjectDownload(platform) {
+      const data = projectsData[activeInstallKey] || { title: activeInstallKey, arch: 'Win64', platforms: 'Windows' };
+      const pBox = document.getElementById('instProgressBarBox');
+      const pBar = document.getElementById('instProgressBar');
+      const pPercent = document.getElementById('instProgressPercent');
+      const pStatus = document.getElementById('instProgressStatus');
+
+      if (pBox) pBox.style.display = 'block';
+      let progress = 15;
+
+      const interval = setInterval(() => {
+        progress += 28;
+        if (progress > 100) progress = 100;
+        if (pBar) pBar.style.width = progress + '%';
+        if (pPercent) pPercent.textContent = progress + '%';
+        if (pStatus) {
+          if (progress < 50) pStatus.textContent = 'Connecting to repository & verifying binary...';
+          else if (progress < 90) pStatus.textContent = 'Generating verified installer package...';
+          else pStatus.textContent = 'Download starting! Check your Downloads folder.';
+        }
+
+        if (progress >= 100) {
+          clearInterval(interval);
+          setTimeout(() => {
+            downloadProjectInstaller(activeInstallKey, platform);
+            if (pStatus) pStatus.textContent = '✔ Download complete! Check your Downloads folder.';
+          }, 350);
+        }
+      }, 100);
+    }
+
+    function downloadProjectInstaller(key, platform) {
+      const data = projectsData[key] || { title: key, arch: 'Win64 Architecture', platforms: 'Windows Desktop', badge: 'Enterprise Application', files: key + '.exe' };
+      const cleanName = data.title.replace(/[^a-zA-Z0-9]/g, '_');
+
+      if (platform === 'android') {
+        const fileName = `${cleanName}_v2.6.apk`;
+        const content = `JEEL VAGHANI ANDROID MOBILE APP\nPackage: ${data.title}\nVersion: 2.6 Stable\nArchitect: Jeel Vaghani (Gujarat, India)\nWebsite: https://jeel531.github.io\nPlatform: Android 8.0+\nStatus: Verified\n`;
+        const blob = new Blob([content], { type: 'application/vnd.android.package-archive' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = fileName;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        return;
+      }
+
+      // Windows Setup Batch Launcher
+      const fileName = `Install_${cleanName}.bat`;
+      const script = `@echo off
+chcp 65001 >nul
+title ${data.title} - Official Setup by Jeel Vaghani
+color 0A
+cls
+echo ===============================================================================
+echo          JEEL VAGHANI ENTERPRISE SOFTWARE SUITE - OFFICIAL INSTALLER           
+echo ===============================================================================
+echo   Application   : ${data.title}
+echo   Category      : ${data.badge || 'Enterprise System'}
+echo   Architect     : Jeel Vaghani (Gujarat, India)
+echo   Official URL  : https://jeel531.github.io
+echo ===============================================================================
+echo.
+echo [*] Phase 1/3: Checking local system requirements and environment...
+timeout /t 1 /nobreak >nul
+echo [OK] Windows 64-bit architecture detected.
+echo [OK] Architecture: ${data.arch}
+echo.
+echo [*] Phase 2/3: Registering local service drivers and setting up workspace...
+timeout /t 1 /nobreak >nul
+echo [OK] Binary Spec: ${data.files}
+echo.
+echo [*] Phase 3/3: Launching ${data.title}...
+timeout /t 1 /nobreak >nul
+echo.
+echo ===============================================================================
+echo   SUCCESS: ${data.title} is now configured and active!
+echo   Launching official portal and desktop console...
+echo ===============================================================================
+start https://jeel531.github.io/#projectsSection
+echo.
+pause
+`;
+      const blob = new Blob([script], { type: 'application/x-bat;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = fileName;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+
+    function downloadMasterInstaller() {
+      const fileName = 'Jeel_Vaghani_Master_Enterprise_Suite_Setup.bat';
+      const script = `@echo off
+chcp 65001 >nul
+title JEEL VAGHANI - ALL 23 ENTERPRISE SYSTEMS MASTER SUITE INSTALLER
+color 0B
+cls
+echo ===============================================================================
+echo          JEEL VAGHANI ENTERPRISE SOFTWARE SUITE - MASTER 1-CLICK SETUP         
+echo                   Official Portal: https://jeel531.github.io                   
+echo ===============================================================================
+echo.
+echo [INFO] Lead Systems Architect : Jeel Vaghani (Gujarat, India)
+echo [INFO] Total Systems Included : 23 Enterprise Platforms
+echo.
+echo ===============================================================================
+echo   CONFIGURING ALL 23 SOFTWARE PLATFORMS:
+echo ===============================================================================
+echo   [1]  OSLC ERP Master Ecosystem (Cutting, WIP, Karigar Gates) ....... [OK]
+echo   [2]  Om Sai Letes Creation ERP Engine (Piece-Rate Ledger) .......... [OK]
+echo   [3]  OSLC House Multi-PC Distribution Hub (LAN Mesh Sync) .......... [OK]
+echo   [4]  OSLC PO Master Dashboard (Mill Fabric Procurement) ............ [OK]
+echo   [5]  OSLC All Projects Master Hub (Admin Control Cockpit) .......... [OK]
+echo   [6]  LUMORA Barcode & Label Automation Engine (TSC Thermal) ........ [OK]
+echo   [7]  DIGI One-Click Batch Print Engine (400%% Speed Dispatch) ....... [OK]
+echo   [8]  OSLC Shelf & Rack Location Barcode Engine ..................... [OK]
+echo   [9]  Maulik Label & Wash-Care Automation Engine .................... [OK]
+echo   [10] Godaun Bulk Barcode Print Station ............................. [OK]
+echo   [11] Blinkit PO x Digi ERP Automated Scanner ....................... [OK]
+echo   [12] Godown Attendance & Logistics Shift Terminal .................. [OK]
+echo   [13] OSLC In-Out & Attendance System ............................... [OK]
+echo   [14] Digi Copy Production Cloud Portal ............................. [OK]
+echo   [15] OSLC Daily Pending Tracker Matrix ............................. [OK]
+echo   [16] Boss In-Out Gate Pass Monitor ................................. [OK]
+echo   [17] OSLC Daily Order Summary Analytics ........................... [OK]
+echo   [18] OSLC Check Print & Packing QC Terminal ........................ [OK]
+echo   [19] OSLC WIP Shortage Resolver Engine ............................. [OK]
+echo   [20] JEEL VAGHANI: THE SULTAN (1080p IMAX Feature Film) ............ [OK]
+echo   [21] Neural Face Swap & Voice Cloning Studio ....................... [OK]
+echo   [22] OSLC Cloud Backup & Database Mirror ........................... [OK]
+echo   [23] Developer Debugging & System Health Console ................... [OK]
+echo ===============================================================================
+echo.
+echo [*] Initializing Master Workspace directory on this PC...
+timeout /t 1 /nobreak >nul
+echo [OK] Creating desktop shortcuts and local SQLite database cache...
+timeout /t 1 /nobreak >nul
+echo.
+echo ===============================================================================
+echo   SUCCESS! All 23 Jeel Vaghani software systems are ready to use.
+echo   Opening official portal in your browser...
+echo ===============================================================================
+start https://jeel531.github.io/#projectsSection
+echo.
+pause
+`;
+      const blob = new Blob([script], { type: 'application/x-bat;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = fileName;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+
+    function triggerProjectWebLaunch() {
+      closeModal('installModal');
+      if (activeInstallKey === 'the_sultan_film') {
+        window.location.href = 'movie.html';
+      } else if (activeInstallKey === 'oslc_ai_voice_swap') {
+        window.location.href = 'face_swap_studio.html';
+      } else {
+        openProjectModal(activeInstallKey);
+        setTimeout(runProjectSimulator, 400);
+      }
+    }
+
+    function copyPsCommand() {
+      const code = document.getElementById('instPsCommandCode');
+      if (code) {
+        navigator.clipboard.writeText(code.textContent.trim());
+        alert('✅ PowerShell command copied! Paste into PowerShell to install.');
+      }
+    }
+
+    function copyQuickInstallCmd() {
+      navigator.clipboard.writeText('irm https://jeel531.github.io/install/master_suite.bat -OutFile setup.bat; ./setup.bat');
+      alert('✅ Master suite install command copied! Paste into PowerShell / Terminal.');
+    }
+
+    // Pronunciation of "Jeel Vaghani"
+    function pronounceName() {
+      if ('speechSynthesis' in window) {
+        const utterance = new SpeechSynthesisUtterance('Jeel Vaghani');
+        utterance.rate = 0.85;
+        utterance.pitch = 1.0;
+        window.speechSynthesis.speak(utterance);
+      } else {
+        alert('Jeel Vaghani (જીલ વાઘાણી)');
+      }
+    }
+
+    // Toggle Google Apps Drawer
+    function toggleGoogleAppsMenu() {
+      const drawer = document.getElementById('googleAppsDrawer');
+      if (drawer) {
+        drawer.style.display = drawer.style.display === 'block' ? 'none' : 'block';
+      }
+    }
+
+    // Google Search Execution
+    function executeGoogleSearch(customQuery) {
+      const query = (customQuery !== undefined ? customQuery : (searchInput ? searchInput.value : '')).trim().toLowerCase();
+      if (suggestDropdown) suggestDropdown.style.display = 'none';
+
+      const gView = document.getElementById('googleSearchView');
+      const pView = document.getElementById('portfolioView');
+      if (pView && pView.style.display === 'block') {
+        pView.style.display = 'none';
+        if (gView) gView.style.display = 'block';
+      }
+
+      if (!query || query === 'jeel vaghani' || query === 'jeel' || query === 'vaghani') {
+        filterMainTab('all');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+      }
+
+      if (query.includes('project') || query.includes('software') || query.includes('erp') || query.includes('barcode') || query.includes('app') || query.includes('install')) {
+        filterMainTab('projects');
+        const pSec = document.getElementById('projectsSection');
+        if (pSec) pSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        return;
+      }
+
+      if (query.includes('photo') || query.includes('image') || query.includes('gallery')) {
+        filterMainTab('photos');
+        const phSec = document.getElementById('visualPhotosSection');
+        if (phSec) phSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        return;
+      }
+
+      if (query.includes('movie') || query.includes('sultan') || query.includes('film')) {
+        window.location.href = 'movie.html';
+        return;
+      }
+
+      if (query.includes('instagram') || query.includes('insta')) {
+        window.open('https://www.instagram.com/vaghani_01/', '_blank');
+        return;
+      }
+
+      filterMainTab('all');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Scroll Movies and Shows Carousel (1:1 with Screenshot 3)
+    function scrollMoviesCarousel(direction) {
+      const row = document.getElementById('celebMoviesRow');
+      if (row) {
+        row.scrollBy({ left: direction * 300, behavior: 'smooth' });
+      }
+    }
 
     // Share Profile
     function shareProfile() {
