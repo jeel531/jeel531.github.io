@@ -781,10 +781,10 @@
         <span>WhatsApp</span>
       </a>
 
-      <a href="JEEL_VAGHANI_THE_OFFICIAL_FULL_MOVIE.mp4" download="JEEL_VAGHANI_THE_OFFICIAL_FULL_MOVIE.mp4" class="action-btn btn-gold" style="font-size: 14px; padding: 9px 18px;" title="Download Full Movie">
+      <button onclick="startExportRecording()" class="action-btn btn-gold" style="font-size: 14px; padding: 9px 18px;" title="Download Full Movie">
         <i class="fa-solid fa-crown"></i>
         <span>👑 Download Official Full Movie (1080p MP4)</span>
-      </a>
+      </button>
 
       <a href="index.html" class="action-btn">
         <i class="fa-solid fa-arrow-left"></i>
@@ -812,8 +812,8 @@
     <div class="movie-screen-wrapper" id="movieScreenWrapper">
       <div class="movie-screen" id="movieScreen">
         
-        <!-- NATIVE HD HTML5 VIDEO PLAYER (PLAYS DIRECT MP4) -->
-        <video id="cinemaVideoPlayer" controls autoplay playsinline style="display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; z-index: 25; background: #000;" src="JEEL_VAGHANI_THE_OFFICIAL_FULL_MOVIE.mp4" poster="assets/jeel-movie-sultan.jpg"></video>
+        <!-- KLING AI CONTINUOUS MOTION TRAILER LAYER (OPTIONAL MOTION MODE) -->
+        <img id="klingMotionTrailer" src="assets/jeel-vaghani-life-trailer.gif" alt="Kling AI Motion Action Movie" style="display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 2;" />
 
         <!-- Cinema Letterbox Bars -->
         <div class="letterbox-bar letterbox-top"></div>
@@ -892,6 +892,10 @@
           </button>
           <input type="range" class="volume-slider" id="volumeSlider" min="0" max="1" step="0.05" value="0.8" oninput="changeVolume(this.value)">
         </div>
+
+        <button class="ctrl-btn" id="motionTrailerBtn" onclick="toggleMotionTrailer()" title="Toggle Kling AI Motion Video" style="width: auto; padding: 0 10px; font-size: 12px; gap: 6px;">
+          <i class="fa-solid fa-clapperboard"></i> <span>Motion Mode</span>
+        </button>
 
         <button class="ctrl-btn" onclick="toggleFullscreen()" title="Fullscreen Mode">
           <i class="fa-solid fa-expand"></i>
@@ -1630,67 +1634,27 @@
       }
     });
 
-    function loadMovieVideo(type) {
-      const vid = document.getElementById('cinemaVideoPlayer');
-      const btnUlt = document.getElementById('btnUltimate');
-      const btnKling = document.getElementById('btnKling');
-      const btnK = document.getElementById('btnKgf');
-      const btnY = document.getElementById('btnYashoda');
-      const btnL = document.getElementById('btnLife');
-      const btnT = document.getElementById('btnTheaterMode');
-      
-      vid.style.display = 'block';
-      if (btnT) btnT.classList.remove('btn-gold');
-      if (btnUlt) btnUlt.classList.remove('btn-gold');
-      if (btnKling) btnKling.classList.remove('btn-gold');
-      if (btnK) btnK.classList.remove('btn-gold');
-      if (btnY) btnY.classList.remove('btn-gold');
-      if (btnL) btnL.classList.remove('btn-gold');
-      
-      if (type === 'ultimate') {
-        vid.src = 'JEEL_VAGHANI_KGF_CHAPTER_3_ULTIMATE_BLOCKBUSTER.mp4';
-        vid.poster = 'assets/jeel-movie-sultan.jpg';
-        if (btnUlt) btnUlt.classList.add('btn-gold');
-      } else if (type === 'kling') {
-        vid.src = 'JEEL_VAGHANI_KLING_AI_BLOCKBUSTER.mp4';
-        vid.poster = 'assets/kling_snap.jpg';
-        if (btnKling) btnKling.classList.add('btn-gold');
-      } else if (type === 'kgf') {
-        vid.src = 'JEEL_SULTAN_KGF_CHAPTER_3.mp4';
-        vid.poster = 'assets/jeel-movie-sultan.jpg';
-        if (btnK) btnK.classList.add('btn-gold');
-      } else if (type === 'yashoda') {
-        vid.src = 'JEEL_VAGHANI_YASHODA_SPECIAL_EDITION.mp4';
-        vid.poster = 'assets/jeel-movie-rudra.jpg';
-        if (btnY) btnY.classList.add('btn-gold');
-      } else {
-        vid.src = 'JEEL_VAGHANI_LIFE_ACTION_MOVIE.mp4';
-        vid.poster = 'assets/jeel-life-poster.jpg';
-        if (btnL) btnL.classList.add('btn-gold');
-      }
-      vid.play().catch(e => console.log('Autoplay blocked:', e));
-    }
+    let motionTrailerActive = false;
 
-    function toggleTheaterMode() {
-      const vid = document.getElementById('cinemaVideoPlayer');
-      const btnUlt = document.getElementById('btnUltimate');
-      const btnKling = document.getElementById('btnKling');
-      const btnK = document.getElementById('btnKgf');
-      const btnY = document.getElementById('btnYashoda');
-      const btnL = document.getElementById('btnLife');
-      const btnT = document.getElementById('btnTheaterMode');
-      
-      if (vid.style.display !== 'none') {
-        vid.pause();
-        vid.style.display = 'none';
-        if (btnT) btnT.classList.add('btn-gold');
-        if (btnUlt) btnUlt.classList.remove('btn-gold');
-        if (btnKling) btnKling.classList.remove('btn-gold');
-        if (btnK) btnK.classList.remove('btn-gold');
-        if (btnY) btnY.classList.remove('btn-gold');
-        if (btnL) btnL.classList.remove('btn-gold');
+    function toggleMotionTrailer() {
+      const trailer = document.getElementById('klingMotionTrailer');
+      const btn = document.getElementById('motionTrailerBtn');
+      motionTrailerActive = !motionTrailerActive;
+
+      if (motionTrailerActive) {
+        trailer.style.display = 'block';
+        if (btn) {
+          btn.style.background = 'rgba(255, 215, 0, 0.25)';
+          btn.style.color = '#ffd700';
+          btn.innerHTML = '<i class="fa-solid fa-images"></i> <span>Chapter Mode</span>';
+        }
       } else {
-        loadMovieVideo('ultimate');
+        trailer.style.display = 'none';
+        if (btn) {
+          btn.style.background = '';
+          btn.style.color = '';
+          btn.innerHTML = '<i class="fa-solid fa-clapperboard"></i> <span>Motion Mode</span>';
+        }
       }
     }
 
