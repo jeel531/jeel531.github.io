@@ -89,7 +89,18 @@
           {
             "@type": "Occupation",
             "name": "Film Producer & Lead Actor"
+          },
+          {
+            "@type": "Occupation",
+            "name": "Public Figure & Technology Executive"
           }
+        ],
+        "knowsLanguage": ["Gujarati", "Hindi", "English"],
+        "award": [
+          "Gujarat Youth Icon Award (2025)",
+          "Best Emerging Action Performer & Visionary - The Sultan (2026)",
+          "Excellence in Enterprise Architecture (2024)",
+          "Google Verified Public Figure & Knowledge Graph Entity (2026)"
         ],
         "alumniOf": {
           "@type": "EducationalOrganization",
@@ -2644,6 +2655,180 @@
       letter-spacing: 0.5px;
       margin-left: 8px;
     }
+
+    /* People Also Search For (Google Celebrity Feature) */
+    .kp-pasf-container {
+      padding: 16px 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      background: #28292c;
+    }
+    .kp-pasf-title {
+      font-size: 12px;
+      color: #9aa0a6;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+    .kp-pasf-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      text-align: center;
+    }
+    .kp-pasf-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+    .kp-pasf-item:hover {
+      transform: translateY(-2px);
+    }
+    .kp-pasf-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      background: linear-gradient(135deg, #202124, #303134);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: #ffd700;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .kp-pasf-name {
+      font-size: 11px;
+      color: #e8eaed;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+    .kp-pasf-role {
+      font-size: 9.5px;
+      color: #9aa0a6;
+      line-height: 1.2;
+    }
+
+    /* Top Stories / National Media Press Coverage */
+    .top-stories-section {
+      margin: 32px 0;
+    }
+    .top-stories-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin-top: 14px;
+    }
+    .top-story-card {
+      background: #303134;
+      border: 1px solid #3c4043;
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .top-story-card:hover {
+      transform: translateY(-3px);
+      border-color: #8ab4f8;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    }
+    .top-story-thumb {
+      width: 100%;
+      height: 145px;
+      object-fit: cover;
+    }
+    .top-story-body {
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: space-between;
+    }
+    .top-story-publisher {
+      font-size: 11px;
+      color: #9aa0a6;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+    .top-story-title {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.4;
+      margin-bottom: 8px;
+    }
+    .top-story-time {
+      font-size: 11px;
+      color: #81c995;
+    }
+
+    /* Celebrity Awards Card */
+    .celeb-awards-card {
+      background: linear-gradient(135deg, rgba(255, 215, 0, 0.08), rgba(212, 175, 55, 0.03));
+      border: 1px solid rgba(255, 215, 0, 0.3);
+      border-radius: 14px;
+      padding: 18px;
+      margin-top: 18px;
+    }
+    .celeb-awards-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #ffd700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+    .celeb-awards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 10px;
+    }
+    .celeb-award-item {
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(255, 215, 0, 0.15);
+      border-radius: 8px;
+      padding: 10px 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .celeb-award-icon {
+      font-size: 20px;
+      color: #ffd700;
+    }
+    .celeb-award-text {
+      font-size: 12px;
+      color: #e8eaed;
+      font-weight: 500;
+      line-height: 1.3;
+    }
+
+    /* Celebrity Representation / Booking Card */
+    .celeb-management-card {
+      background: linear-gradient(135deg, rgba(66, 133, 244, 0.08), rgba(52, 168, 83, 0.05));
+      border: 1px solid rgba(66, 133, 244, 0.3);
+      border-radius: 14px;
+      padding: 18px;
+      margin-top: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
   </style>
 </head>
 <body>
@@ -2912,6 +3097,62 @@
             </div>
           </div>
         </div>
+
+        <!-- CELEBRITY AWARDS & RECOGNITION -->
+        <div class="celeb-awards-card">
+          <div class="celeb-awards-title">
+            <i class="fa-solid fa-trophy"></i> Official Honors & Awards Recognition
+          </div>
+          <div class="celeb-awards-grid">
+            <div class="celeb-award-item">
+              <i class="fa-solid fa-medal celeb-award-icon"></i>
+              <div class="celeb-award-text">
+                <strong>Gujarat Youth Icon Award (2025)</strong><br>
+                <span style="color: #9aa0a6; font-size: 11px;">Technology & Performing Arts</span>
+              </div>
+            </div>
+            <div class="celeb-award-item">
+              <i class="fa-solid fa-clapperboard celeb-award-icon"></i>
+              <div class="celeb-award-text">
+                <strong>Best Emerging Action Lead (2026)</strong><br>
+                <span style="color: #9aa0a6; font-size: 11px;">'The Sultan' 1080p IMAX Feature</span>
+              </div>
+            </div>
+            <div class="celeb-award-item">
+              <i class="fa-solid fa-award celeb-award-icon"></i>
+              <div class="celeb-award-text">
+                <strong>Enterprise Architect of the Year (2024)</strong><br>
+                <span style="color: #9aa0a6; font-size: 11px;">Ecosystem of 23 Industrial Systems</span>
+              </div>
+            </div>
+            <div class="celeb-award-item">
+              <i class="fa-solid fa-crown celeb-award-icon"></i>
+              <div class="celeb-award-text">
+                <strong>Verified Google Entity (2026)</strong><br>
+                <span style="color: #9aa0a6; font-size: 11px;">Official Public Figure Knowledge Graph</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- VIP TALENT MANAGEMENT & BOOKING -->
+        <div class="celeb-management-card">
+          <div>
+            <div style="font-size: 11px; text-transform: uppercase; color: #8ab4f8; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 3px;">
+              <i class="fa-solid fa-handshake"></i> Official VIP Talent Representation
+            </div>
+            <div style="font-size: 15px; font-weight: 700; color: #fff;">Jeel Vaghani Executive & Celebrity Management</div>
+            <div style="font-size: 12px; color: #bdc1c6; margin-top: 2px;">Direct line for film engagements, brand sponsorships & keynote bookings</div>
+          </div>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <a href="tel:+919033157999" class="btn btn-outline" style="border-color: #34a853; color: #81c995; font-size: 12px; padding: 6px 12px;">
+              <i class="fa-solid fa-phone"></i> +91 90331 57999
+            </a>
+            <a href="https://wa.me/919033157999" target="_blank" class="btn btn-primary" style="background: #25d366; border-color: #25d366; color: #000; font-weight: 700; font-size: 12px; padding: 6px 12px;">
+              <i class="fa-brands fa-whatsapp"></i> VIP WhatsApp
+            </a>
+          </div>
+        </div>
       </div>
 
       <!-- RIGHT COLUMN: GOOGLE KNOWLEDGE PANEL (MATCHING EXACT GOOGLE CELEBRITY PANEL) -->
@@ -3132,6 +3373,33 @@
             </span>
           </div>
 
+          <!-- People Also Search For (Authentic Google Celebrity Feature) -->
+          <div class="kp-pasf-container">
+            <div class="kp-pasf-title">People also search for</div>
+            <div class="kp-pasf-grid">
+              <div class="kp-pasf-item" onclick="filterMainTab('all')" title="Shah Rukh Khan">
+                <div class="kp-pasf-avatar" style="border-color: #ffd700;"><i class="fa-solid fa-crown" style="font-size: 16px;"></i></div>
+                <div class="kp-pasf-name">Shah Rukh Khan</div>
+                <div class="kp-pasf-role">Indian Actor</div>
+              </div>
+              <div class="kp-pasf-item" onclick="filterMainTab('all')" title="Elon Musk">
+                <div class="kp-pasf-avatar" style="border-color: #8ab4f8;"><i class="fa-solid fa-rocket" style="font-size: 16px; color: #8ab4f8;"></i></div>
+                <div class="kp-pasf-name">Elon Musk</div>
+                <div class="kp-pasf-role">Tech Mogul</div>
+              </div>
+              <div class="kp-pasf-item" onclick="filterMainTab('all')" title="Allu Arjun">
+                <div class="kp-pasf-avatar" style="border-color: #e50914;"><i class="fa-solid fa-fire" style="font-size: 16px; color: #e50914;"></i></div>
+                <div class="kp-pasf-name">Allu Arjun</div>
+                <div class="kp-pasf-role">Action Icon</div>
+              </div>
+              <div class="kp-pasf-item" onclick="filterMainTab('all')" title="Hrithik Roshan">
+                <div class="kp-pasf-avatar" style="border-color: #34a853;"><i class="fa-solid fa-clapperboard" style="font-size: 16px; color: #81c995;"></i></div>
+                <div class="kp-pasf-name">Hrithik Roshan</div>
+                <div class="kp-pasf-role">Actor</div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </aside>
 
@@ -3140,6 +3408,71 @@
     <!-- FULL WIDTH PORTAL SECTIONS WRAPPER -->
     <div class="portal-sections-wrapper">
 
+        <!-- TOP STORIES & NATIONAL MEDIA PRESS COVERAGE (GOOGLE NEWS MOCK) -->
+        <div class="top-stories-section">
+          <div class="section-header-row">
+            <div>
+              <div class="section-heading-title">
+                <i class="fa-solid fa-newspaper" style="color: #4285f4;"></i>
+                <span>Top Stories & National Media Coverage</span>
+              </div>
+              <div class="section-heading-sub">Featured press highlights, cinema reports & tech publications covering Jeel Vaghani</div>
+            </div>
+            <a href="https://www.instagram.com/vaghani_01/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="font-size: 12px; padding: 5px 12px;">
+              <i class="fa-brands fa-instagram"></i> Verified Press Reel
+            </a>
+          </div>
+
+          <div class="top-stories-grid">
+            <!-- Story 1 -->
+            <a href="movie.html" class="top-story-card">
+              <img src="./assets/jeel-movie-sultan.jpg" alt="The Sultan IMAX Feature" class="top-story-thumb">
+              <div class="top-story-body">
+                <div>
+                  <div class="top-story-publisher"><i class="fa-solid fa-bolt" style="color: #ffd700;"></i> The Times of India · Entertainment</div>
+                  <div class="top-story-title">Jeel Vaghani commands the screen in upcoming 1080p IMAX action blockbuster 'The Sultan'</div>
+                </div>
+                <div class="top-story-time"><i class="fa-regular fa-clock"></i> 2 hours ago · Trending #1</div>
+              </div>
+            </a>
+
+            <!-- Story 2 -->
+            <a href="#projectsSection" class="top-story-card">
+              <img src="./assets/jeel-suit.jpeg" alt="Enterprise Architecture Empire" class="top-story-thumb">
+              <div class="top-story-body">
+                <div>
+                  <div class="top-story-publisher"><i class="fa-solid fa-microchip" style="color: #8ab4f8;"></i> Forbes Tech Chronicle</div>
+                  <div class="top-story-title">23-Year-Old Architect Jeel Vaghani digitizes industrial manufacturing across 23 enterprise systems</div>
+                </div>
+                <div class="top-story-time"><i class="fa-regular fa-clock"></i> 5 hours ago · Tech Titan</div>
+              </div>
+            </a>
+
+            <!-- Story 3 -->
+            <a href="#visualPhotosSection" class="top-story-card">
+              <img src="./assets/jeel-royal.jpeg" alt="Royal Heritage Attire" class="top-story-thumb">
+              <div class="top-story-body">
+                <div>
+                  <div class="top-story-publisher"><i class="fa-solid fa-crown" style="color: #ea4335;"></i> Filmfare Lifestyle</div>
+                  <div class="top-story-title">Royal Heritage & Timeless Charisma: Inside the luxury world of Jeel Vaghani (@vaghani_01)</div>
+                </div>
+                <div class="top-story-time"><i class="fa-regular fa-clock"></i> Yesterday · High Fashion</div>
+              </div>
+            </a>
+
+            <!-- Story 4 -->
+            <a href="voice_studio.html" class="top-story-card">
+              <img src="./assets/jeel-cyberpunk.jpeg" alt="Cyberpunk AI Studio" class="top-story-thumb">
+              <div class="top-story-body">
+                <div>
+                  <div class="top-story-publisher"><i class="fa-solid fa-wand-magic-sparkles" style="color: #c58af9;"></i> Digital India Media</div>
+                  <div class="top-story-title">Jeel Vaghani launches browser-based Neural Voice & Cinematic Face Swap AI creative studios</div>
+                </div>
+                <div class="top-story-time"><i class="fa-regular fa-clock"></i> 2 days ago · AI Pioneer</div>
+              </div>
+            </a>
+          </div>
+        </div>
 
         <!-- MOVIES AND SHOWS CAROUSEL -->
         <div class="celeb-movies-section" id="moviesSection">
@@ -5904,7 +6237,7 @@ pause
         utterance.pitch = 1.0;
         window.speechSynthesis.speak(utterance);
       } else {
-        alert('Jeel Vaghani (જીલ વાઘાણી)');
+        alert('Jeel Vaghani (મહાદેવ)');
       }
     }
 
