@@ -1,0 +1,111 @@
+[
+  {
+    "id": "ig_reel_dewk2h",
+    "isInstagram": true,
+    "isReel": true,
+    "url": "https://www.instagram.com/reel/DEWk2hMomVq/",
+    "caption": "Official Action & Executive Style Reel! Watch the original video on @vaghani_01 🎬🔥",
+    "imageUrl": "./assets/jeel-suit.jpeg",
+    "videoUrl": "https://www.instagram.com/reel/DEWk2hMomVq/",
+    "timeStr": "Official Reel · 153+ Comments",
+    "likes": "1.8K+",
+    "comments": "153",
+    "title": "Jeel Vaghani Official Action Reel"
+  },
+  {
+    "id": "ig_post_sultan",
+    "isInstagram": true,
+    "isReel": false,
+    "url": "https://www.instagram.com/vaghani_01/",
+    "caption": "❤️‍🔥 THE SULTAN / LIFE: 'Nobody can love as deeply as Jeel Vaghani... and nobody can face his fury!' Official 1080p IMAX blockbuster launch! 👑🔥",
+    "imageUrl": "./assets/jeel-life-poster.jpg",
+    "timeStr": "Blockbuster Premiere",
+    "likes": "18.4K+",
+    "comments": "1,420",
+    "title": "JEEL VAGHANI: THE SULTAN Poster"
+  },
+  {
+    "id": "ig_post_cyberpunk",
+    "isInstagram": true,
+    "isReel": false,
+    "url": "https://www.instagram.com/vaghani_01/",
+    "caption": "The future belongs to those who innovate relentlessly. Neon aesthetics & high tech in Times Square. 🚀✨",
+    "imageUrl": "./assets/jeel-cyberpunk.jpeg",
+    "timeStr": "Cyberpunk Edition",
+    "likes": "2.4K+",
+    "comments": "184",
+    "title": "Jeel Vaghani Times Square Cyberpunk"
+  },
+  {
+    "id": "ig_post_royal",
+    "isInstagram": true,
+    "isReel": false,
+    "url": "https://www.instagram.com/vaghani_01/",
+    "caption": "Royal heritage and timeless culture in royal red velvet & gold embroidery. Proud Indian identity. 👑🏛️",
+    "imageUrl": "./assets/jeel-royal.jpeg",
+    "timeStr": "Royal Heritage",
+    "likes": "3.2K+",
+    "comments": "340",
+    "title": "Jeel Vaghani Royal Heritage Sherwani"
+  },
+  {
+    "id": "ig_post_biker",
+    "isInstagram": true,
+    "isReel": false,
+    "url": "https://www.instagram.com/vaghani_01/",
+    "caption": "The open road and hill trails. Pure freedom on two wheels! Riding with confidence and power. 🏍️⛰️",
+    "imageUrl": "./assets/jeel-biker.jpeg",
+    "timeStr": "Mountain Highway",
+    "likes": "3.5K+",
+    "comments": "275",
+    "title": "Jeel Vaghani Mountain Cruiser"
+  },
+  {
+    "id": "ig_post_rudra",
+    "isInstagram": true,
+    "isReel": true,
+    "url": "https://www.instagram.com/vaghani_01/",
+    "caption": "Rudra Martial Arts Combat: High-octane martial stunts and rain combat sequences. Dedication and discipline! 🥋⚡",
+    "imageUrl": "./assets/jeel-movie-rudra.jpg",
+    "timeStr": "Action Stunts",
+    "likes": "4.1K+",
+    "comments": "412",
+    "title": "Jeel Vaghani Martial Arts Combat"
+  },
+  {
+    "id": "ig_post_mafia_sultan",
+    "isInstagram": true,
+    "isReel": false,
+    "url": "https://www.instagram.com/vaghani_01/",
+    "caption": "Sultan of Gujarat: Industrial power, razor-sharp focus, and empire building. 👑💼",
+    "imageUrl": "./assets/jeel-movie-sultan.jpg",
+    "timeStr": "Empire Building",
+    "likes": "5.6K+",
+    "comments": "580",
+    "title": "Jeel Vaghani Mafia Emperor"
+  },
+  {
+    "id": "ig_post_romance",
+    "isInstagram": true,
+    "isReel": false,
+    "url": "https://www.instagram.com/vaghani_01/",
+    "caption": "Sunset beach golden hour. Romance, poetry, and cinema in picturesque frames. 🌅✨",
+    "imageUrl": "./assets/jeel-life-1-romance.jpg",
+    "timeStr": "Sunset Romance",
+    "likes": "2.9K+",
+    "comments": "210",
+    "title": "Jeel Vaghani Sunset Romance"
+  },
+  {
+    "id": "ig_post_climax",
+    "isInstagram": true,
+    "isReel": true,
+    "url": "https://www.instagram.com/vaghani_01/",
+    "caption": "Fire Walk Climax Victory: Unstoppable fury and ultimate triumph! The grand finale scene. 🔥🏆",
+    "imageUrl": "./assets/jeel-life-5-climax.jpg",
+    "timeStr": "Grand Climax",
+    "likes": "6.2K+",
+    "comments": "640",
+    "title": "Jeel Vaghani Fire Walk Victory"
+  }
+]

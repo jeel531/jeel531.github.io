@@ -11,3 +11,4 @@ User-agent: Bingbot
 Allow: /
 
 Sitemap: https://jeel531.github.io/sitemap.xml
+Sitemap: https://jeel531.github.io/feed.xml

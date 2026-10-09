@@ -3,31 +3,97 @@
 <channel>
   <title>Jeel Vaghani (BMU MAHADEV) - Official Website &amp; Updates</title>
   <link>https://jeel531.github.io</link>
-  <description>Official profile, latest photos, biography, and movie updates of Jeel Vaghani (BMU MAHADEV).</description>
+  <description>Official profile, latest photos, biography, Instagram reels, and movie updates of Jeel Vaghani (BMU MAHADEV).</description>
   <language>gu-IN</language>
-  <lastBuildDate>Fri, 09 Oct 2026 17:45:00 +0530</lastBuildDate>
+  <lastBuildDate>Fri, 09 Oct 2026 18:30:00 +0530</lastBuildDate>
   <atom:link href="https://jeel531.github.io/feed.xml" rel="self" type="application/rss+xml" />
   
+  <!-- Post 1: Action Reel -->
   <item>
     <title>Jeel Vaghani Official Instagram Reel (@vaghani_01) - Action &amp; Style</title>
     <link>https://www.instagram.com/reel/DEWk2hMomVq/</link>
     <description>Latest official action reel by Jeel Vaghani on Instagram (@vaghani_01). Watch real stunts and executive style.</description>
-    <pubDate>Fri, 09 Oct 2026 17:00:00 +0530</pubDate>
+    <pubDate>Fri, 09 Oct 2026 18:00:00 +0530</pubDate>
     <guid>https://www.instagram.com/reel/DEWk2hMomVq/</guid>
   </item>
 
+  <!-- Post 2: The Sultan / Life Blockbuster Poster -->
   <item>
     <title>JEEL VAGHANI: THE SULTAN - Official Blockbuster Full Movie Released</title>
     <link>https://jeel531.github.io/movie.html</link>
     <description>Watch the official full action movie starring Jeel Vaghani in 1080p IMAX resolution.</description>
-    <pubDate>Fri, 09 Oct 2026 16:00:00 +0530</pubDate>
+    <pubDate>Fri, 09 Oct 2026 17:30:00 +0530</pubDate>
     <guid>https://jeel531.github.io/movie.html</guid>
   </item>
 
+  <!-- Post 3: Times Square Cyberpunk -->
+  <item>
+    <title>Jeel Vaghani Cyberpunk Tech Edition - Times Square Neon Showcase</title>
+    <link>https://www.instagram.com/vaghani_01/</link>
+    <description>The future belongs to those who innovate relentlessly. Exploring neon aesthetics and high technology in Times Square.</description>
+    <pubDate>Thu, 08 Oct 2026 19:00:00 +0530</pubDate>
+    <guid>https://jeel531.github.io/#post_cyberpunk</guid>
+  </item>
+
+  <!-- Post 4: Royal Heritage Sherwani -->
+  <item>
+    <title>Jeel Vaghani Royal Heritage Edition - Traditional Velvet Sherwani</title>
+    <link>https://www.instagram.com/vaghani_01/</link>
+    <description>Embracing timeless royal culture and Indian heritage in hand-embroidered golden zardozi.</description>
+    <pubDate>Wed, 07 Oct 2026 18:30:00 +0530</pubDate>
+    <guid>https://jeel531.github.io/#post_royal</guid>
+  </item>
+
+  <!-- Post 5: Mountain Highway Biker -->
+  <item>
+    <title>Jeel Vaghani Mountain Cruiser Adventure - Freedom on Two Wheels</title>
+    <link>https://www.instagram.com/vaghani_01/</link>
+    <description>Riding through mist and hill roads with pure confidence. The open road teaches discipline and focus.</description>
+    <pubDate>Tue, 06 Oct 2026 16:00:00 +0530</pubDate>
+    <guid>https://jeel531.github.io/#post_biker</guid>
+  </item>
+
+  <!-- Post 6: Rudra Martial Arts Combat -->
+  <item>
+    <title>Jeel Vaghani Martial Arts Combat - High-Octane Action Stunts</title>
+    <link>https://www.instagram.com/vaghani_01/</link>
+    <description>Intense martial arts training and cinematic rain combat sequences starring Jeel Vaghani.</description>
+    <pubDate>Mon, 05 Oct 2026 17:00:00 +0530</pubDate>
+    <guid>https://jeel531.github.io/#post_rudra</guid>
+  </item>
+
+  <!-- Post 7: Sultan Mafia Emperor -->
+  <item>
+    <title>Jeel Vaghani The Sultan - Industrial Empire and Corporate Power</title>
+    <link>https://www.instagram.com/vaghani_01/</link>
+    <description>Sultan of Gujarat: Industrial power, razor-sharp focus, and visionary enterprise software architect.</description>
+    <pubDate>Sun, 04 Oct 2026 15:00:00 +0530</pubDate>
+    <guid>https://jeel531.github.io/#post_mafia</guid>
+  </item>
+
+  <!-- Post 8: Sunset Romance -->
+  <item>
+    <title>Jeel Vaghani Sunset Romance - Golden Hour Cinematic Frames</title>
+    <link>https://www.instagram.com/vaghani_01/</link>
+    <description>Sunset beach romance and poetic cinematic storytelling in picturesque frames.</description>
+    <pubDate>Sat, 03 Oct 2026 18:00:00 +0530</pubDate>
+    <guid>https://jeel531.github.io/#post_romance</guid>
+  </item>
+
+  <!-- Post 9: Fire Walk Climax Victory -->
+  <item>
+    <title>Jeel Vaghani Fire Walk Climax - Unstoppable Hero Finale</title>
+    <link>https://www.instagram.com/vaghani_01/</link>
+    <description>The explosive finale victory walk through fire. Unmatched cinematic intensity and passion.</description>
+    <pubDate>Fri, 02 Oct 2026 20:00:00 +0530</pubDate>
+    <guid>https://jeel531.github.io/#post_climax</guid>
+  </item>
+
+  <!-- Official Entity Knowledge Graph Item -->
   <item>
     <title>Official Profile &amp; Google Knowledge Graph: Jeel Vaghani (BMU MAHADEV)</title>
     <link>https://jeel531.github.io/</link>
-    <description>Official biography, career, business development portfolio, and photo gallery of Jeel Vaghani.</description>
+    <description>Official biography, career, business development portfolio, and 12 HD photo gallery of Jeel Vaghani.</description>
     <pubDate>Fri, 09 Oct 2026 16:00:00 +0530</pubDate>
     <guid>https://jeel531.github.io/</guid>
   </item>

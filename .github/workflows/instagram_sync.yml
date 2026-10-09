@@ -1,0 +1,36 @@
+name: Automated Instagram & Google Sync
+
+on:
+  schedule:
+    - cron: '0 */6 * * *' # Auto-runs every 6 hours completely free
+  workflow_dispatch:      # Allows 1-click manual trigger anytime
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run Instagram & Google Indexing Syncer
+        run: python scripts/sync_instagram.py
+
+      - name: Commit & Push Changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "Google-Instagram-AutoSync-Bot"
+          git add posts.json feed.xml sitemap.xml
+          if git diff --staged --quiet; then
+            echo "No new updates to commit."
+          else
+            git commit -m "Auto-sync Instagram updates & Google ping [skip ci]"
+            git push
+          fi

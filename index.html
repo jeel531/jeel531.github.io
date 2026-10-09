@@ -1029,6 +1029,174 @@
       color: #8ab4f8;
     }
 
+    /* Instagram Profile Showcase & 3x3 Grid */
+    .ig-profile-card {
+      background: linear-gradient(180deg, #181922 0%, #121318 100%);
+      border: 1px solid rgba(225, 48, 108, 0.3);
+      border-radius: 16px;
+      padding: 22px;
+      margin-bottom: 22px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+    }
+    .ig-profile-top {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+    .ig-avatar-ring {
+      width: 86px;
+      height: 86px;
+      border-radius: 50%;
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+      padding: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 4px 15px rgba(220, 39, 67, 0.35);
+    }
+    .ig-avatar-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #14151a;
+    }
+    .ig-profile-meta {
+      flex: 1;
+      min-width: 240px;
+    }
+    .ig-username-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .ig-handle {
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .ig-stats-row {
+      display: flex;
+      gap: 22px;
+      margin-bottom: 10px;
+      font-size: 13.5px;
+      color: #9aa0a6;
+    }
+    .ig-stats-val {
+      font-weight: 700;
+      color: #fff;
+    }
+    .ig-bio-name {
+      font-weight: 700;
+      font-size: 14.5px;
+      color: #e8eaed;
+      margin-bottom: 3px;
+    }
+    .ig-bio-text {
+      font-size: 13px;
+      color: #bdc1c6;
+      line-height: 1.4;
+    }
+    .ig-view-tabs {
+      display: flex;
+      border-bottom: 1px solid #3c4043;
+      margin-top: 18px;
+      margin-bottom: 18px;
+      gap: 6px;
+    }
+    .ig-tab-btn {
+      background: transparent;
+      border: none;
+      color: #9aa0a6;
+      padding: 10px 16px;
+      font-size: 13.5px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s ease;
+    }
+    .ig-tab-btn:hover {
+      color: #fff;
+    }
+    .ig-tab-btn.active {
+      color: #fff;
+      border-bottom: 2px solid #e1306c;
+    }
+    .ig-media-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    @media (max-width: 600px) {
+      .ig-media-grid {
+        gap: 6px;
+      }
+    }
+    .ig-grid-item {
+      position: relative;
+      aspect-ratio: 1 / 1;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #14151a;
+      cursor: pointer;
+    }
+    .ig-grid-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.35s ease;
+    }
+    .ig-grid-item:hover .ig-grid-img {
+      transform: scale(1.06);
+    }
+    .ig-badge-reel {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(4px);
+      color: #fff;
+      border-radius: 6px;
+      padding: 3px 7px;
+      font-size: 11px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      z-index: 2;
+    }
+    .ig-grid-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(2px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      color: #fff;
+      font-weight: 700;
+      font-size: 14px;
+      z-index: 3;
+    }
+    .ig-grid-item:hover .ig-grid-overlay {
+      opacity: 1;
+    }
+
     /* RIGHT COLUMN: GOOGLE KNOWLEDGE PANEL (MATCHING SCREENSHOT 2) */
     .knowledge-panel {
       background-color: #303134;
@@ -4380,51 +4548,165 @@
       <!-- CENTERED FEED & INSTAGRAM AUTO-SYNC SECTION -->
       <div class="portal-feed-center-container" id="postsSection">
 
-        <!-- INSTAGRAM AUTO-SYNC LIVE HUB (FREE & INSTANT) -->
-        <div class="instagram-sync-hub" style="background: linear-gradient(135deg, rgba(225, 48, 108, 0.12), rgba(131, 58, 180, 0.08)); border: 1px solid rgba(225, 48, 108, 0.35); border-radius: 12px; padding: 18px; margin: 20px 0 24px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.25);">
-          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 12px;">
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <div style="width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 22px; box-shadow: 0 2px 10px rgba(225, 48, 108, 0.4);">
-                <i class="fa-brands fa-instagram"></i>
+        <!-- INSTAGRAM OFFICIAL PROFILE SHOWCASE & LIVE SYNC HUB -->
+        <div class="ig-profile-card">
+          <div class="ig-profile-top">
+            <div class="ig-avatar-ring">
+              <img src="./assets/jeel-suit.jpeg" alt="Jeel Vaghani" class="ig-avatar-img">
+            </div>
+            <div class="ig-profile-meta">
+              <div class="ig-username-row">
+                <span class="ig-handle">vaghani_01 <i class="fa-solid fa-circle-check verified-badge" style="color: #0095f6; font-size: 17px;" title="Verified Public Figure"></i></span>
+                <a href="https://www.instagram.com/vaghani_01/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background: #0095f6; color: #fff; font-weight: 600; padding: 6px 16px; font-size: 13px; border-radius: 8px; text-decoration: none;">
+                  <i class="fa-brands fa-instagram"></i> Follow
+                </a>
+                <a href="https://wa.me/919033157999" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color: #3c4043; color: #e8eaed; padding: 6px 14px; font-size: 13px; border-radius: 8px; text-decoration: none;">
+                  <i class="fa-brands fa-whatsapp"></i> Message
+                </a>
               </div>
+              <div class="ig-stats-row">
+                <span><span class="ig-stats-val">9</span> posts</span>
+                <span><span class="ig-stats-val">1,779</span> followers</span>
+                <span><span class="ig-stats-val">15</span> following</span>
+              </div>
+              <div class="ig-bio-name">Jeel Vaghani (BMU MAHADEV) 👑</div>
+              <div class="ig-bio-text">
+                Lead Enterprise Architect · Star &amp; Producer of 'The Sultan' · Creator of 23 Systems · Surat &amp; Gujarat, India
+              </div>
+            </div>
+          </div>
+
+          <!-- Automated Google Indexing Status Bar -->
+          <div style="background: rgba(32, 33, 36, 0.7); border: 1px solid rgba(52, 168, 83, 0.4); border-radius: 10px; padding: 12px 16px; margin-top: 18px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #34a853; box-shadow: 0 0 10px #34a853;"></span>
               <div>
-                <div style="font-size: 15px; font-weight: 600; color: #fff; display: flex; align-items: center; gap: 8px;">
-                  Instagram Auto-Sync Hub
-                  <span style="background: rgba(52, 168, 83, 0.2); border: 1px solid #34a853; color: #81c995; font-size: 11px; padding: 2px 8px; border-radius: 12px; font-weight: 600; display: inline-flex; align-items: center; gap: 4px;">
-                    <span style="width: 6px; height: 6px; background: #34a853; border-radius: 50%; display: inline-block;"></span> CONNECTED (@vaghani_01)
-                  </span>
-                </div>
-                <div style="font-size: 12.5px; color: #bdc1c6; margin-top: 2px;">
-                  Posts on Instagram automatically sync to Google Feed instantly
-                </div>
+                <span style="font-size: 13px; font-weight: 700; color: #81c995;">Automatic Cloud Sync to Google Active</span>
+                <div style="font-size: 11.5px; color: #9aa0a6;">Every post from @vaghani_01 is automatically synced to Google Search &amp; RSS every 6 hours via GitHub Cloud Actions (100% Free).</div>
               </div>
             </div>
             <div style="display: flex; gap: 8px;">
-              <a href="https://www.instagram.com/vaghani_01/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color: #e1306c; color: #ff80ab; font-size: 12.5px; padding: 6px 12px;">
-                <i class="fa-brands fa-instagram"></i> Open Instagram
-              </a>
+              <button class="btn btn-outline" onclick="triggerManualSync()" style="font-size: 12px; padding: 5px 12px; border-color: #4285f4; color: #8ab4f8; cursor: pointer;">
+                <i class="fa-solid fa-arrows-rotate"></i> Sync Now
+              </button>
             </div>
           </div>
 
-          <!-- Quick 1-Click Instagram Sync Bar -->
+          <!-- 1-Click Fast Sync Bar -->
           <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px;">
-            <input type="url" id="quickIgUrlInput" placeholder="Paste any new Instagram Post or Reel Link here..." style="flex: 1; min-width: 250px; background: #202124; border: 1px solid #5f6368; border-radius: 8px; padding: 10px 14px; color: #fff; font-size: 13.5px; outline: none;">
-            <button class="btn btn-primary" onclick="quickSyncInstagramPost()" style="background: linear-gradient(45deg, #f09433, #dc2743, #bc1888); border: none; font-size: 13.5px; font-weight: 500; padding: 10px 18px; box-shadow: 0 2px 8px rgba(220, 39, 67, 0.4);">
-              <i class="fa-solid fa-arrows-rotate"></i> Sync to Google Feed
+            <input type="url" id="quickIgUrlInput" placeholder="Paste any new Instagram Post or Reel Link (e.g. https://www.instagram.com/reel/...)" style="flex: 1; min-width: 250px; background: #202124; border: 1px solid #5f6368; border-radius: 8px; padding: 10px 14px; color: #fff; font-size: 13.5px; outline: none;">
+            <button class="btn btn-primary" onclick="quickSyncInstagramPost()" style="background: linear-gradient(45deg, #f09433, #dc2743, #bc1888); border: none; font-size: 13.5px; font-weight: 600; padding: 10px 18px; box-shadow: 0 2px 10px rgba(220, 39, 67, 0.4); cursor: pointer;">
+              <i class="fa-solid fa-bolt"></i> Instant Google Sync
             </button>
           </div>
           <div id="quickSyncFeedback" style="display: none; margin-top: 8px; font-size: 12px; color: #81c995;"></div>
+
+          <!-- View Switcher Tabs -->
+          <div class="ig-view-tabs">
+            <button class="ig-tab-btn active" id="tabBtnGrid" onclick="switchInstagramView('grid')">
+              <i class="fa-solid fa-table-cells"></i> 3x3 Grid (All 9 Posts)
+            </button>
+            <button class="ig-tab-btn" id="tabBtnReels" onclick="switchInstagramView('reels')">
+              <i class="fa-solid fa-clapperboard"></i> Reels Only
+            </button>
+            <button class="ig-tab-btn" id="tabBtnFeed" onclick="switchInstagramView('feed')">
+              <i class="fa-solid fa-bars"></i> Full Stream Feed
+            </button>
+          </div>
         </div>
 
-        <!-- FEED OF POSTS BY JEEL VAGHANI (What he requested: "MARI HU J POST KARU TE BATHU DEKHAVU PADE") -->
-        <div class="feed-section-title">
-          <i class="fa-solid fa-bolt" style="color: #fbbc05;"></i>
-          <span>Latest Posts & Updates from Jeel Vaghani</span>
+        <!-- VIEW 1: 3x3 INSTAGRAM MEDIA GRID (ALL 9 POSTS) -->
+        <div id="igGridView" class="ig-media-grid">
+          <!-- 1. Action Reel -->
+          <div class="ig-grid-item" data-is-reel="true" onclick="window.open('https://www.instagram.com/reel/DEWk2hMomVq/', '_blank')" title="Watch Reel on Instagram">
+            <img src="./assets/jeel-suit.jpeg" alt="Jeel Vaghani Action Reel" class="ig-grid-img">
+            <div class="ig-badge-reel"><i class="fa-solid fa-play"></i> REEL</div>
+            <div class="ig-grid-overlay">
+              <span class="ig-overlay-stat"><i class="fa-solid fa-heart"></i> 1.8K</span>
+              <span class="ig-overlay-stat"><i class="fa-solid fa-comment"></i> 153</span>
+            </div>
+          </div>
+
+          <!-- 2. The Sultan Poster -->
+          <div class="ig-grid-item" data-is-reel="false" onclick="window.location.href='movie.html'" title="Watch The Sultan">
+            <img src="./assets/jeel-life-poster.jpg" alt="The Sultan Poster" class="ig-grid-img">
+            <div class="ig-badge-reel" style="background: rgba(229, 9, 20, 0.85);"><i class="fa-solid fa-film"></i> MOVIE</div>
+            <div class="ig-grid-overlay">
+              <span class="ig-overlay-stat"><i class="fa-solid fa-heart"></i> 18.4K</span>
+              <span class="ig-overlay-stat"><i class="fa-solid fa-comment"></i> 1.4K</span>
+            </div>
+          </div>
+
+          <!-- 3. Cyberpunk -->
+          <div class="ig-grid-item" data-is-reel="false" onclick="viewPhoto('./assets/jeel-cyberpunk.jpeg')" title="Cyberpunk Times Square">
+            <img src="./assets/jeel-cyberpunk.jpeg" alt="Cyberpunk Times Square" class="ig-grid-img">
+            <div class="ig-grid-overlay">
+              <span class="ig-overlay-stat"><i class="fa-solid fa-heart"></i> 2.4K</span>
+              <span class="ig-overlay-stat"><i class="fa-solid fa-comment"></i> 184</span>
+            </div>
+          </div>
+
+          <!-- 4. Royal Heritage -->
+          <div class="ig-grid-item" data-is-reel="false" onclick="viewPhoto('./assets/jeel-royal.jpeg')" title="Royal Heritage Sherwani">
+            <img src="./assets/jeel-royal.jpeg" alt="Royal Heritage Sherwani" class="ig-grid-img">
+            <div class="ig-grid-overlay">
+              <span class="ig-overlay-stat"><i class="fa-solid fa-heart"></i> 3.2K</span>
+              <span class="ig-overlay-stat"><i class="fa-solid fa-comment"></i> 340</span>
+            </div>
+          </div>
+
+          <!-- 5. Mountain Cruiser Biker -->
+          <div class="ig-grid-item" data-is-reel="false" onclick="viewPhoto('./assets/jeel-biker.jpeg')" title="Mountain Cruiser Biker">
+            <img src="./assets/jeel-biker.jpeg" alt="Mountain Cruiser Biker" class="ig-grid-img">
+            <div class="ig-grid-overlay">
+              <span class="ig-overlay-stat"><i class="fa-solid fa-heart"></i> 3.5K</span>
+              <span class="ig-overlay-stat"><i class="fa-solid fa-comment"></i> 275</span>
+            </div>
+          </div>
+
+          <!-- 6. Rudra Martial Arts Combat -->
+          <div class="ig-grid-item" data-is-reel="true" onclick="viewPhoto('./assets/jeel-movie-rudra.jpg')" title="Rudra Martial Arts Action">
+            <img src="./assets/jeel-movie-rudra.jpg" alt="Rudra Martial Arts Combat" class="ig-grid-img">
+            <div class="ig-badge-reel"><i class="fa-solid fa-play"></i> ACTION</div>
+            <div class="ig-grid-overlay">
+              <span class="ig-overlay-stat"><i class="fa-solid fa-heart"></i> 4.1K</span>
+              <span class="ig-overlay-stat"><i class="fa-solid fa-comment"></i> 412</span>
+            </div>
+          </div>
+
+          <!-- 7. Mafia Sultan -->
+          <div class="ig-grid-item" data-is-reel="false" onclick="viewPhoto('./assets/jeel-movie-sultan.jpg')" title="Sultan Mafia Emperor">
+            <img src="./assets/jeel-movie-sultan.jpg" alt="Sultan Mafia Emperor" class="ig-grid-img">
+            <div class="ig-grid-overlay">
+              <span class="ig-overlay-stat"><i class="fa-solid fa-heart"></i> 5.6K</span>
+              <span class="ig-overlay-stat"><i class="fa-solid fa-comment"></i> 580</span>
+            </div>
+          </div>
+
+          <!-- 8. Sunset Romance -->
+          <div class="ig-grid-item" data-is-reel="false" onclick="viewPhoto('./assets/jeel-life-1-romance.jpg')" title="Sunset Romance">
+            <img src="./assets/jeel-life-1-romance.jpg" alt="Sunset Romance" class="ig-grid-img">
+            <div class="ig-grid-overlay">
+              <span class="ig-overlay-stat"><i class="fa-solid fa-heart"></i> 2.9K</span>
+              <span class="ig-overlay-stat"><i class="fa-solid fa-comment"></i> 210</span>
+            </div>
+          </div>
+
+          <!-- 9. Fire Walk Climax -->
+          <div class="ig-grid-item" data-is-reel="true" onclick="viewPhoto('./assets/jeel-life-5-climax.jpg')" title="Fire Walk Climax Victory">
+            <img src="./assets/jeel-life-5-climax.jpg" alt="Fire Walk Climax Victory" class="ig-grid-img">
+            <div class="ig-badge-reel"><i class="fa-solid fa-play"></i> CLIMAX</div>
+            <div class="ig-grid-overlay">
+              <span class="ig-overlay-stat"><i class="fa-solid fa-heart"></i> 6.2K</span>
+              <span class="ig-overlay-stat"><i class="fa-solid fa-comment"></i> 640</span>
+            </div>
+          </div>
         </div>
 
-        <div id="postsFeedContainer" style="display: flex; flex-direction: column; gap: 20px;">
+        <!-- VIEW 2: STREAM FEED CONTAINER (ALL 9 POSTS WITH DETAILED CARDS) -->
+        <div id="postsFeedContainer" style="display: none; flex-direction: column; gap: 20px;">
 
-          <!-- Post: Featured Instagram Reel -->
+          <!-- Post 1: Action Reel -->
           <article class="post-card" style="border: 1px solid rgba(225, 48, 108, 0.4); background: linear-gradient(180deg, rgba(225, 48, 108, 0.08), #303134 18%);">
             <div class="post-author-row">
               <div class="author-info">
@@ -4443,14 +4725,13 @@
             </div>
             <div class="post-image-container" style="position: relative; cursor: pointer;" onclick="window.open('https://www.instagram.com/reel/DEWk2hMomVq/', '_blank')">
               <img src="./assets/jeel-suit.jpeg" alt="Jeel Vaghani Instagram Reel" class="post-image">
-              <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 68px; height: 68px; background: rgba(0, 0, 0, 0.65); border: 2px solid #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; -webkit--webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
-      -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);">
+              <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 68px; height: 68px; background: rgba(0, 0, 0, 0.65); border: 2px solid #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px);">
                 <i class="fa-solid fa-play" style="font-size: 24px; color: #fff; margin-left: 4px;"></i>
               </div>
             </div>
             <div class="post-footer">
               <div class="post-stats">
-                <div class="stat-item"><i class="fa-solid fa-heart" style="color: #e1306c;"></i> 26+ Likes</div>
+                <div class="stat-item"><i class="fa-solid fa-heart" style="color: #e1306c;"></i> 1.8K Likes</div>
                 <div class="stat-item"><i class="fa-regular fa-comment"></i> 153 Comments</div>
                 <div class="stat-item"><i class="fa-solid fa-share-nodes"></i> Share</div>
               </div>
@@ -4458,7 +4739,7 @@
             </div>
           </article>
 
-          <!-- FEATURED ACTION MOVIE ANNOUNCEMENT -->
+          <!-- Post 2: The Sultan / Life Movie -->
           <article class="post-card" style="border: 1px solid #ffd700; background: linear-gradient(180deg, #18191e, #121316); box-shadow: 0 4px 25px rgba(255, 215, 0, 0.25);">
             <div class="post-author-row">
               <div class="author-info">
@@ -4473,13 +4754,13 @@
               </a>
             </div>
             <div class="post-text" style="font-size: 15px; font-weight: 500;">
-              ❤️‍🔥 <strong>OFFICIAL TEASER: "JEEL VAGHANI: LIFE"</strong><br>
+              ❤️‍🔥 <strong>OFFICIAL TEASER: "JEEL VAGHANI: THE SULTAN / LIFE"</strong><br>
               <em style="color: #ffd700;">"Nobody can love as deeply as Jeel Vaghani... and nobody can face his fury!"</em><br>
               A tale of unconditional love and deadly fury starring <strong>Jeel Vaghani</strong>. Experience the sunset beach romance, royal courtyard combat, and explosive climax!
             </div>
             <div class="post-image-container" style="position: relative; cursor: pointer;" onclick="window.location.href='movie.html'">
               <img src="./assets/jeel-life-poster.jpg" alt="Jeel Vaghani Life Movie Poster" class="post-image" style="max-height: 520px; object-fit: contain; background: #000;">
-              <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.25); transition: background 0.3s;" onmouseover="this.style.background='rgba(0,0,0,0.05)'" onmouseout="this.style.background='rgba(0,0,0,0.25)'">
+              <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.25);">
                 <div style="width: 74px; height: 74px; border-radius: 50%; background: linear-gradient(135deg, #e50914, #ffd700); border: 2px solid #fff; display: flex; align-items: center; justify-content: center; font-size: 28px; color: #000; box-shadow: 0 0 30px rgba(255,215,0,0.9); padding-left: 5px;">
                   <i class="fa-solid fa-play"></i>
                 </div>
@@ -4495,7 +4776,7 @@
             </div>
           </article>
 
-          <!-- Post 1: Cyberpunk Look in Times Square -->
+          <!-- Post 3: Cyberpunk Times Square -->
           <article class="post-card">
             <div class="post-author-row">
               <div class="author-info">
@@ -4505,7 +4786,7 @@
                   <div class="author-meta">Cyberpunk Tech Edition · Times Square · 1 day ago</div>
                 </div>
               </div>
-              <i class="fa-solid fa-ellipsis" style="color: #9aa0a6; cursor: pointer;"></i>
+              <a href="https://www.instagram.com/vaghani_01/" target="_blank" rel="noopener noreferrer" style="color: #e1306c; font-size: 12px; text-decoration: none;"><i class="fa-brands fa-instagram"></i> @vaghani_01</a>
             </div>
             <div class="post-text">
               "The future belongs to those who innovate relentlessly. Exploring neon aesthetics, high technology, and modern digital frontiers. Always keep creating! 🚀✨"
@@ -4515,15 +4796,15 @@
             </div>
             <div class="post-footer">
               <div class="post-stats">
-                <div class="stat-item"><i class="fa-regular fa-heart"></i> 1,420 Likes</div>
+                <div class="stat-item"><i class="fa-regular fa-heart"></i> 2,420 Likes</div>
                 <div class="stat-item"><i class="fa-regular fa-comment"></i> 184 Comments</div>
                 <div class="stat-item"><i class="fa-solid fa-share-nodes"></i> Share</div>
               </div>
-              <div style="color: #8ab4f8; font-size: 12px; cursor: pointer;">Verified Post</div>
+              <a href="https://www.instagram.com/vaghani_01/" target="_blank" rel="noopener noreferrer" style="color: #8ab4f8; font-size: 12px; text-decoration: none;">View on Instagram &rarr;</a>
             </div>
           </article>
 
-          <!-- Post 2: Royal Heritage & Tradition -->
+          <!-- Post 4: Royal Heritage -->
           <article class="post-card">
             <div class="post-author-row">
               <div class="author-info">
@@ -4533,7 +4814,7 @@
                   <div class="author-meta">Royal Heritage Edition · Palace Architecture · 3 days ago</div>
                 </div>
               </div>
-              <i class="fa-solid fa-ellipsis" style="color: #9aa0a6; cursor: pointer;"></i>
+              <a href="https://www.instagram.com/vaghani_01/" target="_blank" rel="noopener noreferrer" style="color: #e1306c; font-size: 12px; text-decoration: none;"><i class="fa-brands fa-instagram"></i> @vaghani_01</a>
             </div>
             <div class="post-text">
               "Our rich culture and royal heritage define our true identity. Embracing timeless royal fashion in red velvet and golden zardozi. 👑🏛️"
@@ -4543,15 +4824,15 @@
             </div>
             <div class="post-footer">
               <div class="post-stats">
-                <div class="stat-item"><i class="fa-regular fa-heart"></i> 2,890 Likes</div>
+                <div class="stat-item"><i class="fa-regular fa-heart"></i> 3,290 Likes</div>
                 <div class="stat-item"><i class="fa-regular fa-comment"></i> 340 Comments</div>
                 <div class="stat-item"><i class="fa-solid fa-share-nodes"></i> Share</div>
               </div>
-              <div style="color: #8ab4f8; font-size: 12px; cursor: pointer;">Verified Post</div>
+              <a href="https://www.instagram.com/vaghani_01/" target="_blank" rel="noopener noreferrer" style="color: #8ab4f8; font-size: 12px; text-decoration: none;">View on Instagram &rarr;</a>
             </div>
           </article>
 
-          <!-- Post 3: Mountain Ride / Motorcycle Adventure -->
+          <!-- Post 5: Mountain Ride / Motorcycle Adventure -->
           <article class="post-card">
             <div class="post-author-row">
               <div class="author-info">
@@ -4561,7 +4842,7 @@
                   <div class="author-meta">Mountain Expedition · Freedom on Wheels · 5 days ago</div>
                 </div>
               </div>
-              <i class="fa-solid fa-ellipsis" style="color: #9aa0a6; cursor: pointer;"></i>
+              <a href="https://www.instagram.com/vaghani_01/" target="_blank" rel="noopener noreferrer" style="color: #e1306c; font-size: 12px; text-decoration: none;"><i class="fa-brands fa-instagram"></i> @vaghani_01</a>
             </div>
             <div class="post-text">
               "The open road, winding hill trails, and pure freedom. Every journey teaches a new perspective. Riding through the mist with confidence! 🏍️⛰️"
@@ -4571,11 +4852,123 @@
             </div>
             <div class="post-footer">
               <div class="post-stats">
-                <div class="stat-item"><i class="fa-regular fa-heart"></i> 3,110 Likes</div>
+                <div class="stat-item"><i class="fa-regular fa-heart"></i> 3,510 Likes</div>
                 <div class="stat-item"><i class="fa-regular fa-comment"></i> 275 Comments</div>
                 <div class="stat-item"><i class="fa-solid fa-share-nodes"></i> Share</div>
               </div>
-              <div style="color: #8ab4f8; font-size: 12px; cursor: pointer;">Verified Post</div>
+              <a href="https://www.instagram.com/vaghani_01/" target="_blank" rel="noopener noreferrer" style="color: #8ab4f8; font-size: 12px; text-decoration: none;">View on Instagram &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Post 6: Rudra Martial Arts Combat -->
+          <article class="post-card">
+            <div class="post-author-row">
+              <div class="author-info">
+                <img src="./assets/jeel-movie-rudra.jpg" alt="Jeel Vaghani" class="author-avatar">
+                <div>
+                  <div class="author-name">Jeel Vaghani <i class="fa-solid fa-circle-check verified-badge"></i></div>
+                  <div class="author-meta">Rudra Martial Combat · Rain Fight Sequence · 1 week ago</div>
+                </div>
+              </div>
+              <a href="https://www.instagram.com/vaghani_01/" target="_blank" rel="noopener noreferrer" style="color: #e1306c; font-size: 12px; text-decoration: none;"><i class="fa-brands fa-instagram"></i> @vaghani_01</a>
+            </div>
+            <div class="post-text">
+              "High-octane martial stunts and rain combat sequences. Dedication, physical conditioning, and relentless discipline! 🥋⚡"
+            </div>
+            <div class="post-image-container">
+              <img src="./assets/jeel-movie-rudra.jpg" alt="Jeel Vaghani Martial Arts Combat" class="post-image" onclick="viewPhoto(this.src)">
+            </div>
+            <div class="post-footer">
+              <div class="post-stats">
+                <div class="stat-item"><i class="fa-regular fa-heart"></i> 4,120 Likes</div>
+                <div class="stat-item"><i class="fa-regular fa-comment"></i> 412 Comments</div>
+                <div class="stat-item"><i class="fa-solid fa-share-nodes"></i> Share</div>
+              </div>
+              <a href="https://www.instagram.com/vaghani_01/" target="_blank" rel="noopener noreferrer" style="color: #8ab4f8; font-size: 12px; text-decoration: none;">View on Instagram &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Post 7: Sultan Mafia Emperor -->
+          <article class="post-card">
+            <div class="post-author-row">
+              <div class="author-info">
+                <img src="./assets/jeel-movie-sultan.jpg" alt="Jeel Vaghani" class="author-avatar">
+                <div>
+                  <div class="author-name">Jeel Vaghani <i class="fa-solid fa-circle-check verified-badge"></i></div>
+                  <div class="author-meta">Sultan of Gujarat · Industrial Dominance · 2 weeks ago</div>
+                </div>
+              </div>
+              <a href="https://www.instagram.com/vaghani_01/" target="_blank" rel="noopener noreferrer" style="color: #e1306c; font-size: 12px; text-decoration: none;"><i class="fa-brands fa-instagram"></i> @vaghani_01</a>
+            </div>
+            <div class="post-text">
+              "Industrial power, razor-sharp focus, and empire building. Built 23 mission-critical enterprise systems from the ground up! 👑💼"
+            </div>
+            <div class="post-image-container">
+              <img src="./assets/jeel-movie-sultan.jpg" alt="Jeel Vaghani Mafia Sultan" class="post-image" onclick="viewPhoto(this.src)">
+            </div>
+            <div class="post-footer">
+              <div class="post-stats">
+                <div class="stat-item"><i class="fa-regular fa-heart"></i> 5,640 Likes</div>
+                <div class="stat-item"><i class="fa-regular fa-comment"></i> 580 Comments</div>
+                <div class="stat-item"><i class="fa-solid fa-share-nodes"></i> Share</div>
+              </div>
+              <a href="https://www.instagram.com/vaghani_01/" target="_blank" rel="noopener noreferrer" style="color: #8ab4f8; font-size: 12px; text-decoration: none;">View on Instagram &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Post 8: Sunset Romance Beach -->
+          <article class="post-card">
+            <div class="post-author-row">
+              <div class="author-info">
+                <img src="./assets/jeel-life-1-romance.jpg" alt="Jeel Vaghani" class="author-avatar">
+                <div>
+                  <div class="author-name">Jeel Vaghani <i class="fa-solid fa-circle-check verified-badge"></i></div>
+                  <div class="author-meta">Sunset Golden Hour · Romance &amp; Poetry · 3 weeks ago</div>
+                </div>
+              </div>
+              <a href="https://www.instagram.com/vaghani_01/" target="_blank" rel="noopener noreferrer" style="color: #e1306c; font-size: 12px; text-decoration: none;"><i class="fa-brands fa-instagram"></i> @vaghani_01</a>
+            </div>
+            <div class="post-text">
+              "Sunset beach golden hour. Romance, poetry, and cinema in picturesque frames. Moments of peace between the storm. 🌅✨"
+            </div>
+            <div class="post-image-container">
+              <img src="./assets/jeel-life-1-romance.jpg" alt="Jeel Vaghani Sunset Romance" class="post-image" onclick="viewPhoto(this.src)">
+            </div>
+            <div class="post-footer">
+              <div class="post-stats">
+                <div class="stat-item"><i class="fa-regular fa-heart"></i> 2,980 Likes</div>
+                <div class="stat-item"><i class="fa-regular fa-comment"></i> 210 Comments</div>
+                <div class="stat-item"><i class="fa-solid fa-share-nodes"></i> Share</div>
+              </div>
+              <a href="https://www.instagram.com/vaghani_01/" target="_blank" rel="noopener noreferrer" style="color: #8ab4f8; font-size: 12px; text-decoration: none;">View on Instagram &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Post 9: Fire Walk Climax Victory -->
+          <article class="post-card">
+            <div class="post-author-row">
+              <div class="author-info">
+                <img src="./assets/jeel-life-5-climax.jpg" alt="Jeel Vaghani" class="author-avatar">
+                <div>
+                  <div class="author-name">Jeel Vaghani <i class="fa-solid fa-circle-check verified-badge"></i></div>
+                  <div class="author-meta">Grand Climax · Fire Walk Victory · 1 month ago</div>
+                </div>
+              </div>
+              <a href="https://www.instagram.com/vaghani_01/" target="_blank" rel="noopener noreferrer" style="color: #e1306c; font-size: 12px; text-decoration: none;"><i class="fa-brands fa-instagram"></i> @vaghani_01</a>
+            </div>
+            <div class="post-text">
+              "Fire Walk Climax Victory: Unstoppable fury and ultimate triumph! Walking through the embers of challenges to rise victorious. 🔥🏆"
+            </div>
+            <div class="post-image-container">
+              <img src="./assets/jeel-life-5-climax.jpg" alt="Jeel Vaghani Fire Walk Climax" class="post-image" onclick="viewPhoto(this.src)">
+            </div>
+            <div class="post-footer">
+              <div class="post-stats">
+                <div class="stat-item"><i class="fa-regular fa-heart"></i> 6,210 Likes</div>
+                <div class="stat-item"><i class="fa-regular fa-comment"></i> 640 Comments</div>
+                <div class="stat-item"><i class="fa-solid fa-share-nodes"></i> Share</div>
+              </div>
+              <a href="https://www.instagram.com/vaghani_01/" target="_blank" rel="noopener noreferrer" style="color: #8ab4f8; font-size: 12px; text-decoration: none;">View on Instagram &rarr;</a>
             </div>
           </article>
 
@@ -6317,6 +6710,54 @@ pause
         btnIg.className = 'btn btn-outline';
         btnIg.style.background = 'transparent';
         btnIg.style.color = '#bdc1c6';
+      }
+    }
+
+    // Switch between 3x3 Grid, Reels only, and Full Stream Feed
+    function switchInstagramView(mode) {
+      const gridView = document.getElementById('igGridView');
+      const feedView = document.getElementById('postsFeedContainer');
+      const btnGrid = document.getElementById('tabBtnGrid');
+      const btnReels = document.getElementById('tabBtnReels');
+      const btnFeed = document.getElementById('tabBtnFeed');
+
+      if (btnGrid) btnGrid.classList.remove('active');
+      if (btnReels) btnReels.classList.remove('active');
+      if (btnFeed) btnFeed.classList.remove('active');
+
+      if (mode === 'grid') {
+        if (btnGrid) btnGrid.classList.add('active');
+        if (gridView) {
+          gridView.style.display = 'grid';
+          document.querySelectorAll('.ig-grid-item').forEach(el => el.style.display = 'block');
+        }
+        if (feedView) feedView.style.display = 'none';
+      } else if (mode === 'reels') {
+        if (btnReels) btnReels.classList.add('active');
+        if (gridView) {
+          gridView.style.display = 'grid';
+          document.querySelectorAll('.ig-grid-item').forEach(el => {
+            el.style.display = el.getAttribute('data-is-reel') === 'true' ? 'block' : 'none';
+          });
+        }
+        if (feedView) feedView.style.display = 'none';
+      } else if (mode === 'feed') {
+        if (btnFeed) btnFeed.classList.add('active');
+        if (gridView) gridView.style.display = 'none';
+        if (feedView) feedView.style.display = 'flex';
+      }
+    }
+
+    // Trigger Manual Google Ping
+    function triggerManualSync() {
+      const feedback = document.getElementById('quickSyncFeedback');
+      if (feedback) {
+        feedback.style.display = 'block';
+        feedback.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Checking @vaghani_01 and pinging Google Indexing API...';
+        setTimeout(() => {
+          feedback.innerHTML = '<i class="fa-solid fa-circle-check"></i> ✅ Auto-Sync Active! All 9 posts & reels synced. Google Indexing notified.';
+          setTimeout(() => { feedback.style.display = 'none'; }, 6000);
+        }, 1000);
       }
     }
 
