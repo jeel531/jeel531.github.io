@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeel Vaghani - Free Instagram Blue Tick & Google Helper</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Noto+Sans+Gujarati:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    :root {
+      --bg: #0d0e12;
+      --card: #181920;
+      --border: #282a36;
+      --insta: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      --google: #4285f4;
+      --green: #34a853;
+      --gold: #ffd700;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg);
+      color: #fff;
+      font-family: 'Outfit', 'Noto Sans Gujarati', sans-serif;
+      padding: 16px;
+      line-height: 1.5;
+    }
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .header {
+      text-align: center;
+      padding: 24px 0 16px 0;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 215, 0, 0.15);
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+    p.sub {
+      color: #9aa0a6;
+      font-size: 14px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+    .card-title {
+      font-size: 18px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .step-box {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 14px;
+      margin-bottom: 12px;
+    }
+    .step-num {
+      display: inline-block;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--google);
+      color: #fff;
+      text-align: center;
+      line-height: 26px;
+      font-weight: 700;
+      font-size: 13px;
+      margin-right: 8px;
+    }
+    .step-title {
+      font-weight: 700;
+      font-size: 15px;
+      display: inline-flex;
+      align-items: center;
+    }
+    .step-desc {
+      font-size: 13.5px;
+      color: #bdc1c6;
+      margin-top: 6px;
+      margin-left: 34px;
+    }
+    .copy-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #101116;
+      border: 1px solid #333645;
+      padding: 10px 14px;
+      border-radius: 8px;
+      margin-top: 8px;
+      gap: 10px;
+    }
+    .copy-text {
+      font-size: 13px;
+      color: #8ab4f8;
+      word-break: break-all;
+      font-family: monospace;
+    }
+    .copy-label {
+      font-size: 12px;
+      color: #9aa0a6;
+      display: block;
+      margin-bottom: 2px;
+    }
+    .btn {
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .btn-insta {
+      background: var(--insta);
+      color: #fff;
+      width: 100%;
+      justify-content: center;
+      padding: 14px;
+      font-size: 16px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(220, 39, 67, 0.4);
+      margin: 12px 0;
+    }
+    .btn-google {
+      background: #4285f4;
+      color: #fff;
+      width: 100%;
+      justify-content: center;
+      padding: 14px;
+      font-size: 16px;
+      border-radius: 12px;
+      margin: 12px 0;
+    }
+    .btn-copy {
+      background: #252836;
+      color: #fff;
+      border: 1px solid #3d4257;
+    }
+    .btn-copy:hover {
+      background: #34a853;
+      border-color: #34a853;
+    }
+    .btn-copy.copied {
+      background: #34a853;
+      color: #fff;
+    }
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #34a853;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 600;
+      display: none;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <div class="badge"><i class="fa-solid fa-crown"></i> JEEL VAGHANI (BMU MAHADEV)</div>
+      <h1>Instagram Blue Tick &amp; Google ૧-ક્લિક હેલ્પર</h1>
+      <p class="sub">તારા ફોનમાં સીધું ઓપન કરીને બધી જ વિગતો ૧ ટચમાં સબમિટ કરો (૧૦૦% FREE)</p>
+    </div>
+
+    <!-- SECTION 1: INSTAGRAM FREE BLUE TICK -->
+    <div class="card" style="border-color: rgba(225, 48, 108, 0.4);">
+      <div class="card-title" style="color: #ff80ab;">
+        <i class="fa-brands fa-instagram" style="font-size: 24px; color: #e1306c;"></i>
+        <span>૧. Instagram માં મફત Blue Tick મેળવો</span>
+      </div>
+
+      <p style="font-size: 13.5px; color: #bdc1c6; margin-bottom: 14px;">
+        નીચેનું ગુલાબી બટન દબાવશો એટલે સીધું તારા ફોનમાં Instagram નું Verification ફોર્મ ખૂલી જશે:
+      </p>
+
+      <a href="https://www.instagram.com/accounts/manage/verification/" target="_blank" class="btn btn-insta">
+        <i class="fa-brands fa-instagram"></i> સીધું Verification ફોર્મ ખોલો (Direct Open)
+      </a>
+
+      <!-- Step 1 -->
+      <div class="step-box">
+        <span class="step-num" style="background: #e1306c;">1</span>
+        <span class="step-title">તારું નામ અને પુરાવો (ID Card)</span>
+        <div class="step-desc">
+          તારું નામ લખો: <strong>Jeel Vaghani</strong><br>
+          તારા <strong>આધાર કાર્ડ (Aadhaar Card)</strong>, <strong>પાન કાર્ડ (PAN)</strong> અથવા <strong>ડ્રાઇવિંગ લાયસન્સ</strong> નો ફોટો પાડીને Upload કરો.
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step-box">
+        <span class="step-num" style="background: #e1306c;">2</span>
+        <span class="step-title">Category અને જાણીતું નામ</span>
+        <div class="step-desc">
+          Category: <strong>Entertainment / Actor</strong> અથવા <strong>Digital Creator</strong><br>
+          Country: <strong>India</strong><br>
+          Also Known As:
+          <div class="copy-item" style="margin-top: 6px;">
+            <span class="copy-text" id="textKnown">Jeel Vaghani (BMU MAHADEV)</span>
+            <button class="btn btn-copy" onclick="copyContent('textKnown', this)"><i class="fa-regular fa-copy"></i> Copy</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step-box">
+        <span class="step-num" style="background: #e1306c;">3</span>
+        <span class="step-title">Links (સૌથી જરૂરી પ્રૂફ - ૧-ટચમાં Copy કરો)</span>
+        <div class="step-desc">
+          ત્યાં Links નો ઓપ્શન આવશે, તેમાં નીચે આપેલી લિંક્સ કોપી કરીને પેસ્ટ કરો:
+
+          <!-- Link 1 -->
+          <div style="margin-top: 10px;">
+            <span class="copy-label">Link 1 (Official Website):</span>
+            <div class="copy-item">
+              <span class="copy-text" id="link1">https://jeel531.github.io</span>
+              <button class="btn btn-copy" onclick="copyContent('link1', this)"><i class="fa-regular fa-copy"></i> Copy</button>
+            </div>
+          </div>
+
+          <!-- Link 2 -->
+          <div style="margin-top: 10px;">
+            <span class="copy-label">Link 2 (Lead Actor Movie):</span>
+            <div class="copy-item">
+              <span class="copy-text" id="link2">https://jeel531.github.io/movie.html</span>
+              <button class="btn btn-copy" onclick="copyContent('link2', this)"><i class="fa-regular fa-copy"></i> Copy</button>
+            </div>
+          </div>
+
+          <!-- Link 3 -->
+          <div style="margin-top: 10px;">
+            <span class="copy-label">Link 3 (23 Software Systems):</span>
+            <div class="copy-item">
+              <span class="copy-text" id="link3">https://jeel531.github.io/#projectsSection</span>
+              <button class="btn btn-copy" onclick="copyContent('link3', this)"><i class="fa-regular fa-copy"></i> Copy</button>
+            </div>
+          </div>
+
+          <!-- Link 4 -->
+          <div style="margin-top: 10px;">
+            <span class="copy-label">Link 4 (LinkedIn Executive Profile):</span>
+            <div class="copy-item">
+              <span class="copy-text" id="link4">https://www.linkedin.com/in/jeelvaghani</span>
+              <button class="btn btn-copy" onclick="copyContent('link4', this)"><i class="fa-regular fa-copy"></i> Copy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="step-box" style="border-color: #34a853; background: rgba(52, 168, 83, 0.08);">
+        <span class="step-num" style="background: #34a853;"><i class="fa-solid fa-check"></i></span>
+        <span class="step-title" style="color: #81c995;">Submit કરો!</span>
+        <div class="step-desc" style="color: #e8eaed;">
+          છેલ્લે <strong>Submit</strong> બટન દબાવી દો! Meta ની ટીમ તારી ઓફિશિયલ સાઇટ, ફિલ્મ અને ૨૩ સિસ્ટમ્સ જોઈને તારા ખાતા પર <strong>૧૦૦% FREE Blue Tick</strong> આપી દેશે!
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 2: GOOGLE SEARCH CONSOLE -->
+    <div class="card" style="border-color: rgba(66, 133, 244, 0.4);">
+      <div class="card-title" style="color: #8ab4f8;">
+        <i class="fa-brands fa-google" style="font-size: 24px; color: #4285f4;"></i>
+        <span>૨. Google Search Console માં સાઇટ ચડાવો</span>
+      </div>
+
+      <p style="font-size: 13.5px; color: #bdc1c6; margin-bottom: 14px;">
+        વેરિફિકેશન કોડ વેબસાઇટમાં પહેલેથી જ મૂકી દીધો છે. માત્ર નીચેનું બટન દબાવો:
+      </p>
+
+      <a href="https://search.google.com/search-console/welcome" target="_blank" class="btn btn-google">
+        <i class="fa-brands fa-google"></i> Google Search Console ખોલો
+      </a>
+
+      <div class="step-box">
+        <span class="step-num">1</span>
+        <span class="step-title">URL Prefix માં સાઇટ પેસ્ટ કરો</span>
+        <div class="step-desc">
+          <div class="copy-item">
+            <span class="copy-text" id="siteUrl">https://jeel531.github.io</span>
+            <button class="btn btn-copy" onclick="copyContent('siteUrl', this)"><i class="fa-regular fa-copy"></i> Copy</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-box">
+        <span class="step-num">2</span>
+        <span class="step-title">Sitemaps સબમિટ કરો</span>
+        <div class="step-desc">
+          Search Console માં ડાબી બાજુ Sitemaps પર ક્લિક કરીને આ બંને નાખીને Submit કરો:
+          <div class="copy-item" style="margin-top: 6px;">
+            <span class="copy-text" id="sitemap1">sitemap.xml</span>
+            <button class="btn btn-copy" onclick="copyContent('sitemap1', this)"><i class="fa-regular fa-copy"></i> Copy</button>
+          </div>
+          <div class="copy-item" style="margin-top: 6px;">
+            <span class="copy-text" id="sitemap2">feed.xml</span>
+            <button class="btn btn-copy" onclick="copyContent('sitemap2', this)"><i class="fa-regular fa-copy"></i> Copy</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align: center; padding: 20px 0;">
+      <a href="index.html" class="btn" style="background: rgba(255,255,255,0.08); color: #fff;">
+        <i class="fa-solid fa-arrow-left"></i> પાછા પોર્ટલ પર જાઓ
+      </a>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">✅ Copied to Clipboard!</div>
+
+  <script>
+    function copyContent(elementId, btn) {
+      const text = document.getElementById(elementId).innerText.trim();
+      navigator.clipboard.writeText(text).then(() => {
+        const toast = document.getElementById('toast');
+        toast.style.display = 'block';
+        toast.innerText = '✅ Copied: ' + text;
+        setTimeout(() => { toast.style.display = 'none'; }, 2500);
+
+        const oldHtml = btn.innerHTML;
+        btn.innerHTML = '<i class="fa-solid fa-check"></i> Copied';
+        btn.classList.add('copied');
+        setTimeout(() => {
+          btn.innerHTML = oldHtml;
+          btn.classList.remove('copied');
+        }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>
