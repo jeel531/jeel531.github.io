@@ -36,8 +36,8 @@
       let node;
       while (node = walker.nextNode()) {
         const val = (node.nodeValue || '').trim();
-        const valLower = val.toLowerCase();
-        if (valLower === 'vaghani_01' || valLower === '@vaghani_01' || val === 'Jeel Vaghani') {
+        const cleanVal = val.toLowerCase().replace(/^@/, '');
+        if (cleanVal === 'vaghani_01' || val === 'Jeel Vaghani') {
           targets.push({ node: node, val: val });
         }
       }
@@ -45,27 +45,32 @@
       targets.forEach(({ node, val }) => {
         const parent = node.parentElement;
         if (!parent) return;
-        if (parent.tagName === 'SCRIPT' || parent.tagName === 'STYLE') return;
+        if (['SCRIPT', 'STYLE', 'TITLE', 'NOSCRIPT', 'TEXTAREA', 'INPUT'].includes(parent.tagName)) return;
 
-        if (parent.classList.contains('jeel-verified-badge') || parent.querySelector('.jeel-verified-badge')) return;
-        if (parent.parentElement && parent.parentElement.querySelector('.jeel-verified-badge')) return;
+        if (parent.classList.contains('jeel-verified-badge') || parent.closest('.jeel-verified-badge')) return;
+        if (parent.querySelector && parent.querySelector('.jeel-verified-badge')) return;
+        if (parent.nextElementSibling && parent.nextElementSibling.classList.contains('jeel-verified-badge')) return;
+        if (parent.parentElement && parent.parentElement.querySelector(':scope > .jeel-verified-badge')) return;
 
         const size = (val === 'Jeel Vaghani') ? 16 : 20;
         const badge = createVerifiedBadge(size);
 
-        if (parent.nextSibling) {
+        if (node.nextSibling) {
+          node.parentNode.insertBefore(badge, node.nextSibling);
+        } else if (parent.nextSibling) {
           parent.parentNode.insertBefore(badge, parent.nextSibling);
         } else {
           parent.appendChild(badge);
         }
       });
 
-      // 2. Direct QuerySelector for headers and username links
-      const elements = document.querySelectorAll('h1, h2, h3, a[href*="vaghani_01"]');
+      // 2. Direct QuerySelector for headers, links, and username tags
+      const elements = document.querySelectorAll('h1, h2, h3, a[href*="vaghani_01"], span[dir="auto"]');
       elements.forEach(el => {
         if (el.querySelector('.jeel-verified-badge') || el.classList.contains('jeel-verified-badge')) return;
-        const t = el.textContent.trim().toLowerCase();
-        if (t === 'vaghani_01' || t === '@vaghani_01') {
+        if (el.nextElementSibling && el.nextElementSibling.classList.contains('jeel-verified-badge')) return;
+        const t = el.textContent.trim().toLowerCase().replace(/^@/, '');
+        if (t === 'vaghani_01') {
           el.appendChild(createVerifiedBadge(20));
         }
       });
