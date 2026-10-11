@@ -16,6 +16,7 @@ URL_LIST = [
     f"https://{HOST}/movie.html",
     f"https://{HOST}/face_swap_studio.html",
     f"https://{HOST}/voice_studio.html",
+    f"https://{HOST}/google.html",
     f"https://{HOST}/sitemap.xml",
     f"https://{HOST}/feed.xml"
 ]

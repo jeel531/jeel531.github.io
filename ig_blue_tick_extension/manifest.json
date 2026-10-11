@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Instagram Official Verified Badge for vaghani_01",
+  "version": "1.0",
+  "description": "Activates the verified blue tick badge directly on vaghani_01 profile",
+  "permissions": ["activeTab"],
+  "host_permissions": ["https://www.instagram.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.instagram.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}

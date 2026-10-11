@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Google Celebrity Knowledge Panel & Instagram VIP Verified - Jeel Vaghani",
+  "version": "2.0",
+  "description": "Displays the Official Google Celebrity Knowledge Panel, Autocomplete Photo Suggestion, and Instagram Blue Tick for Jeel Vaghani",
+  "permissions": ["activeTab"],
+  "host_permissions": [
+    "*://*.google.com/*",
+    "*://*.google.co.in/*",
+    "*://*.instagram.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.google.com/*",
+        "*://*.google.co.in/*",
+        "*://*.instagram.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["style.css"],
+      "run_at": "document_end"
+    }
+  ]
+}

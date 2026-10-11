@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jeel vaghani - Google Search | Official Celebrity Knowledge Panel</title>
+  
+  <!-- SEO & Social Meta -->
+  <meta name="description" content="Official Google Search Celebrity Knowledge Panel & Entity Suggestion for Jeel Vaghani (BMU MAHADEV) - Indian Actor & Chief Enterprise Architect.">
+  <meta name="author" content="Jeel Vaghani">
+  <link rel="canonical" href="https://jeel531.github.io/google.html">
+  <meta property="og:title" content="Jeel Vaghani - Google Search (Celebrity Entity)">
+  <meta property="og:image" content="https://jeel531.github.io/assets/jeel-suit.jpeg">
+
+  <!-- Google Fonts: Google Sans & Roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    :root {
+      --g-bg: #202124;
+      --g-card: #303134;
+      --g-card-hover: #3c4043;
+      --g-border: #3c4043;
+      --g-text-main: #e8eaed;
+      --g-text-sub: #bdc1c6;
+      --g-text-muted: #9aa0a6;
+      --g-blue: #8ab4f8;
+      --g-blue-active: #aecbfa;
+      --g-chip-bg: #303134;
+      --g-chip-hover: #3c4043;
+      --g-input-bg: #303134;
+      --g-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background-color: var(--g-bg);
+      color: var(--g-text-main);
+      font-family: var(--g-font);
+      font-size: 14px;
+      line-height: 1.5;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Floating Simulator Toolbar */
+    .sim-bar {
+      background: linear-gradient(90deg, #1a73e8, #9334e6);
+      color: #fff;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 13px;
+      font-weight: 500;
+      position: sticky;
+      top: 0;
+      z-index: 9999;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    }
+    .sim-bar-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .sim-bar-badge {
+      background: #ffd700;
+      color: #000;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      letter-spacing: 0.5px;
+    }
+    .sim-bar-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .sim-btn {
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      padding: 5px 12px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .sim-btn:hover {
+      background: #fff;
+      color: #202124;
+    }
+    .sim-btn-gold {
+      background: #ffd700;
+      color: #000;
+      border: none;
+    }
+    .sim-btn-gold:hover {
+      background: #ffe24d;
+      color: #000;
+    }
+
+    /* TOP GOOGLE SEARCH HEADER */
+    .google-header {
+      padding: 20px 24px 0 24px;
+      border-bottom: 1px solid #3c4043;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .google-top-row {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      margin-bottom: 24px;
+      position: relative;
+    }
+
+    .google-logo {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      user-select: none;
+    }
+    .gl-b { color: #4285f4; }
+    .gl-r { color: #ea4335; }
+    .gl-y { color: #fbbc05; }
+    .gl-g { color: #34a853; }
+
+    /* Chrome Search Bar / Omnibox */
+    .search-box-wrapper {
+      position: relative;
+      flex: 1;
+      max-width: 692px;
+    }
+
+    .search-input-pill {
+      background-color: var(--g-input-bg);
+      border: 1px solid transparent;
+      border-radius: 24px;
+      display: flex;
+      align-items: center;
+      height: 44px;
+      padding: 0 16px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.28);
+      transition: all 0.2s;
+      cursor: text;
+    }
+    .search-input-pill:hover,
+    .search-input-pill.focus-active {
+      background-color: #303134;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.6);
+      border-color: transparent;
+    }
+    .search-input-pill.dropdown-open {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      background-color: #303134;
+    }
+
+    .search-input-text {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: var(--g-text-main);
+      font-size: 16px;
+      font-family: inherit;
+    }
+
+    .search-icons-right {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      color: var(--g-text-muted);
+      font-size: 16px;
+    }
+    .search-icons-right i {
+      cursor: pointer;
+    }
+    .search-icons-right i:hover {
+      color: var(--g-text-main);
+    }
+    .mic-icon { color: #4285f4; }
+    .lens-icon { color: #fbbc05; }
+
+    /* CHROME OMNIBOX AUTOCOMPLETE DROPDOWN (1:1 MATCH OF PHOTO 2) */
+    .autocomplete-dropdown {
+      display: none;
+      position: absolute;
+      top: 44px;
+      left: 0;
+      right: 0;
+      background-color: #303134;
+      border-bottom-left-radius: 24px;
+      border-bottom-right-radius: 24px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+      border-top: 1px solid #3c4043;
+      overflow: hidden;
+      z-index: 1000;
+    }
+    .autocomplete-dropdown.show {
+      display: block;
+    }
+
+    .ac-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 10px 18px;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .ac-row:hover, .ac-row.selected {
+      background-color: #3c4043;
+    }
+    .ac-icon {
+      color: var(--g-text-muted);
+      font-size: 16px;
+      width: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .ac-text {
+      flex: 1;
+      font-size: 15px;
+      color: var(--g-text-main);
+    }
+    .ac-text b {
+      color: #fff;
+    }
+
+    /* THE CELEBRITY ENTITY SUGGESTION ROW (IMAGE 2 REPLICA) */
+    .ac-entity-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 10px 18px;
+      cursor: pointer;
+      background: rgba(138, 180, 248, 0.08);
+      border-left: 3px solid var(--g-blue);
+      transition: background 0.15s;
+    }
+    .ac-entity-row:hover {
+      background-color: #3c4043;
+    }
+    .ac-entity-thumb {
+      width: 36px;
+      height: 36px;
+      border-radius: 6px;
+      object-fit: cover;
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    }
+    .ac-entity-info {
+      flex: 1;
+    }
+    .ac-entity-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+    .ac-entity-sub {
+      font-size: 13px;
+      color: var(--g-text-muted);
+    }
+
+    /* Top Right Profile / Settings */
+    .google-top-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-left: auto;
+    }
+    .google-icon-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--g-text-sub);
+      cursor: pointer;
+      font-size: 18px;
+      transition: background 0.2s;
+    }
+    .google-icon-btn:hover {
+      background-color: #303134;
+      color: #fff;
+    }
+    .google-user-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #8ab4f8;
+      color: #202124;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+
+    /* SEARCH TABS (AI Mode, All, Images, News, Videos, etc.) */
+    .google-tabs {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      padding-left: 170px;
+    }
+    .google-tabs::-webkit-scrollbar { display: none; }
+    .google-tab {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--g-text-sub);
+      font-size: 14px;
+      padding: 10px 4px 14px 4px;
+      text-decoration: none;
+      white-space: nowrap;
+      border-bottom: 3px solid transparent;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .google-tab:hover {
+      color: var(--g-text-main);
+    }
+    .google-tab.active {
+      color: var(--g-blue);
+      border-bottom-color: var(--g-blue);
+      font-weight: 500;
+    }
+    .google-tab i {
+      font-size: 14px;
+    }
+    .tab-tools {
+      margin-left: auto;
+      color: var(--g-text-muted);
+      cursor: pointer;
+      padding: 10px 4px 14px 4px;
+    }
+
+    /* MAIN CONTAINER: KNOWLEDGE GRAPH HERO (MATCHING PHOTO 3) */
+    .google-container {
+      max-width: 1280px;
+      margin: 24px auto 80px auto;
+      padding: 0 24px;
+    }
+
+    /* CELEBRITY HEADER: Hina Khan Style */
+    .kp-celeb-header {
+      margin-bottom: 20px;
+    }
+    .kp-celeb-name-row {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+    }
+    .kp-celeb-name {
+      font-size: 32px;
+      font-weight: 600;
+      color: #ffffff;
+      letter-spacing: -0.5px;
+    }
+    .kp-celeb-subtitle {
+      font-size: 16px;
+      color: var(--g-text-sub);
+      margin-top: 2px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .kp-kebab-menu {
+      color: var(--g-text-muted);
+      cursor: pointer;
+      font-size: 13px;
+      margin-left: 4px;
+    }
+
+    /* PHOTO GRID: 1:1 REPLICA OF PHOTO 3 */
+    .kp-photo-mosaic {
+      display: grid;
+      grid-template-columns: 280px 180px 240px 1fr;
+      grid-template-rows: 170px 170px;
+      gap: 12px;
+      margin-bottom: 36px;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    /* Large Portrait Image (Left) */
+    .mosaic-tall {
+      grid-column: 1;
+      grid-row: 1 / span 2;
+      position: relative;
+      background-color: var(--g-card);
+      border-radius: 16px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .mosaic-tall img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+    .mosaic-tall:hover img {
+      transform: scale(1.02);
+    }
+    .mosaic-source-badge {
+      position: absolute;
+      bottom: 12px;
+      left: 14px;
+      font-size: 11px;
+      color: #fff;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+      background: rgba(0,0,0,0.4);
+      padding: 2px 8px;
+      border-radius: 4px;
+      -webkit-backdrop-filter: blur(4px);
+      backdrop-filter: blur(4px);
+    }
+
+    /* Middle 2 Stacked Images */
+    .mosaic-mid-top {
+      grid-column: 2;
+      grid-row: 1;
+      position: relative;
+      background-color: var(--g-card);
+      border-radius: 16px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .mosaic-mid-top img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+    .mosaic-mid-top:hover img {
+      transform: scale(1.03);
+    }
+
+    .mosaic-mid-bottom {
+      grid-column: 2;
+      grid-row: 2;
+      position: relative;
+      background-color: var(--g-card);
+      border-radius: 16px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .mosaic-mid-bottom img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+    .mosaic-mid-bottom:hover img {
+      transform: scale(1.03);
+    }
+    .mosaic-expand-badge {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      background: rgba(0,0,0,0.6);
+      color: #fff;
+      font-size: 11px;
+      padding: 4px 6px;
+      border-radius: 6px;
+    }
+
+    /* Column 3: Instagram Post Card (Top) */
+    .mosaic-insta-card {
+      grid-column: 3;
+      grid-row: 1 / span 2;
+      background-color: var(--g-card);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid rgba(255,255,255,0.05);
+      transition: background 0.2s;
+    }
+    .mosaic-insta-card:hover {
+      background-color: var(--g-card-hover);
+    }
+    .insta-card-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .insta-card-content {
+      padding: 14px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .insta-card-handle {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: var(--g-text-sub);
+    }
+    .insta-card-handle i {
+      color: #e1306c;
+    }
+    .insta-card-caption {
+      font-size: 13px;
+      color: var(--g-text-main);
+      margin: 6px 0;
+      line-height: 1.4;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .insta-card-time {
+      font-size: 11px;
+      color: var(--g-text-muted);
+    }
+
+    /* Column 4: Quick Facts & News Card */
+    .mosaic-col-right {
+      grid-column: 4;
+      grid-row: 1 / span 2;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .fact-pill-row {
+      display: flex;
+      gap: 12px;
+    }
+
+    .fact-square-card {
+      background-color: var(--g-card);
+      border-radius: 16px;
+      padding: 16px;
+      flex: 1;
+      cursor: pointer;
+      border: 1px solid rgba(255,255,255,0.05);
+      transition: background 0.2s;
+    }
+    .fact-square-card:hover {
+      background-color: var(--g-card-hover);
+    }
+    .fact-card-top {
+      font-size: 13px;
+      color: var(--g-text-muted);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .fact-card-val {
+      font-size: 18px;
+      font-weight: 500;
+      color: #fff;
+    }
+    .fact-card-sub {
+      font-size: 12px;
+      color: var(--g-text-muted);
+      margin-top: 2px;
+    }
+
+    .news-mini-card {
+      background-color: var(--g-card);
+      border-radius: 16px;
+      padding: 14px;
+      display: flex;
+      gap: 12px;
+      flex: 1;
+      align-items: center;
+      cursor: pointer;
+      border: 1px solid rgba(255,255,255,0.05);
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.2s;
+    }
+    .news-mini-card:hover {
+      background-color: var(--g-card-hover);
+    }
+    .news-mini-left {
+      flex: 1;
+    }
+    .news-mini-src {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: var(--g-text-sub);
+      margin-bottom: 4px;
+    }
+    .news-mini-src i {
+      color: #e1306c;
+    }
+    .news-mini-title {
+      font-size: 13px;
+      line-height: 1.4;
+      color: var(--g-text-main);
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .news-mini-time {
+      font-size: 11px;
+      color: var(--g-text-muted);
+      margin-top: 6px;
+    }
+    .news-mini-thumb {
+      width: 72px;
+      height: 72px;
+      border-radius: 10px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    /* "MOVIES AND SHOWS" CAROUSEL (EXACT 1:1 MATCH OF PHOTO 3) */
+    .section-title-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 32px 0 16px 0;
+    }
+    .section-title {
+      font-size: 20px;
+      font-weight: 500;
+      color: #fff;
+    }
+
+    .movies-carousel-container {
+      position: relative;
+    }
+
+    .movies-carousel {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      padding: 4px 0 12px 0;
+      scroll-behavior: smooth;
+    }
+    .movies-carousel::-webkit-scrollbar { display: none; }
+
+    .movie-card {
+      flex: 0 0 148px;
+      background-color: transparent;
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s;
+    }
+    .movie-card:hover {
+      transform: translateY(-4px);
+    }
+    .movie-poster-box {
+      width: 148px;
+      height: 210px;
+      border-radius: 12px;
+      overflow: hidden;
+      background-color: var(--g-card);
+      position: relative;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    }
+    .movie-poster-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .movie-badge-live {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: #e50914;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .movie-title {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: #fff;
+      margin-top: 8px;
+      line-height: 1.3;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .movie-sub {
+      font-size: 12px;
+      color: var(--g-text-muted);
+      margin-top: 2px;
+    }
+
+    .carousel-nav-btn {
+      position: absolute;
+      top: 90px;
+      right: -16px;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #3c4043;
+      color: #fff;
+      border: 1px solid #5f6368;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+      z-index: 10;
+      transition: background 0.2s;
+    }
+    .carousel-nav-btn:hover {
+      background: #5f6368;
+    }
+
+    /* "ABOUT" SECTION (EXACT 1:1 MATCH OF PHOTO 3) */
+    .about-card {
+      background-color: transparent;
+      border-top: 1px solid #3c4043;
+      padding-top: 24px;
+      margin-top: 36px;
+      max-width: 760px;
+    }
+    .about-title {
+      font-size: 20px;
+      font-weight: 500;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+    .about-snippet {
+      font-size: 14px;
+      color: var(--g-text-main);
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+    .about-wiki-link {
+      color: var(--g-blue);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .about-wiki-link:hover {
+      text-decoration: underline;
+    }
+
+    .about-facts-table {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      border-top: 1px solid #3c4043;
+      padding-top: 16px;
+    }
+    .fact-row {
+      display: flex;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .fact-row-label {
+      width: 140px;
+      color: var(--g-text-muted);
+      flex-shrink: 0;
+    }
+    .fact-row-val {
+      color: var(--g-text-main);
+      flex: 1;
+    }
+    .fact-row-val a {
+      color: var(--g-blue);
+      text-decoration: none;
+    }
+    .fact-row-val a:hover {
+      text-decoration: underline;
+    }
+
+    /* PROFILES CHIPS ROW */
+    .profiles-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+    .profile-chip {
+      background-color: var(--g-card);
+      border: 1px solid #3c4043;
+      border-radius: 20px;
+      padding: 8px 16px;
+      color: #fff;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    .profile-chip:hover {
+      background-color: var(--g-card-hover);
+      border-color: var(--g-blue);
+      color: var(--g-blue);
+    }
+
+    /* CLAIM THIS KNOWLEDGE PANEL BUTTON (OFFICIAL GOOGLE BADGE) */
+    .claim-panel-card {
+      background: rgba(138, 180, 248, 0.08);
+      border: 1px solid rgba(138, 180, 248, 0.3);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-top: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+    .claim-panel-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .claim-badge-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--g-blue);
+      color: #202124;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+    .claim-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+    }
+    .claim-desc {
+      font-size: 12px;
+      color: var(--g-text-muted);
+    }
+    .claim-btn {
+      background-color: var(--g-blue);
+      color: #202124;
+      padding: 8px 18px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .claim-btn:hover {
+      background-color: var(--g-blue-active);
+    }
+
+    /* MODAL: Permanent Google Activation Guide */
+    .guide-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      z-index: 10000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .guide-modal.show {
+      display: flex;
+    }
+    .guide-modal-content {
+      background: #202124;
+      border: 1px solid #3c4043;
+      border-radius: 16px;
+      max-width: 640px;
+      width: 100%;
+      padding: 28px;
+      max-height: 90vh;
+      overflow-y: auto;
+      color: var(--g-text-main);
+    }
+    .guide-modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #3c4043;
+      padding-bottom: 14px;
+      margin-bottom: 18px;
+    }
+    .guide-modal-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #ffd700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .guide-step {
+      background: #303134;
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-bottom: 12px;
+      border-left: 4px solid var(--g-blue);
+    }
+    .guide-step-title {
+      font-weight: 600;
+      color: #fff;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+    .guide-step-body {
+      font-size: 13px;
+      color: var(--g-text-sub);
+      line-height: 1.5;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .google-tabs { padding-left: 0; }
+      .kp-photo-mosaic {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+      }
+      .mosaic-tall { grid-column: 1 / span 2; height: 320px; }
+      .mosaic-mid-top { grid-column: 1; height: 160px; }
+      .mosaic-mid-bottom { grid-column: 2; height: 160px; }
+      .mosaic-insta-card { grid-column: 1 / span 2; height: auto; }
+      .mosaic-col-right { grid-column: 1 / span 2; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- FLOATING SIMULATOR BAR -->
+  <div class="sim-bar">
+    <div class="sim-bar-left">
+      <span class="sim-bar-badge"><i class="fa-solid fa-crown"></i> 100% VERIFIED SIMULATION</span>
+      <span>Google Celebrity Search &amp; Knowledge Graph Entity</span>
+    </div>
+    <div class="sim-bar-actions">
+      <button class="sim-btn" onclick="triggerDropdownTest()">
+        <i class="fa-solid fa-camera"></i> Test Search Dropdown (Photo 2)
+      </button>
+      <button class="sim-btn sim-btn-gold" onclick="openGuideModal()">
+        <i class="fa-solid fa-circle-question"></i> Permanent Google.com Activation
+      </button>
+      <a href="index.html" class="sim-btn">
+        <i class="fa-solid fa-house"></i> Main Website
+      </a>
+      <a href="movie.html" class="sim-btn" style="background: #e50914; border-color: #e50914;">
+        <i class="fa-solid fa-film"></i> Watch The Sultan
+      </a>
+    </div>
+  </div>
+
+  <!-- GOOGLE TOP SEARCH HEADER -->
+  <header class="google-header">
+    <div class="google-top-row">
+      <!-- Google Logo -->
+      <a href="index.html" class="google-logo" title="Google Search">
+        <span class="gl-b">G</span><span class="gl-r">o</span><span class="gl-y">o</span><span class="gl-b">g</span><span class="gl-g">l</span><span class="gl-r">e</span>
+      </a>
+
+      <!-- Chrome Search Bar / Omnibox -->
+      <div class="search-box-wrapper" id="searchBoxWrapper">
+        <div class="search-input-pill" id="searchPill" onclick="toggleDropdown()">
+          <input type="text" class="search-input-text" id="searchInput" value="jeel vaghani" autocomplete="off" onfocus="showDropdown()" oninput="handleSearchInput(this.value)">
+          <div class="search-icons-right">
+            <i class="fa-solid fa-xmark" onclick="clearSearch()" title="Clear"></i>
+            <span style="color: #5f6368;">|</span>
+            <i class="fa-solid fa-microphone mic-icon" title="Search by voice"></i>
+            <i class="fa-solid fa-camera lens-icon" title="Search by image"></i>
+            <i class="fa-solid fa-magnifying-glass" style="color: #8ab4f8;" title="Search"></i>
+          </div>
+        </div>
+
+        <!-- CHROME OMNIBOX AUTOCOMPLETE DROPDOWN (1:1 REPLICA OF PHOTO 2) -->
+        <div class="autocomplete-dropdown" id="autoDropdown">
+          <!-- Row 1: Regular Query -->
+          <div class="ac-row" onclick="selectSuggestion('jeel vaghani')">
+            <div class="ac-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div class="ac-text"><b>jeel vaghani</b> - Google Search</div>
+          </div>
+
+          <!-- Row 2: CELEBRITY ENTITY SUGGESTION WITH PHOTO (PHOTO 2 REPLICA) -->
+          <div class="ac-entity-row" onclick="selectSuggestion('jeel vaghani celebrity')">
+            <img src="./assets/jeel-suit.jpeg" alt="Jeel Vaghani" class="ac-entity-thumb">
+            <div class="ac-entity-info">
+              <span class="ac-entity-title">Jeel Vaghani</span>
+              <span class="ac-entity-sub"> - Indian actor &amp; Chief Enterprise Architect</span>
+            </div>
+            <span style="font-size: 11px; color: #8ab4f8; font-weight: 600;"><i class="fa-solid fa-circle-check"></i> Entity</span>
+          </div>
+
+          <!-- Row 3: Sultan Movie -->
+          <div class="ac-row" onclick="window.location.href='movie.html'">
+            <div class="ac-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div class="ac-text"><b>jeel vaghani</b> the sultan movie (1080p IMAX)</div>
+          </div>
+
+          <!-- Row 4: Instagram -->
+          <div class="ac-row" onclick="window.open('https://www.instagram.com/vaghani_01/', '_blank')">
+            <div class="ac-icon"><i class="fa-brands fa-instagram" style="color: #e1306c;"></i></div>
+            <div class="ac-text"><b>jeel vaghani</b> instagram @vaghani_01</div>
+          </div>
+
+          <!-- Row 5: 23 Enterprise Systems -->
+          <div class="ac-row" onclick="window.location.href='index.html#projectsSection'">
+            <div class="ac-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div class="ac-text"><b>jeel vaghani</b> 23 enterprise systems architecture</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Top Right User Controls -->
+      <div class="google-top-right">
+        <div class="google-icon-btn" title="Settings"><i class="fa-solid fa-gear"></i></div>
+        <div class="google-icon-btn" title="Google apps"><i class="fa-solid fa-braille"></i></div>
+        <div class="google-user-avatar" title="Google Account: Jeel Vaghani">J</div>
+      </div>
+    </div>
+
+    <!-- GOOGLE TABS BAR -->
+    <nav class="google-tabs">
+      <div class="google-tab"><i class="fa-solid fa-wand-magic-sparkles"></i> AI Mode</div>
+      <div class="google-tab active"><i class="fa-solid fa-magnifying-glass"></i> All</div>
+      <div class="google-tab" onclick="window.location.href='index.html#visualPhotosSection'"><i class="fa-regular fa-image"></i> Images</div>
+      <div class="google-tab"><i class="fa-regular fa-newspaper"></i> News</div>
+      <div class="google-tab" onclick="window.location.href='movie.html'"><i class="fa-solid fa-film"></i> Videos</div>
+      <div class="google-tab"><i class="fa-solid fa-play"></i> Short videos</div>
+      <div class="google-tab"><i class="fa-solid fa-bag-shopping"></i> Shopping</div>
+      <div class="google-tab"><i class="fa-solid fa-ellipsis-vertical"></i> More</div>
+      <div class="tab-tools">Tools</div>
+    </nav>
+  </header>
+
+  <!-- MAIN SEARCH BODY: GOOGLE CELEBRITY KNOWLEDGE PANEL (PHOTO 3 REPLICA) -->
+  <main class="google-container">
+
+    <!-- CELEBRITY ENTITY HEADER -->
+    <div class="kp-celeb-header">
+      <div class="kp-celeb-name-row">
+        <h1 class="kp-celeb-name">Jeel Vaghani</h1>
+      </div>
+      <div class="kp-celeb-subtitle">
+        <span>Indian actor &amp; Chief Enterprise Architect</span>
+        <i class="fa-solid fa-ellipsis-vertical kp-kebab-menu" title="Options"></i>
+      </div>
+    </div>
+
+    <!-- PHOTO MOSAIC GRID (PHOTO 3 REPLICA) -->
+    <div class="kp-photo-mosaic">
+
+      <!-- Left Big Vertical Portrait -->
+      <div class="mosaic-tall" onclick="window.location.href='index.html#visualPhotosSection'">
+        <img src="./assets/jeel-suit.jpeg" alt="Jeel Vaghani Official Portrait">
+        <span class="mosaic-source-badge">Source: Jeel Vaghani Official</span>
+      </div>
+
+      <!-- Mid Top Landscape Photo -->
+      <div class="mosaic-mid-top" onclick="window.location.href='index.html#visualPhotosSection'">
+        <img src="./assets/jeel-royal.jpeg" alt="Jeel Vaghani Royal Sherwani">
+      </div>
+
+      <!-- Mid Bottom Portrait Photo -->
+      <div class="mosaic-mid-bottom" onclick="window.location.href='index.html#visualPhotosSection'">
+        <img src="./assets/jeel-cyberpunk.jpeg" alt="Jeel Vaghani Cyberpunk Edition">
+        <span class="mosaic-expand-badge"><i class="fa-regular fa-images"></i> 12+</span>
+      </div>
+
+      <!-- Column 3: Official Instagram Card -->
+      <a href="https://www.instagram.com/vaghani_01/" target="_blank" class="mosaic-insta-card">
+        <img src="./assets/jeel-biker.jpeg" alt="Jeel Vaghani Instagram Post" class="insta-card-img">
+        <div class="insta-card-content">
+          <div class="insta-card-handle">
+            <i class="fa-brands fa-instagram"></i>
+            <span>@vaghani_01</span>
+          </div>
+          <div class="insta-card-caption">
+            Executive cinematic journey across Gujarat &amp; Enterprise tech production. 🚀🔥
+          </div>
+          <div class="insta-card-time">3 days ago</div>
+        </div>
+      </a>
+
+      <!-- Column 4: Quick Facts (Age, Status) & News Card -->
+      <div class="mosaic-col-right">
+        <!-- Quick Fact Chips Row -->
+        <div class="fact-pill-row">
+          <div class="fact-square-card">
+            <div class="fact-card-top">Age</div>
+            <div class="fact-card-val">23 years</div>
+            <div class="fact-card-sub">23 Apr 2003</div>
+          </div>
+          <div class="fact-square-card">
+            <div class="fact-card-top">
+              <span>Profession</span>
+              <i class="fa-solid fa-chevron-right" style="font-size: 10px;"></i>
+            </div>
+            <div class="fact-card-val" style="font-size: 15px;">Actor &amp; Architect</div>
+            <div class="fact-card-sub">23 Enterprise Apps</div>
+          </div>
+        </div>
+
+        <!-- News / Media Card -->
+        <a href="movie.html" class="news-mini-card">
+          <div class="news-mini-left">
+            <div class="news-mini-src">
+              <i class="fa-solid fa-newspaper"></i>
+              <span>Cinema &amp; Tech Gujarat</span>
+            </div>
+            <div class="news-mini-title">
+              Jeel Vaghani stars in blockbuster 'The Sultan' and engineers 23 enterprise systems...
+            </div>
+            <div class="news-mini-time">5 days ago</div>
+          </div>
+          <img src="./assets/jeel-movie-sultan.jpg" alt="The Sultan Release" class="news-mini-thumb">
+        </a>
+      </div>
+
+    </div>
+
+    <!-- "MOVIES AND SHOWS" CAROUSEL (EXACT 1:1 REPLICA OF PHOTO 3) -->
+    <div class="section-title-row">
+      <h2 class="section-title">Movies and shows</h2>
+    </div>
+
+    <div class="movies-carousel-container">
+      <div class="movies-carousel" id="moviesCarousel">
+
+        <!-- Card 1: The Sultan (Main Movie) -->
+        <a href="movie.html" class="movie-card">
+          <div class="movie-poster-box">
+            <img src="./assets/jeel-movie-sultan.jpg" alt="The Sultan">
+            <span class="movie-badge-live">WATCH 1080p</span>
+          </div>
+          <div class="movie-title">The Sultan</div>
+          <div class="movie-sub">2026 · Action/IMAX</div>
+        </a>
+
+        <!-- Card 2: Rudra -->
+        <a href="movie.html" class="movie-card">
+          <div class="movie-poster-box">
+            <img src="./assets/jeel-movie-rudra.jpg" alt="The Sultan: Rudra">
+          </div>
+          <div class="movie-title">The Sultan: Rudra</div>
+          <div class="movie-sub">Upcoming</div>
+        </a>
+
+        <!-- Card 3: Life Poster -->
+        <a href="movie.html" class="movie-card">
+          <div class="movie-poster-box">
+            <img src="./assets/jeel-life-poster.jpg" alt="BMU Mahadev: The Life">
+          </div>
+          <div class="movie-title">BMU Mahadev</div>
+          <div class="movie-sub">2025 · Biography</div>
+        </a>
+
+        <!-- Card 4: Action Unleashed -->
+        <a href="movie.html" class="movie-card">
+          <div class="movie-poster-box">
+            <img src="./assets/jeel-life-3-combat.jpg" alt="Action Combat Unleashed">
+          </div>
+          <div class="movie-title">Action Combat</div>
+          <div class="movie-sub">2026 · Martial Arts</div>
+        </a>
+
+        <!-- Card 5: Enterprise Systems -->
+        <a href="index.html#projectsSection" class="movie-card">
+          <div class="movie-poster-box">
+            <img src="./assets/jeel-suit.jpeg" alt="23 Enterprise Systems">
+          </div>
+          <div class="movie-title">Enterprise 23</div>
+          <div class="movie-sub">Architecture Series</div>
+        </a>
+
+        <!-- Card 6: AI Voice Studio -->
+        <a href="voice_studio.html" class="movie-card">
+          <div class="movie-poster-box">
+            <img src="./assets/jeel-cyberpunk.jpeg" alt="AI Neural Studios">
+          </div>
+          <div class="movie-title">AI Voice Studio</div>
+          <div class="movie-sub">Interactive Audio</div>
+        </a>
+
+      </div>
+      <button class="carousel-nav-btn" onclick="scrollCarousel(1)" title="Scroll right">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <!-- "ABOUT" SECTION (EXACT 1:1 REPLICA OF PHOTO 3) -->
+    <div class="about-card">
+      <h2 class="about-title">About</h2>
+      <div class="about-snippet">
+        <strong>Jeel Vaghani (BMU MAHADEV)</strong> is an Indian actor, film producer, and Chief Enterprise Systems Architect based in Gujarat, India. Vaghani is noted for starring as the lead in the cinematic blockbuster <em>'The Sultan'</em> (1080p IMAX) and architecting 23 mission-critical enterprise software suites, high-throughput industrial thermal barcode engines, and AI creative studios.
+        <a href="#" class="about-wiki-link" onclick="openGuideModal(); return false;">Google Knowledge Graph / Wikipedia</a>
+      </div>
+
+      <div class="about-facts-table">
+        <div class="fact-row">
+          <span class="fact-row-label">Born</span>
+          <span class="fact-row-val">23 April 2003 (age 23 years), Surat, Gujarat, India</span>
+        </div>
+        <div class="fact-row">
+          <span class="fact-row-label">Known for</span>
+          <span class="fact-row-val">The Sultan (2026) · 23 Enterprise Industrial ERP Systems</span>
+        </div>
+        <div class="fact-row">
+          <span class="fact-row-label">Education</span>
+          <span class="fact-row-val">RMIT University Specialization · Computer Systems</span>
+        </div>
+        <div class="fact-row">
+          <span class="fact-row-label">Height</span>
+          <span class="fact-row-val">5 ft 11 in (180 cm)</span>
+        </div>
+        <div class="fact-row">
+          <span class="fact-row-label">Nationality</span>
+          <span class="fact-row-val">Indian</span>
+        </div>
+        <div class="fact-row">
+          <span class="fact-row-label">Organizations</span>
+          <span class="fact-row-val">Enterprise Tech Innovations Gujarat · BMU Mahadev Films</span>
+        </div>
+        <div class="fact-row">
+          <span class="fact-row-label">Official Website</span>
+          <span class="fact-row-val"><a href="https://jeel531.github.io">https://jeel531.github.io</a></span>
+        </div>
+      </div>
+
+      <!-- Profiles Row -->
+      <div class="profiles-row">
+        <a href="https://www.instagram.com/vaghani_01/" target="_blank" class="profile-chip">
+          <i class="fa-brands fa-instagram" style="color: #e1306c;"></i> Instagram (@vaghani_01)
+        </a>
+        <a href="https://www.linkedin.com/in/jeelvaghani" target="_blank" class="profile-chip">
+          <i class="fa-brands fa-linkedin" style="color: #0a66c2;"></i> LinkedIn
+        </a>
+        <a href="https://github.com/jeel531" target="_blank" class="profile-chip">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+        <a href="https://wa.me/919033157999" target="_blank" class="profile-chip">
+          <i class="fa-brands fa-whatsapp" style="color: #25d366;"></i> WhatsApp (+91 90331 57999)
+        </a>
+      </div>
+
+      <!-- Claim This Knowledge Panel Card -->
+      <div class="claim-panel-card">
+        <div class="claim-panel-left">
+          <div class="claim-badge-icon"><i class="fa-solid fa-circle-check"></i></div>
+          <div>
+            <div class="claim-title">Claim this knowledge panel</div>
+            <div class="claim-desc">Are you Jeel Vaghani? Verify your identity on Google to manage this presence.</div>
+          </div>
+        </div>
+        <button class="claim-btn" onclick="openGuideModal()">
+          <i class="fa-solid fa-shield-halved"></i> Claim on Google
+        </button>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- MODAL: Step-by-Step Activation Guide on Google.com -->
+  <div class="guide-modal" id="guideModal" onclick="if(event.target === this) closeGuideModal()">
+    <div class="guide-modal-content">
+      <div class="guide-modal-header">
+        <div class="guide-modal-title">
+          <i class="fa-solid fa-crown"></i> Real Google.com Activation Guide
+        </div>
+        <i class="fa-solid fa-xmark" style="font-size: 20px; cursor: pointer;" onclick="closeGuideModal()"></i>
+      </div>
+
+      <div style="font-size: 13.5px; color: #bdc1c6; margin-bottom: 16px; line-height: 1.5;">
+        ગૂગલ પર તમારો ફોટો અને સાચું સેલિબ્રિટી નોલેજ પેનલ (Knowledge Panel) <strong>100% ફ્રી</strong> માં એક્ટિવેટ કરવા માટે નીચેના સ્ટેપ્સ ફોલો કરો:
+      </div>
+
+      <div class="guide-step">
+        <div class="guide-step-title">૧. તમારી વેબસાઇટ ગૂગલ પર ઓલરેડી #૧ રેન્ક છે!</div>
+        <div class="guide-step-body">
+          તમે સ્ક્રીનશોટ ૧ માં જોયું કે 'jeel vaghani' સર્ચ કરતા તમારી સાઇટ નંબર ૧ છે અને તમારા ૩ ફોટા પણ ગૂગલે બતાવ્યા છે. આ અડધું કામ ઓલરેડી થઈ ગયું છે.
+        </div>
+      </div>
+
+      <div class="guide-step">
+        <div class="guide-step-title">૨. Wikidata.org પર એકાઉન્ટ અને Entity બનાવો (સૌથી મહત્વનું)</div>
+        <div class="guide-step-body">
+          ગૂગલનું Knowledge Graph સીધું <strong>Wikidata.org</strong> માંથી ડેટા વાંચે છે. <a href="https://www.wikidata.org" target="_blank" style="color: #8ab4f8;">Wikidata.org</a> પર જઈને ફ્રી માં 'Jeel Vaghani' નામની entity બનાવીને તેમાં Occupation (Actor & Systems Architect) અને તમારો ફોટો અપલોડ કરો.
+        </div>
+      </div>
+
+      <div class="guide-step">
+        <div class="guide-step-title">૩. IMDb.com પર 'The Sultan' મુવી અને તમારું નામ લિસ્ટ કરો</div>
+        <div class="guide-step-body">
+          જેમ હિના ખાન નું પેનલ મુવીઝ/ટીવી શોઝ બતાવે છે, તેમ <a href="https://contribute.imdb.com" target="_blank" style="color: #8ab4f8;">IMDb</a> પર 'The Sultan' મુવી અને Jeel Vaghani નું ક્રેડિટ ઉમેરો.
+        </div>
+      </div>
+
+      <div class="guide-step">
+        <div class="guide-step-title">૪. Google Search Console માં 'Claim Knowledge Panel' કરો</div>
+        <div class="guide-step-body">
+          ગૂગલ સર્ચમાં જ્યારે પણ પેનલ દેખાશે ત્યારે નીચે 'Claim this knowledge panel' બટન પર ક્લિક કરીને તમારા જીમેલ (Google Search Console) થી વેરિફાય કરાવી લો.
+        </div>
+      </div>
+
+      <button class="claim-btn" style="width: 100%; margin-top: 10px;" onclick="closeGuideModal()">
+        સમજાઈ ગયું (Got It)
+      </button>
+    </div>
+  </div>
+
+  <script>
+    // Search Autocomplete Toggle
+    const searchPill = document.getElementById('searchPill');
+    const autoDropdown = document.getElementById('autoDropdown');
+    const searchInput = document.getElementById('searchInput');
+
+    function toggleDropdown() {
+      autoDropdown.classList.toggle('show');
+      searchPill.classList.toggle('dropdown-open');
+    }
+
+    function showDropdown() {
+      autoDropdown.classList.add('show');
+      searchPill.classList.add('dropdown-open');
+    }
+
+    function hideDropdown() {
+      autoDropdown.classList.remove('show');
+      searchPill.classList.remove('dropdown-open');
+    }
+
+    function clearSearch() {
+      searchInput.value = '';
+      searchInput.focus();
+    }
+
+    function triggerDropdownTest() {
+      showDropdown();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function selectSuggestion(query) {
+      searchInput.value = query;
+      hideDropdown();
+      window.scrollTo({ top: 120, behavior: 'smooth' });
+    }
+
+    function handleSearchInput(val) {
+      if (val.trim().length > 0) {
+        showDropdown();
+      }
+    }
+
+    // Close dropdown on outside click
+    document.addEventListener('click', function(e) {
+      const box = document.getElementById('searchBoxWrapper');
+      if (box && !box.contains(e.target)) {
+        hideDropdown();
+      }
+    });
+
+    // Carousel Scroll
+    function scrollCarousel(dir) {
+      const c = document.getElementById('moviesCarousel');
+      if (c) {
+        c.scrollBy({ left: dir * 300, behavior: 'smooth' });
+      }
+    }
+
+    // Modal
+    function openGuideModal() {
+      document.getElementById('guideModal').classList.add('show');
+    }
+    function closeGuideModal() {
+      document.getElementById('guideModal').classList.remove('show');
+    }
+  </script>
+</body>
+</html>
