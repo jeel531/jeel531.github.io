@@ -1,12 +1,9 @@
-CREATE
-LAST|Len|"Jeel Vaghani"
-LAST|Den|"Indian actor and Chief Enterprise Systems Architect"
-LAST|Lgu|"જીલ વાઘાણી"
-LAST|Dgu|"ભારતીય અભિનેતા અને એન્ટરપ્રાઇઝ આર્કિટેક્ટ"
-LAST|P31|Q5
-LAST|P106|Q33999
-LAST|P106|Q188442
-LAST|P569|+2003-04-23T00:00:00Z/11
-LAST|P27|Q668
-LAST|P856|"https://jeel531.github.io"
-LAST|P2003|"vaghani_01"
+Q141712893|Lgu|"જીલ વાઘાણી"
+Q141712893|Dgu|"ભારતીય અભિનેતા અને એન્ટરપ્રાઇઝ આર્કિટેક્ટ"
+Q141712893|P31|Q5
+Q141712893|P106|Q33999
+Q141712893|P106|Q188442
+Q141712893|P569|+2003-04-23T00:00:00Z/11
+Q141712893|P27|Q668
+Q141712893|P856|"https://jeel531.github.io"
+Q141712893|P2003|"vaghani_01"

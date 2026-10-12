@@ -17,6 +17,7 @@ Welcome to the official repository and website of **Jeel Vaghani** (જીલ �
 - **Movie Project**: [Jeel Vaghani: The Sultan](https://jeel531.github.io/movie.html)
 - **Instagram**: [@vaghani_01](https://www.instagram.com/vaghani_01/)
 - **GitHub**: [@jeel531](https://github.com/jeel531)
+- **Wikidata (Google Knowledge Graph)**: [Q141712893](https://www.wikidata.org/wiki/Q141712893)
 
 ---
 *© 2026 Jeel Vaghani. All Rights Reserved.*
